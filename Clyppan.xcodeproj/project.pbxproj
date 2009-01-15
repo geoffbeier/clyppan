@@ -25,19 +25,19 @@
 		EE1429150F1D25BB002F1FE7 /* Clyppan.icns in Resources */ = {isa = PBXBuildFile; fileRef = EE1429100F1D25BB002F1FE7 /* Clyppan.icns */; };
 		EE1429160F1D25BB002F1FE7 /* clyppan-small.png in Resources */ = {isa = PBXBuildFile; fileRef = EE1429110F1D25BB002F1FE7 /* clyppan-small.png */; };
 		EE4A8F7A0F1E075B007DE4BF /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE4A8F780F1E075B007DE4BF /* Preferences.xib */; };
-		EE4A8FDF0F1E0A10007DE4BF /* Shortcuts.png in Resources */ = {isa = PBXBuildFile; fileRef = EE4A8FDE0F1E0A10007DE4BF /* Shortcuts.png */; };
-		EE4A8FE10F1E0A15007DE4BF /* Update.tiff in Resources */ = {isa = PBXBuildFile; fileRef = EE4A8FE00F1E0A15007DE4BF /* Update.tiff */; };
 		EE4A901A0F1E1A17007DE4BF /* Check.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EE4A90190F1E1A17007DE4BF /* Check.pdf */; };
 		EE4A92060F1E83E9007DE4BF /* QuickPreview.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE4A92040F1E83E9007DE4BF /* QuickPreview.xib */; };
 		EE4A92880F1E8EF9007DE4BF /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = EE4A92870F1E8EF9007DE4BF /* Credits.rtf */; };
-		EEF418030F1D27050037980E /* ShortcutRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF418020F1D27050037980E /* ShortcutRecorder.framework */; };
-		EEF418070F1D272A0037980E /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF418060F1D272A0037980E /* Sparkle.framework */; };
-		EEF418110F1D27670037980E /* DBPrefsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF418100F1D27670037980E /* DBPrefsWindowController.m */; };
-		EEF418140F1D27710037980E /* OMHShortcutKey.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF418120F1D27710037980E /* OMHShortcutKey.m */; };
-		EEF418170F1D277F0037980E /* ImageTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF418160F1D277F0037980E /* ImageTextCell.m */; };
+		EE4A93D30F1F8825007DE4BF /* ShortcutRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE4A93D10F1F8825007DE4BF /* ShortcutRecorder.framework */; };
+		EE4A93D40F1F8825007DE4BF /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE4A93D20F1F8825007DE4BF /* Sparkle.framework */; };
+		EE4A93E80F1F8845007DE4BF /* ShortcutRecorder.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EE4A93D10F1F8825007DE4BF /* ShortcutRecorder.framework */; };
+		EE4A93E90F1F8845007DE4BF /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EE4A93D20F1F8825007DE4BF /* Sparkle.framework */; };
+		EE71BBFA0F1F888E00F130A9 /* ImageTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE71BBF80F1F888E00F130A9 /* ImageTextCell.m */; };
+		EE71BBFD0F1F88A200F130A9 /* OMHShortcutKey.m in Sources */ = {isa = PBXBuildFile; fileRef = EE71BBFC0F1F88A200F130A9 /* OMHShortcutKey.m */; };
+		EE71BC000F1F88B700F130A9 /* DBPrefsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE71BBFF0F1F88B700F130A9 /* DBPrefsWindowController.m */; };
+		EE71BC0C0F1F88E100F130A9 /* Shortcuts.png in Resources */ = {isa = PBXBuildFile; fileRef = EE71BC0A0F1F88E100F130A9 /* Shortcuts.png */; };
+		EE71BC0D0F1F88E100F130A9 /* Update.tiff in Resources */ = {isa = PBXBuildFile; fileRef = EE71BC0B0F1F88E100F130A9 /* Update.tiff */; };
 		EEF4181A0F1D27A80037980E /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF418190F1D27A80037980E /* Carbon.framework */; };
-		EEF418C30F1D2A080037980E /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EEF418060F1D272A0037980E /* Sparkle.framework */; };
-		EEF418C40F1D2A080037980E /* ShortcutRecorder.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EEF418020F1D27050037980E /* ShortcutRecorder.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,8 +47,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EEF418C30F1D2A080037980E /* Sparkle.framework in Copy Frameworks */,
-				EEF418C40F1D2A080037980E /* ShortcutRecorder.framework in Copy Frameworks */,
+				EE4A93E80F1F8845007DE4BF /* ShortcutRecorder.framework in Copy Frameworks */,
+				EE4A93E90F1F8845007DE4BF /* Sparkle.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,19 +88,19 @@
 		EE1429100F1D25BB002F1FE7 /* Clyppan.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Clyppan.icns; path = Resources/Clyppan.icns; sourceTree = SOURCE_ROOT; };
 		EE1429110F1D25BB002F1FE7 /* clyppan-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "clyppan-small.png"; path = "Resources/clyppan-small.png"; sourceTree = SOURCE_ROOT; };
 		EE4A8F790F1E075B007DE4BF /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Preferences.xib; sourceTree = "<group>"; };
-		EE4A8FDE0F1E0A10007DE4BF /* Shortcuts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Shortcuts.png; path = "../../../collections/Resources/Preference Icons/Shortcuts.png"; sourceTree = SOURCE_ROOT; };
-		EE4A8FE00F1E0A15007DE4BF /* Update.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Update.tiff; path = "../../../collections/Resources/Preference Icons/Update.tiff"; sourceTree = SOURCE_ROOT; };
 		EE4A90190F1E1A17007DE4BF /* Check.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Check.pdf; path = Resources/Check.pdf; sourceTree = SOURCE_ROOT; };
 		EE4A92050F1E83E9007DE4BF /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/QuickPreview.xib; sourceTree = "<group>"; };
 		EE4A92870F1E8EF9007DE4BF /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Credits.rtf; path = Resources/Credits.rtf; sourceTree = SOURCE_ROOT; };
-		EEF418020F1D27050037980E /* ShortcutRecorder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShortcutRecorder.framework; path = "../../../frameworks/ShortCut Recorder/SR Leopard/build/Release/ShortcutRecorder.framework"; sourceTree = SOURCE_ROOT; };
-		EEF418060F1D272A0037980E /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = "../../../frameworks/Sparkle with GC/Sparkle.framework"; sourceTree = SOURCE_ROOT; };
-		EEF4180F0F1D27670037980E /* DBPrefsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBPrefsWindowController.h; path = ../../../collections/Controllers/DBPrefsWindowController.h; sourceTree = SOURCE_ROOT; };
-		EEF418100F1D27670037980E /* DBPrefsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBPrefsWindowController.m; path = ../../../collections/Controllers/DBPrefsWindowController.m; sourceTree = SOURCE_ROOT; };
-		EEF418120F1D27710037980E /* OMHShortcutKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OMHShortcutKey.m; path = ../../../collections/Shortcut/OMHShortcutKey.m; sourceTree = SOURCE_ROOT; };
-		EEF418130F1D27710037980E /* OMHShortcutKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OMHShortcutKey.h; path = ../../../collections/Shortcut/OMHShortcutKey.h; sourceTree = SOURCE_ROOT; };
-		EEF418150F1D277F0037980E /* ImageTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageTextCell.h; path = ../../../collections/Cells/ImageTextCell.h; sourceTree = SOURCE_ROOT; };
-		EEF418160F1D277F0037980E /* ImageTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageTextCell.m; path = ../../../collections/Cells/ImageTextCell.m; sourceTree = SOURCE_ROOT; };
+		EE4A93D10F1F8825007DE4BF /* ShortcutRecorder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShortcutRecorder.framework; path = Frameworks/ShortcutRecorder.framework; sourceTree = SOURCE_ROOT; };
+		EE4A93D20F1F8825007DE4BF /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Frameworks/Sparkle.framework; sourceTree = SOURCE_ROOT; };
+		EE71BBF80F1F888E00F130A9 /* ImageTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageTextCell.m; path = ../collections/Cells/ImageTextCell.m; sourceTree = SOURCE_ROOT; };
+		EE71BBF90F1F888E00F130A9 /* ImageTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageTextCell.h; path = ../collections/Cells/ImageTextCell.h; sourceTree = SOURCE_ROOT; };
+		EE71BBFB0F1F88A200F130A9 /* OMHShortcutKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OMHShortcutKey.h; path = ../collections/Shortcut/OMHShortcutKey.h; sourceTree = SOURCE_ROOT; };
+		EE71BBFC0F1F88A200F130A9 /* OMHShortcutKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OMHShortcutKey.m; path = ../collections/Shortcut/OMHShortcutKey.m; sourceTree = SOURCE_ROOT; };
+		EE71BBFE0F1F88B700F130A9 /* DBPrefsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBPrefsWindowController.h; path = ../collections/Controllers/DBPrefsWindowController.h; sourceTree = SOURCE_ROOT; };
+		EE71BBFF0F1F88B700F130A9 /* DBPrefsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBPrefsWindowController.m; path = ../collections/Controllers/DBPrefsWindowController.m; sourceTree = SOURCE_ROOT; };
+		EE71BC0A0F1F88E100F130A9 /* Shortcuts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Shortcuts.png; path = "../collections/Resources/Preference Icons/Shortcuts.png"; sourceTree = SOURCE_ROOT; };
+		EE71BC0B0F1F88E100F130A9 /* Update.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Update.tiff; path = "../collections/Resources/Preference Icons/Update.tiff"; sourceTree = SOURCE_ROOT; };
 		EEF418190F1D27A80037980E /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -110,9 +110,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
-				EEF418030F1D27050037980E /* ShortcutRecorder.framework in Frameworks */,
-				EEF418070F1D272A0037980E /* Sparkle.framework in Frameworks */,
 				EEF4181A0F1D27A80037980E /* Carbon.framework in Frameworks */,
+				EE4A93D30F1F8825007DE4BF /* ShortcutRecorder.framework in Frameworks */,
+				EE4A93D40F1F8825007DE4BF /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,8 +217,8 @@
 				EE1428F00F1D259A002F1FE7 /* OMHClippingsTableView.m */,
 				EE1428FA0F1D259A002F1FE7 /* OMHMainWindow.h */,
 				EE1428F60F1D259A002F1FE7 /* OMHMainWindow.m */,
-				EEF418150F1D277F0037980E /* ImageTextCell.h */,
-				EEF418160F1D277F0037980E /* ImageTextCell.m */,
+				EE71BBF80F1F888E00F130A9 /* ImageTextCell.m */,
+				EE71BBF90F1F888E00F130A9 /* ImageTextCell.h */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -227,8 +227,6 @@
 			isa = PBXGroup;
 			children = (
 				EE0F27EB0F1D2B5400E0C0FF /* Preferences */,
-				EEF418130F1D27710037980E /* OMHShortcutKey.h */,
-				EEF418120F1D27710037980E /* OMHShortcutKey.m */,
 				EE1428FB0F1D259A002F1FE7 /* AppController.h */,
 				EE1428F30F1D259A002F1FE7 /* AppController.m */,
 				EE1428FC0F1D259A002F1FE7 /* OMHClippingController.h */,
@@ -237,6 +235,8 @@
 				EE1428F50F1D259A002F1FE7 /* OMHClipboardController.m */,
 				EE1428FE0F1D259A002F1FE7 /* OMHQuickPreviewWindowController.h */,
 				EE1428F90F1D259A002F1FE7 /* OMHQuickPreviewWindowController.m */,
+				EE71BBFB0F1F88A200F130A9 /* OMHShortcutKey.h */,
+				EE71BBFC0F1F88A200F130A9 /* OMHShortcutKey.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -253,8 +253,8 @@
 		EE0F27EB0F1D2B5400E0C0FF /* Preferences */ = {
 			isa = PBXGroup;
 			children = (
-				EEF4180F0F1D27670037980E /* DBPrefsWindowController.h */,
-				EEF418100F1D27670037980E /* DBPrefsWindowController.m */,
+				EE71BBFE0F1F88B700F130A9 /* DBPrefsWindowController.h */,
+				EE71BBFF0F1F88B700F130A9 /* DBPrefsWindowController.m */,
 				EE1428F10F1D259A002F1FE7 /* OMHPreferenceController.h */,
 				EE1428FD0F1D259A002F1FE7 /* OMHPreferenceController.m */,
 			);
@@ -264,9 +264,9 @@
 		EE1429080F1D25A7002F1FE7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				EE4A8FDE0F1E0A10007DE4BF /* Shortcuts.png */,
+				EE71BC0A0F1F88E100F130A9 /* Shortcuts.png */,
+				EE71BC0B0F1F88E100F130A9 /* Update.tiff */,
 				EE4A90190F1E1A17007DE4BF /* Check.pdf */,
-				EE4A8FE00F1E0A15007DE4BF /* Update.tiff */,
 				EE14290D0F1D25BB002F1FE7 /* clyppan-small-inverted.png */,
 				EE14290E0F1D25BB002F1FE7 /* Stamp.png */,
 				EE1429100F1D25BB002F1FE7 /* Clyppan.icns */,
@@ -278,8 +278,8 @@
 		EEF417FD0F1D26D80037980E /* 3rd Party Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EEF418060F1D272A0037980E /* Sparkle.framework */,
-				EEF418020F1D27050037980E /* ShortcutRecorder.framework */,
+				EE4A93D10F1F8825007DE4BF /* ShortcutRecorder.framework */,
+				EE4A93D20F1F8825007DE4BF /* Sparkle.framework */,
 			);
 			name = "3rd Party Frameworks";
 			sourceTree = "<group>";
@@ -335,11 +335,11 @@
 				EE1429150F1D25BB002F1FE7 /* Clyppan.icns in Resources */,
 				EE1429160F1D25BB002F1FE7 /* clyppan-small.png in Resources */,
 				EE4A8F7A0F1E075B007DE4BF /* Preferences.xib in Resources */,
-				EE4A8FDF0F1E0A10007DE4BF /* Shortcuts.png in Resources */,
-				EE4A8FE10F1E0A15007DE4BF /* Update.tiff in Resources */,
 				EE4A901A0F1E1A17007DE4BF /* Check.pdf in Resources */,
 				EE4A92060F1E83E9007DE4BF /* QuickPreview.xib in Resources */,
 				EE4A92880F1E8EF9007DE4BF /* Credits.rtf in Resources */,
+				EE71BC0C0F1F88E100F130A9 /* Shortcuts.png in Resources */,
+				EE71BC0D0F1F88E100F130A9 /* Update.tiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,9 +360,9 @@
 				EE1429040F1D259A002F1FE7 /* OMHMainWindow.m in Sources */,
 				EE1429050F1D259A002F1FE7 /* OMHQuickPreviewWindowController.m in Sources */,
 				EE1429060F1D259A002F1FE7 /* OMHPreferenceController.m in Sources */,
-				EEF418110F1D27670037980E /* DBPrefsWindowController.m in Sources */,
-				EEF418140F1D27710037980E /* OMHShortcutKey.m in Sources */,
-				EEF418170F1D277F0037980E /* ImageTextCell.m in Sources */,
+				EE71BBFA0F1F888E00F130A9 /* ImageTextCell.m in Sources */,
+				EE71BBFD0F1F88A200F130A9 /* OMHShortcutKey.m in Sources */,
+				EE71BC000F1F88B700F130A9 /* DBPrefsWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +412,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../frameworks/ShortCut Recorder/SR Leopard/build/Release\"",
 					"\"$(SRCROOT)/../../../frameworks/Sparkle with GC\"",
+					"\"$(SRCROOT)/Frameworks\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -435,6 +436,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../frameworks/ShortCut Recorder/SR Leopard/build/Release\"",
 					"\"$(SRCROOT)/../../../frameworks/Sparkle with GC\"",
+					"\"$(SRCROOT)/Frameworks\"",
 				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_MODEL_TUNING = G5;
