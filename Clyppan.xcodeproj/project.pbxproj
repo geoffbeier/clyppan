@@ -1,0 +1,501 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7446970DB6B7EA00F9684A /* MainMenu.xib */; };
+		770B37ED0679A11B001EADE2 /* Clyppan_DataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 770B37EC0679A11B001EADE2 /* Clyppan_DataModel.xcdatamodel */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		EE1428FF0F1D259A002F1FE7 /* OMHClippingController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1428EF0F1D259A002F1FE7 /* OMHClippingController.m */; };
+		EE1429000F1D259A002F1FE7 /* OMHClippingsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1428F00F1D259A002F1FE7 /* OMHClippingsTableView.m */; };
+		EE1429010F1D259A002F1FE7 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1428F30F1D259A002F1FE7 /* AppController.m */; };
+		EE1429020F1D259A002F1FE7 /* Clipping.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1428F40F1D259A002F1FE7 /* Clipping.m */; };
+		EE1429030F1D259A002F1FE7 /* OMHClipboardController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1428F50F1D259A002F1FE7 /* OMHClipboardController.m */; };
+		EE1429040F1D259A002F1FE7 /* OMHMainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1428F60F1D259A002F1FE7 /* OMHMainWindow.m */; };
+		EE1429050F1D259A002F1FE7 /* OMHQuickPreviewWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1428F90F1D259A002F1FE7 /* OMHQuickPreviewWindowController.m */; };
+		EE1429060F1D259A002F1FE7 /* OMHPreferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1428FD0F1D259A002F1FE7 /* OMHPreferenceController.m */; };
+		EE1429120F1D25BB002F1FE7 /* clyppan-small-inverted.png in Resources */ = {isa = PBXBuildFile; fileRef = EE14290D0F1D25BB002F1FE7 /* clyppan-small-inverted.png */; };
+		EE1429130F1D25BB002F1FE7 /* Stamp.png in Resources */ = {isa = PBXBuildFile; fileRef = EE14290E0F1D25BB002F1FE7 /* Stamp.png */; };
+		EE1429150F1D25BB002F1FE7 /* Clyppan.icns in Resources */ = {isa = PBXBuildFile; fileRef = EE1429100F1D25BB002F1FE7 /* Clyppan.icns */; };
+		EE1429160F1D25BB002F1FE7 /* clyppan-small.png in Resources */ = {isa = PBXBuildFile; fileRef = EE1429110F1D25BB002F1FE7 /* clyppan-small.png */; };
+		EE4A8F7A0F1E075B007DE4BF /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE4A8F780F1E075B007DE4BF /* Preferences.xib */; };
+		EE4A8FDF0F1E0A10007DE4BF /* Shortcuts.png in Resources */ = {isa = PBXBuildFile; fileRef = EE4A8FDE0F1E0A10007DE4BF /* Shortcuts.png */; };
+		EE4A8FE10F1E0A15007DE4BF /* Update.tiff in Resources */ = {isa = PBXBuildFile; fileRef = EE4A8FE00F1E0A15007DE4BF /* Update.tiff */; };
+		EE4A901A0F1E1A17007DE4BF /* Check.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EE4A90190F1E1A17007DE4BF /* Check.pdf */; };
+		EE4A92060F1E83E9007DE4BF /* QuickPreview.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE4A92040F1E83E9007DE4BF /* QuickPreview.xib */; };
+		EE4A92880F1E8EF9007DE4BF /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = EE4A92870F1E8EF9007DE4BF /* Credits.rtf */; };
+		EEF418030F1D27050037980E /* ShortcutRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF418020F1D27050037980E /* ShortcutRecorder.framework */; };
+		EEF418070F1D272A0037980E /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF418060F1D272A0037980E /* Sparkle.framework */; };
+		EEF418110F1D27670037980E /* DBPrefsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF418100F1D27670037980E /* DBPrefsWindowController.m */; };
+		EEF418140F1D27710037980E /* OMHShortcutKey.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF418120F1D27710037980E /* OMHShortcutKey.m */; };
+		EEF418170F1D277F0037980E /* ImageTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF418160F1D277F0037980E /* ImageTextCell.m */; };
+		EEF4181A0F1D27A80037980E /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF418190F1D27A80037980E /* Carbon.framework */; };
+		EEF418C30F1D2A080037980E /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EEF418060F1D272A0037980E /* Sparkle.framework */; };
+		EEF418C40F1D2A080037980E /* ShortcutRecorder.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EEF418020F1D27050037980E /* ShortcutRecorder.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EEF418CE0F1D2A0B0037980E /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EEF418C30F1D2A080037980E /* Sparkle.framework in Copy Frameworks */,
+				EEF418C40F1D2A080037980E /* ShortcutRecorder.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		2F7446980DB6B7EA00F9684A /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* Clyppan_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Clyppan_Prefix.pch; sourceTree = "<group>"; };
+		770B37EC0679A11B001EADE2 /* Clyppan_DataModel.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = Clyppan_DataModel.xcdatamodel; sourceTree = "<group>"; };
+		77C82804067257F0000B614F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* Clyppan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clyppan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE1428EF0F1D259A002F1FE7 /* OMHClippingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OMHClippingController.m; path = Source/OMHClippingController.m; sourceTree = "<group>"; };
+		EE1428F00F1D259A002F1FE7 /* OMHClippingsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OMHClippingsTableView.m; path = Source/OMHClippingsTableView.m; sourceTree = "<group>"; };
+		EE1428F10F1D259A002F1FE7 /* OMHPreferenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OMHPreferenceController.h; path = Source/OMHPreferenceController.h; sourceTree = "<group>"; };
+		EE1428F20F1D259A002F1FE7 /* OMHClipboardController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OMHClipboardController.h; path = Source/OMHClipboardController.h; sourceTree = "<group>"; };
+		EE1428F30F1D259A002F1FE7 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppController.m; path = Source/AppController.m; sourceTree = "<group>"; };
+		EE1428F40F1D259A002F1FE7 /* Clipping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Clipping.m; path = Source/Clipping.m; sourceTree = "<group>"; };
+		EE1428F50F1D259A002F1FE7 /* OMHClipboardController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OMHClipboardController.m; path = Source/OMHClipboardController.m; sourceTree = "<group>"; };
+		EE1428F60F1D259A002F1FE7 /* OMHMainWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OMHMainWindow.m; path = Source/OMHMainWindow.m; sourceTree = "<group>"; };
+		EE1428F70F1D259A002F1FE7 /* OMHClippingsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OMHClippingsTableView.h; path = Source/OMHClippingsTableView.h; sourceTree = "<group>"; };
+		EE1428F80F1D259A002F1FE7 /* Clipping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Clipping.h; path = Source/Clipping.h; sourceTree = "<group>"; };
+		EE1428F90F1D259A002F1FE7 /* OMHQuickPreviewWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OMHQuickPreviewWindowController.m; path = Source/OMHQuickPreviewWindowController.m; sourceTree = "<group>"; };
+		EE1428FA0F1D259A002F1FE7 /* OMHMainWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OMHMainWindow.h; path = Source/OMHMainWindow.h; sourceTree = "<group>"; };
+		EE1428FB0F1D259A002F1FE7 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = Source/AppController.h; sourceTree = "<group>"; };
+		EE1428FC0F1D259A002F1FE7 /* OMHClippingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OMHClippingController.h; path = Source/OMHClippingController.h; sourceTree = "<group>"; };
+		EE1428FD0F1D259A002F1FE7 /* OMHPreferenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OMHPreferenceController.m; path = Source/OMHPreferenceController.m; sourceTree = "<group>"; };
+		EE1428FE0F1D259A002F1FE7 /* OMHQuickPreviewWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OMHQuickPreviewWindowController.h; path = Source/OMHQuickPreviewWindowController.h; sourceTree = "<group>"; };
+		EE14290D0F1D25BB002F1FE7 /* clyppan-small-inverted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "clyppan-small-inverted.png"; path = "Resources/clyppan-small-inverted.png"; sourceTree = SOURCE_ROOT; };
+		EE14290E0F1D25BB002F1FE7 /* Stamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stamp.png; path = Resources/Stamp.png; sourceTree = SOURCE_ROOT; };
+		EE1429100F1D25BB002F1FE7 /* Clyppan.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Clyppan.icns; path = Resources/Clyppan.icns; sourceTree = SOURCE_ROOT; };
+		EE1429110F1D25BB002F1FE7 /* clyppan-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "clyppan-small.png"; path = "Resources/clyppan-small.png"; sourceTree = SOURCE_ROOT; };
+		EE4A8F790F1E075B007DE4BF /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Preferences.xib; sourceTree = "<group>"; };
+		EE4A8FDE0F1E0A10007DE4BF /* Shortcuts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Shortcuts.png; path = "../../../collections/Resources/Preference Icons/Shortcuts.png"; sourceTree = SOURCE_ROOT; };
+		EE4A8FE00F1E0A15007DE4BF /* Update.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Update.tiff; path = "../../../collections/Resources/Preference Icons/Update.tiff"; sourceTree = SOURCE_ROOT; };
+		EE4A90190F1E1A17007DE4BF /* Check.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Check.pdf; path = Resources/Check.pdf; sourceTree = SOURCE_ROOT; };
+		EE4A92050F1E83E9007DE4BF /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/QuickPreview.xib; sourceTree = "<group>"; };
+		EE4A92870F1E8EF9007DE4BF /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Credits.rtf; path = Resources/Credits.rtf; sourceTree = SOURCE_ROOT; };
+		EEF418020F1D27050037980E /* ShortcutRecorder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShortcutRecorder.framework; path = "../../../frameworks/ShortCut Recorder/SR Leopard/build/Release/ShortcutRecorder.framework"; sourceTree = SOURCE_ROOT; };
+		EEF418060F1D272A0037980E /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = "../../../frameworks/Sparkle with GC/Sparkle.framework"; sourceTree = SOURCE_ROOT; };
+		EEF4180F0F1D27670037980E /* DBPrefsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBPrefsWindowController.h; path = ../../../collections/Controllers/DBPrefsWindowController.h; sourceTree = SOURCE_ROOT; };
+		EEF418100F1D27670037980E /* DBPrefsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBPrefsWindowController.m; path = ../../../collections/Controllers/DBPrefsWindowController.m; sourceTree = SOURCE_ROOT; };
+		EEF418120F1D27710037980E /* OMHShortcutKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OMHShortcutKey.m; path = ../../../collections/Shortcut/OMHShortcutKey.m; sourceTree = SOURCE_ROOT; };
+		EEF418130F1D27710037980E /* OMHShortcutKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OMHShortcutKey.h; path = ../../../collections/Shortcut/OMHShortcutKey.h; sourceTree = SOURCE_ROOT; };
+		EEF418150F1D277F0037980E /* ImageTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageTextCell.h; path = ../../../collections/Cells/ImageTextCell.h; sourceTree = SOURCE_ROOT; };
+		EEF418160F1D277F0037980E /* ImageTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageTextCell.m; path = ../../../collections/Cells/ImageTextCell.m; sourceTree = SOURCE_ROOT; };
+		EEF418190F1D27A80037980E /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				EEF418030F1D27050037980E /* ShortcutRecorder.framework in Frameworks */,
+				EEF418070F1D272A0037980E /* Sparkle.framework in Frameworks */,
+				EEF4181A0F1D27A80037980E /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EE0F27E80F1D2AD100E0C0FF /* Views */,
+				EE0F27E90F1D2AE200E0C0FF /* Controllers */,
+				EE0F27EA0F1D2B0C00E0C0FF /* Models */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EEF418190F1D27A80037980E /* Carbon.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				77C82804067257F0000B614F /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* Clyppan.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* Clyppan */ = {
+			isa = PBXGroup;
+			children = (
+				7756732906782D8800D1FEB8 /* Models */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				EE4A92040F1E83E9007DE4BF /* QuickPreview.xib */,
+			);
+			name = Clyppan;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* Clyppan_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EE4A92870F1E8EF9007DE4BF /* Credits.rtf */,
+				EE1429080F1D25A7002F1FE7 /* Images */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				2F7446970DB6B7EA00F9684A /* MainMenu.xib */,
+				EE4A8F780F1E075B007DE4BF /* Preferences.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EEF417FD0F1D26D80037980E /* 3rd Party Frameworks */,
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7756732906782D8800D1FEB8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				770B37EC0679A11B001EADE2 /* Clyppan_DataModel.xcdatamodel */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		EE0F27E80F1D2AD100E0C0FF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EE1428F70F1D259A002F1FE7 /* OMHClippingsTableView.h */,
+				EE1428F00F1D259A002F1FE7 /* OMHClippingsTableView.m */,
+				EE1428FA0F1D259A002F1FE7 /* OMHMainWindow.h */,
+				EE1428F60F1D259A002F1FE7 /* OMHMainWindow.m */,
+				EEF418150F1D277F0037980E /* ImageTextCell.h */,
+				EEF418160F1D277F0037980E /* ImageTextCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		EE0F27E90F1D2AE200E0C0FF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EE0F27EB0F1D2B5400E0C0FF /* Preferences */,
+				EEF418130F1D27710037980E /* OMHShortcutKey.h */,
+				EEF418120F1D27710037980E /* OMHShortcutKey.m */,
+				EE1428FB0F1D259A002F1FE7 /* AppController.h */,
+				EE1428F30F1D259A002F1FE7 /* AppController.m */,
+				EE1428FC0F1D259A002F1FE7 /* OMHClippingController.h */,
+				EE1428EF0F1D259A002F1FE7 /* OMHClippingController.m */,
+				EE1428F20F1D259A002F1FE7 /* OMHClipboardController.h */,
+				EE1428F50F1D259A002F1FE7 /* OMHClipboardController.m */,
+				EE1428FE0F1D259A002F1FE7 /* OMHQuickPreviewWindowController.h */,
+				EE1428F90F1D259A002F1FE7 /* OMHQuickPreviewWindowController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		EE0F27EA0F1D2B0C00E0C0FF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EE1428F80F1D259A002F1FE7 /* Clipping.h */,
+				EE1428F40F1D259A002F1FE7 /* Clipping.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		EE0F27EB0F1D2B5400E0C0FF /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				EEF4180F0F1D27670037980E /* DBPrefsWindowController.h */,
+				EEF418100F1D27670037980E /* DBPrefsWindowController.m */,
+				EE1428F10F1D259A002F1FE7 /* OMHPreferenceController.h */,
+				EE1428FD0F1D259A002F1FE7 /* OMHPreferenceController.m */,
+			);
+			name = Preferences;
+			sourceTree = "<group>";
+		};
+		EE1429080F1D25A7002F1FE7 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				EE4A8FDE0F1E0A10007DE4BF /* Shortcuts.png */,
+				EE4A90190F1E1A17007DE4BF /* Check.pdf */,
+				EE4A8FE00F1E0A15007DE4BF /* Update.tiff */,
+				EE14290D0F1D25BB002F1FE7 /* clyppan-small-inverted.png */,
+				EE14290E0F1D25BB002F1FE7 /* Stamp.png */,
+				EE1429100F1D25BB002F1FE7 /* Clyppan.icns */,
+				EE1429110F1D25BB002F1FE7 /* clyppan-small.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		EEF417FD0F1D26D80037980E /* 3rd Party Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EEF418060F1D272A0037980E /* Sparkle.framework */,
+				EEF418020F1D27050037980E /* ShortcutRecorder.framework */,
+			);
+			name = "3rd Party Frameworks";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* Clyppan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26FC0A840875C7B200E6366F /* Build configuration list for PBXNativeTarget "Clyppan" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				EEF418CE0F1D2A0B0037980E /* Copy Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Clyppan;
+			productInstallPath = "$(HOME)/Applications";
+			productName = Clyppan;
+			productReference = 8D1107320486CEB800E47090 /* Clyppan.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 26FC0A880875C7B200E6366F /* Build configuration list for PBXProject "Clyppan" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* Clyppan */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* Clyppan */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */,
+				EE1429120F1D25BB002F1FE7 /* clyppan-small-inverted.png in Resources */,
+				EE1429130F1D25BB002F1FE7 /* Stamp.png in Resources */,
+				EE1429150F1D25BB002F1FE7 /* Clyppan.icns in Resources */,
+				EE1429160F1D25BB002F1FE7 /* clyppan-small.png in Resources */,
+				EE4A8F7A0F1E075B007DE4BF /* Preferences.xib in Resources */,
+				EE4A8FDF0F1E0A10007DE4BF /* Shortcuts.png in Resources */,
+				EE4A8FE10F1E0A15007DE4BF /* Update.tiff in Resources */,
+				EE4A901A0F1E1A17007DE4BF /* Check.pdf in Resources */,
+				EE4A92060F1E83E9007DE4BF /* QuickPreview.xib in Resources */,
+				EE4A92880F1E8EF9007DE4BF /* Credits.rtf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				770B37ED0679A11B001EADE2 /* Clyppan_DataModel.xcdatamodel in Sources */,
+				EE1428FF0F1D259A002F1FE7 /* OMHClippingController.m in Sources */,
+				EE1429000F1D259A002F1FE7 /* OMHClippingsTableView.m in Sources */,
+				EE1429010F1D259A002F1FE7 /* AppController.m in Sources */,
+				EE1429020F1D259A002F1FE7 /* Clipping.m in Sources */,
+				EE1429030F1D259A002F1FE7 /* OMHClipboardController.m in Sources */,
+				EE1429040F1D259A002F1FE7 /* OMHMainWindow.m in Sources */,
+				EE1429050F1D259A002F1FE7 /* OMHQuickPreviewWindowController.m in Sources */,
+				EE1429060F1D259A002F1FE7 /* OMHPreferenceController.m in Sources */,
+				EEF418110F1D27670037980E /* DBPrefsWindowController.m in Sources */,
+				EEF418140F1D27710037980E /* OMHShortcutKey.m in Sources */,
+				EEF418170F1D277F0037980E /* ImageTextCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2F7446970DB6B7EA00F9684A /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2F7446980DB6B7EA00F9684A /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		EE4A8F780F1E075B007DE4BF /* Preferences.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE4A8F790F1E075B007DE4BF /* English */,
+			);
+			name = Preferences.xib;
+			sourceTree = "<group>";
+		};
+		EE4A92040F1E83E9007DE4BF /* QuickPreview.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE4A92050F1E83E9007DE4BF /* English */,
+			);
+			name = QuickPreview.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		26FC0A850875C7B200E6366F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../frameworks/ShortCut Recorder/SR Leopard/build/Release\"",
+					"\"$(SRCROOT)/../../../frameworks/Sparkle with GC\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Clyppan_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = Clyppan;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		26FC0A860875C7B200E6366F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../frameworks/ShortCut Recorder/SR Leopard/build/Release\"",
+					"\"$(SRCROOT)/../../../frameworks/Sparkle with GC\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Clyppan_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = Clyppan;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		26FC0A890875C7B200E6366F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Debug;
+		};
+		26FC0A8A0875C7B200E6366F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		26FC0A840875C7B200E6366F /* Build configuration list for PBXNativeTarget "Clyppan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26FC0A850875C7B200E6366F /* Debug */,
+				26FC0A860875C7B200E6366F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26FC0A880875C7B200E6366F /* Build configuration list for PBXProject "Clyppan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26FC0A890875C7B200E6366F /* Debug */,
+				26FC0A8A0875C7B200E6366F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
