@@ -33,7 +33,10 @@
  */
 - (void) pasteboardUpdated:(id)newContent
 {
-    [self addObjectWithContent:newContent];
+    if ( [newContent isKindOfClass:[NSAttributedString class]] )
+        [self addObjectWithContent:newContent];
+    else
+        NSLog( @"The new clipboard content wasn't a NSAttributedString" );
 }
 
 - (void) addObject:(id)object
