@@ -15,10 +15,14 @@ extern const float PasteboardPullInterval;
 
 @interface OMHClipboardController: NSObject 
 {  
+    id delegate;
+    
     @protected
         NSTimer *timer;
         NSInteger previousChangeCount;
 }
+
+@property( nonatomic ) id delegate;
 
 + (OMHClipboardController *)sharedController;
 - (void) createTimer;

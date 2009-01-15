@@ -36,7 +36,7 @@ static OMHPreferenceController *_sharedPrefsWindowController = nil;
 	[[NSUserDefaults standardUserDefaults] registerDefaults:defaultValues];
 }
 
-+ (OMHPreferenceController *)sharedPrefsWindowController
++ (OMHPreferenceController *) sharedPrefsWindowController
 {
 	if (!_sharedPrefsWindowController) {
 		_sharedPrefsWindowController = [[self alloc] initWithWindowNibName:[self nibName]];
@@ -44,14 +44,26 @@ static OMHPreferenceController *_sharedPrefsWindowController = nil;
 	return _sharedPrefsWindowController;
 }
 
-- (void)setupToolbar
+
+#pragma mark -
+#pragma mark Overriding Methods
+
+- (id) initWithWindow:(NSWindow *)window
+{
+    id obj = [super initWithWindow:window];
+    [self setAnimationDuration:0.20];
+    
+    return obj;
+}
+
+- (void) setupToolbar
 {
     [self addView:generalPrefsView label:@"General" image:[NSImage imageNamed:NSImageNamePreferencesGeneral]];
     [self addView:shortcutsPrefView label:@"Shortcuts" image:[NSImage imageNamed:@"Shortcuts"]];
     [self addView:updatePrefView label:@"Update" image:[NSImage imageNamed:@"Update"]];
 }
 
-- (IBAction)showWindow:(id)sender 
+- (IBAction) showWindow:(id)sender 
 {
     [super showWindow:sender];
     
@@ -60,6 +72,10 @@ static OMHPreferenceController *_sharedPrefsWindowController = nil;
     
     [self loadHotKeyFromUserDefaults];
 }
+
+
+#pragma mark -
+#pragma mark Keyboard Shortcut Preference Methods
 
 /*!
  * Loads global activation hot key from user defaults.
@@ -119,7 +135,6 @@ static OMHPreferenceController *_sharedPrefsWindowController = nil;
         [self.delegate performSelector:@selector( shortcutDidChange:keyCombo: ) 
                             withObject:shortcutId 
                             withObject:value];
-//        [self.delegate shortcutDidChange:shortcutId keyCombo:keyCombo];
     }
 }
 

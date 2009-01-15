@@ -7,11 +7,15 @@
 //
 
 #import "OMHClippingController.h"
+#import "OMHClipboardController.h"
+
 
 @implementation OMHClippingController
 
+
 @synthesize currentActiveItem;
 @synthesize clippingPurgeLimit;
+
 
 - (void) awakeFromNib
 {
@@ -19,22 +23,17 @@
     [self setSorting];
     
     // Register for updates from the clipboard controller
-    NSNotificationCenter *ncenter = [NSNotificationCenter defaultCenter];
-    [ncenter addObserver:self 
-                selector:@selector( pasteboardUpdated: ) 
-                    name:@"ClipboardStringValue" 
-                  object:nil];
+    [[OMHClipboardController sharedController] setDelegate:self];
 }
 
 /*!
  * Puts new content inserted on the pastboard into the clipping list
  *
- * This method is called whenever a new value is inserted into the pasteboard
+ * OMHClippingController delegate method.
  */
-- (void) pasteboardUpdated:(NSNotification *)notification
+- (void) pasteboardUpdated:(id)newContent
 {
-    NSAttributedString *string = [notification.userInfo objectForKey:@"value"];
-    [self addObjectWithContent:string];
+    [self addObjectWithContent:newContent];
 }
 
 - (void) addObject:(id)object

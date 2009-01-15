@@ -15,6 +15,10 @@ static OMHClipboardController *_OMHClipboardController = nil;
 
 @implementation OMHClipboardController
 
+
+@synthesize delegate;
+
+
 #pragma mark -
 #pragma mark Class Methods
 
@@ -90,11 +94,9 @@ static OMHClipboardController *_OMHClipboardController = nil;
         string = [[NSAttributedString alloc] initWithString:stringFromPboard];
     }
     
-    if ( string )
+    if ( string && [delegate respondsToSelector:@selector( pasteboardUpdated: )] )
     {
-        NSNotificationCenter *ncenter = [NSNotificationCenter defaultCenter];
-        NSDictionary *dict = [NSDictionary dictionaryWithObject:string forKey:@"value"];
-        [ncenter postNotificationName:@"ClipboardStringValue" object:string userInfo:dict];            
+        [delegate performSelector:@selector( pasteboardUpdated: ) withObject:string];
     }
 }
 
