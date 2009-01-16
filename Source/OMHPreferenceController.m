@@ -51,7 +51,7 @@ static OMHPreferenceController *_sharedPrefsWindowController = nil;
 - (id) initWithWindow:(NSWindow *)window
 {
     id obj = [super initWithWindow:window];
-    [self setAnimationDuration:0.20];
+    [obj setAnimationDuration:0.15];
     
     return obj;
 }
