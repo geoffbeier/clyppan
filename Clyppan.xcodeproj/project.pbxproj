@@ -15,7 +15,6 @@
 		EE1428FF0F1D259A002F1FE7 /* OMHClippingController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1428EF0F1D259A002F1FE7 /* OMHClippingController.m */; };
 		EE1429000F1D259A002F1FE7 /* OMHClippingsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1428F00F1D259A002F1FE7 /* OMHClippingsTableView.m */; };
 		EE1429010F1D259A002F1FE7 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1428F30F1D259A002F1FE7 /* AppController.m */; };
-		EE1429020F1D259A002F1FE7 /* Clipping.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1428F40F1D259A002F1FE7 /* Clipping.m */; };
 		EE1429030F1D259A002F1FE7 /* OMHClipboardController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1428F50F1D259A002F1FE7 /* OMHClipboardController.m */; };
 		EE1429040F1D259A002F1FE7 /* OMHMainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1428F60F1D259A002F1FE7 /* OMHMainWindow.m */; };
 		EE1429050F1D259A002F1FE7 /* OMHQuickPreviewWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1428F90F1D259A002F1FE7 /* OMHQuickPreviewWindowController.m */; };
@@ -24,6 +23,7 @@
 		EE1429130F1D25BB002F1FE7 /* Stamp.png in Resources */ = {isa = PBXBuildFile; fileRef = EE14290E0F1D25BB002F1FE7 /* Stamp.png */; };
 		EE1429150F1D25BB002F1FE7 /* Clyppan.icns in Resources */ = {isa = PBXBuildFile; fileRef = EE1429100F1D25BB002F1FE7 /* Clyppan.icns */; };
 		EE1429160F1D25BB002F1FE7 /* clyppan-small.png in Resources */ = {isa = PBXBuildFile; fileRef = EE1429110F1D25BB002F1FE7 /* clyppan-small.png */; };
+		EE3FE3CF0F211B0E00B09105 /* OMHClipping.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3FE3CD0F211B0E00B09105 /* OMHClipping.m */; };
 		EE4A8F7A0F1E075B007DE4BF /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE4A8F780F1E075B007DE4BF /* Preferences.xib */; };
 		EE4A901A0F1E1A17007DE4BF /* Check.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EE4A90190F1E1A17007DE4BF /* Check.pdf */; };
 		EE4A92060F1E83E9007DE4BF /* QuickPreview.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE4A92040F1E83E9007DE4BF /* QuickPreview.xib */; };
@@ -72,11 +72,9 @@
 		EE1428F10F1D259A002F1FE7 /* OMHPreferenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OMHPreferenceController.h; path = Source/OMHPreferenceController.h; sourceTree = "<group>"; };
 		EE1428F20F1D259A002F1FE7 /* OMHClipboardController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OMHClipboardController.h; path = Source/OMHClipboardController.h; sourceTree = "<group>"; };
 		EE1428F30F1D259A002F1FE7 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppController.m; path = Source/AppController.m; sourceTree = "<group>"; };
-		EE1428F40F1D259A002F1FE7 /* Clipping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Clipping.m; path = Source/Clipping.m; sourceTree = "<group>"; };
 		EE1428F50F1D259A002F1FE7 /* OMHClipboardController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OMHClipboardController.m; path = Source/OMHClipboardController.m; sourceTree = "<group>"; };
 		EE1428F60F1D259A002F1FE7 /* OMHMainWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OMHMainWindow.m; path = Source/OMHMainWindow.m; sourceTree = "<group>"; };
 		EE1428F70F1D259A002F1FE7 /* OMHClippingsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OMHClippingsTableView.h; path = Source/OMHClippingsTableView.h; sourceTree = "<group>"; };
-		EE1428F80F1D259A002F1FE7 /* Clipping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Clipping.h; path = Source/Clipping.h; sourceTree = "<group>"; };
 		EE1428F90F1D259A002F1FE7 /* OMHQuickPreviewWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OMHQuickPreviewWindowController.m; path = Source/OMHQuickPreviewWindowController.m; sourceTree = "<group>"; };
 		EE1428FA0F1D259A002F1FE7 /* OMHMainWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OMHMainWindow.h; path = Source/OMHMainWindow.h; sourceTree = "<group>"; };
 		EE1428FB0F1D259A002F1FE7 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = Source/AppController.h; sourceTree = "<group>"; };
@@ -87,6 +85,8 @@
 		EE14290E0F1D25BB002F1FE7 /* Stamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stamp.png; path = Resources/Stamp.png; sourceTree = SOURCE_ROOT; };
 		EE1429100F1D25BB002F1FE7 /* Clyppan.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Clyppan.icns; path = Resources/Clyppan.icns; sourceTree = SOURCE_ROOT; };
 		EE1429110F1D25BB002F1FE7 /* clyppan-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "clyppan-small.png"; path = "Resources/clyppan-small.png"; sourceTree = SOURCE_ROOT; };
+		EE3FE3CD0F211B0E00B09105 /* OMHClipping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OMHClipping.m; path = Source/OMHClipping.m; sourceTree = SOURCE_ROOT; };
+		EE3FE3CE0F211B0E00B09105 /* OMHClipping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OMHClipping.h; path = Source/OMHClipping.h; sourceTree = SOURCE_ROOT; };
 		EE4A8F790F1E075B007DE4BF /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Preferences.xib; sourceTree = "<group>"; };
 		EE4A90190F1E1A17007DE4BF /* Check.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Check.pdf; path = Resources/Check.pdf; sourceTree = SOURCE_ROOT; };
 		EE4A92050F1E83E9007DE4BF /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/QuickPreview.xib; sourceTree = "<group>"; };
@@ -244,8 +244,8 @@
 		EE0F27EA0F1D2B0C00E0C0FF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				EE1428F80F1D259A002F1FE7 /* Clipping.h */,
-				EE1428F40F1D259A002F1FE7 /* Clipping.m */,
+				EE3FE3CD0F211B0E00B09105 /* OMHClipping.m */,
+				EE3FE3CE0F211B0E00B09105 /* OMHClipping.h */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -355,7 +355,6 @@
 				EE1428FF0F1D259A002F1FE7 /* OMHClippingController.m in Sources */,
 				EE1429000F1D259A002F1FE7 /* OMHClippingsTableView.m in Sources */,
 				EE1429010F1D259A002F1FE7 /* AppController.m in Sources */,
-				EE1429020F1D259A002F1FE7 /* Clipping.m in Sources */,
 				EE1429030F1D259A002F1FE7 /* OMHClipboardController.m in Sources */,
 				EE1429040F1D259A002F1FE7 /* OMHMainWindow.m in Sources */,
 				EE1429050F1D259A002F1FE7 /* OMHQuickPreviewWindowController.m in Sources */,
@@ -363,6 +362,7 @@
 				EE71BBFA0F1F888E00F130A9 /* ImageTextCell.m in Sources */,
 				EE71BBFD0F1F88A200F130A9 /* OMHShortcutKey.m in Sources */,
 				EE71BC000F1F88B700F130A9 /* DBPrefsWindowController.m in Sources */,
+				EE3FE3CF0F211B0E00B09105 /* OMHClipping.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

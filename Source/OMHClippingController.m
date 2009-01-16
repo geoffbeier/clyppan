@@ -69,7 +69,7 @@
 - (void) addObjectWithContent:(NSAttributedString *)content;
 {  
     // Check if existing object exists...
-    Clipping *existingObject = [self objectWithContent:content];
+    OMHClipping *existingObject = [self objectWithContent:content];
     if ( existingObject != nil )
     {
         [self markObjectAsCurrentWithoutClipboard:existingObject];        
@@ -108,7 +108,7 @@
 - (id) objectWithContent:(NSAttributedString *)content;
 {
     NSArray *objects = [self arrangedObjects];
-    for ( Clipping *object in objects )
+    for ( OMHClipping *object in objects )
     {
         if ( [[object.content string] isEqualToString:[content string]] )
         {
@@ -140,7 +140,7 @@
  */
 - (void) markObjectAsSelectedOnRow:(NSInteger)row
 {
-    Clipping *object = [[self arrangedObjects] objectAtIndex:row];
+    OMHClipping *object = [[self arrangedObjects] objectAtIndex:row];
     [self markObjectAsCurrent:object];
     
     [self setSelectionIndex:row];
@@ -155,7 +155,7 @@
  */
 - (void) rapidPaste;
 {
-    Clipping *object = self.currentActiveItem;
+    OMHClipping *object = self.currentActiveItem;
     [self markObjectAsSelectedOnRow:1];
 
     // Make timeIntervalSince1970 negative so the clipping will end up at the bottom
@@ -244,7 +244,7 @@
     [self markObjectAsCurrent:[[self selectedObjects] objectAtIndex:0]];
 }
 
-- (void) markObjectAsCurrent:(Clipping *)object;
+- (void) markObjectAsCurrent:(OMHClipping *)object;
 {
     [self markObjectAsCurrentWithoutClipboard:object];
     NSPasteboard *pb = [NSPasteboard generalPasteboard];
@@ -256,7 +256,7 @@
     //    [pb setString:self.currentActiveItem.content forType:NSRTFPboardType];    
 }
 
-- (void) markObjectAsCurrentWithoutClipboard:(Clipping *)object;
+- (void) markObjectAsCurrentWithoutClipboard:(OMHClipping *)object;
 {
     if ( [object.isCurrent boolValue] == YES )
         return;

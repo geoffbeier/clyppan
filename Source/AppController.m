@@ -114,13 +114,11 @@
 - (void) applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Start autosaving timer
-    //[OMHClippingController createAutoSaveTimer:60 * 15];
 	autoSaveTimer = [NSTimer scheduledTimerWithTimeInterval:autoSaveInterval
        	  									 target:self
                                            selector:@selector( autoSave )
                                            userInfo:nil 
-                                            repeats:YES];
-    
+                                            repeats:YES];    
 }
 
 /*!

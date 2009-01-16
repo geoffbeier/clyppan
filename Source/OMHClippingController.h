@@ -7,17 +7,17 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "Clipping.h"
+#import "OMHClipping.h"
 
 
 @interface OMHClippingController: NSArrayController 
 {
-    Clipping *currentActiveItem;    
+    OMHClipping *currentActiveItem;    
     int clippingPurgeLimit;
 }
 
 // Properties
-@property( nonatomic, assign ) Clipping *currentActiveItem;
+@property( nonatomic, assign ) OMHClipping *currentActiveItem;
 @property( nonatomic, assign ) int clippingPurgeLimit;
 
 // Interface Actions
@@ -34,8 +34,8 @@
 
 - (void) setSorting;
 - (void) markObjectAsSelectedOnRow:(NSInteger)row;
-- (void) markObjectAsCurrent:(Clipping *)object;
-- (void) markObjectAsCurrentWithoutClipboard:(Clipping *)object;
+- (void) markObjectAsCurrent:(OMHClipping *)object;
+- (void) markObjectAsCurrentWithoutClipboard:(OMHClipping *)object;
 - (void) rapidPaste;
 
 
