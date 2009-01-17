@@ -186,6 +186,7 @@
  */
 - (void) applicationWillBecomeActive:(NSNotification *)aNotification
 {
+    // Don't show the main window if we're starting up for the first time.
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];    
     if ( [defaults boolForKey:@"hasLaunchedBefore"] )
     {
@@ -197,6 +198,7 @@
 
 - (void) applicationWillResignActive:(NSNotification *)aNotification
 {
+    [[OMHStatusItemWindowController sharedWindowController] close];
     [NSApp hide:self];
 }
 
