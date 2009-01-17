@@ -18,8 +18,39 @@
 
 #pragma mark -
 #pragma mark Initialization and Setup
+
++ (void) initialize;
+{
+	// Set default values for preferences
+	NSMutableDictionary *defaultValues = [NSMutableDictionary dictionary];
+    
+    // Register Ctrl+Command+C as the default short cut
+    [defaultValues setObject:[NSNumber numberWithShort:8] forKey:@"activateKey"];
+    [defaultValues setObject:[NSNumber numberWithUnsignedInt:768] forKey:@"activateModifier"];
+    
+    // Register Shift+Command+V as the default short cut
+    [defaultValues setObject:[NSNumber numberWithShort:9] forKey:@"rapidPasteKey"];
+    [defaultValues setObject:[NSNumber numberWithUnsignedInt:768] forKey:@"rapidPasteModifier"];
+    
+    // Set default limit for when to purge old clippings
+    [defaultValues setObject:[NSNumber numberWithInt:500] forKey:@"clippingPurgeLimit"];
+    
+    // Set a flag to know if we've ever started before
+    [defaultValues setObject:[NSNumber numberWithBool:NO] forKey:@"hasLaunchedBefore"];
+    
+	[[NSUserDefaults standardUserDefaults] registerDefaults:defaultValues];
+}
+
 - (void) awakeFromNib
 {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];    
+
+    // Show floating helper window
+    if ( ![defaults boolForKey:@"hasLaunchedBefore"] )
+    {
+        [[OMHStatusItemWindowController sharedWindowController] showWindow:self];
+    }
+    
     // Create the status menu item
     [self createStatusMenu];
  
@@ -31,7 +62,6 @@
     [[OMHPreferenceController sharedPrefsWindowController] loadHotKeyFromUserDefaults];
 
     // Observe certain user default keypaths
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];    
     [defaults addObserver:self forKeyPath:@"clippingPurgeLimit" options:0 context:NULL];
 
     // Set purge limit
@@ -48,25 +78,30 @@
  * Creates a status menu item visible in the top right of the screen.
  */
 - (void) createStatusMenu
-{
+{        
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:27];
-	[statusItem setImage:[NSImage imageNamed:@"clyppan-small"]];
-	[statusItem setHighlightMode:YES];	 
+    [statusItem setHighlightMode:YES];	 
     [statusItem setTarget:self];
-    [statusItem setAction:@selector( statusMenuItemClicked )];    
+    [statusItem setAction:@selector( statusMenuItemClicked )];       
+    [statusItem setImage:[NSImage imageNamed:@"clyppan-small"]];
 }
 
 
 #pragma mark -
 #pragma mark Interface Actions
 
+- (IBAction) showMainWindow:(id)sender;
+{
+    [NSApp activateIgnoringOtherApps:YES]; 
+    [mainWindow makeKeyAndOrderFront:self];
+}
+
 /*!
  * Handles the event of the status menu item getting clicked.
  */
 - (void) statusMenuItemClicked
 {
-    [NSApp activateIgnoringOtherApps:YES]; 
-    
+    [self showMainWindow:self];
 }
 
 - (IBAction) showPreferencesWindow:(id)sender
@@ -107,9 +142,34 @@
     NSLog( @"MOC is saved" );
 }
 
+/* 
+ * Returns the string representation the activate keyboard shortcut 
+ */
+- (NSString *) activateKeyComboString
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    signed short activateKey = [[defaults objectForKey:@"activateKey"] shortValue];
+    unsigned int activateModifier = [[defaults objectForKey:@"activateModifier"] unsignedIntValue];
+    
+	return [NSString stringWithFormat: @"%@%@",
+            SRStringForCocoaModifierFlags( SRCarbonToCocoaFlags( activateModifier ) ),
+            SRStringForKeyCode( activateKey )];
+}
+
 
 #pragma mark -
 #pragma mark Notifications / Delegation methods
+
+- (void) windowDidBecomeKey:(NSNotification *)notification
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ( [defaults boolForKey:@"hasLaunchedBefore"] )
+    {
+        [[OMHStatusItemWindowController sharedWindowController] close];
+        [defaults setBool:YES forKey:@"hasLaunchedBefore"];        
+    }
+}
 
 - (void) applicationDidFinishLaunching:(NSNotification *)aNotification
 {
@@ -126,11 +186,13 @@
  */
 - (void) applicationWillBecomeActive:(NSNotification *)aNotification
 {
-    if ( ![mainWindow isVisible] )
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];    
+    if ( [defaults boolForKey:@"hasLaunchedBefore"] )
     {
-        [mainWindow orderFrontRegardless];
+        [self showMainWindow:self];        
     }
-    [mainWindow makeKeyAndOrderFront:self];
+    
+    [defaults setBool:YES forKey:@"hasLaunchedBefore"];
 }
 
 - (void) applicationWillResignActive:(NSNotification *)aNotification
@@ -150,8 +212,7 @@
         }
         else
         {
-            [NSApp activateIgnoringOtherApps:YES];
-            [mainWindow makeKeyAndOrderFront:self];
+            [self showMainWindow:self];
         }            
     }
     else if ( [identifier isEqualTo:ShortcutRapidPasteId] )
@@ -174,7 +235,6 @@
 
 -(void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context 
 {
-    NSLog( @"Key changed %@", keyPath );
     if ( [keyPath isEqualToString:@"clippingPurgeLimit"] )
     {
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -185,6 +245,7 @@
 
 #pragma mark -
 #pragma mark Core data
+
 /**
  Returns the support folder for the application, used to store the Core Data
  store file.  This code uses a folder named "Clyppan" for
@@ -279,22 +340,6 @@
 - (NSUndoManager *)windowWillReturnUndoManager:(NSWindow *)window {
     return [[self managedObjectContext] undoManager];
 }
-
-
-///**
-// Performs the save action for the application, which is to send the save:
-// message to the application's managed object context.  Any encountered errors
-// are presented to the user.
-// */
-//
-//- (IBAction) saveAction:(id)sender {
-//    
-//    NSError *error = nil;
-//    if (![[self managedObjectContext] save:&error]) {
-//        [[NSApplication sharedApplication] presentError:error];
-//    }
-//}
-
 
 /**
  Implementation of the applicationShouldTerminate: method, used here to

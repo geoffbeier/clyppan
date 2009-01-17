@@ -8,8 +8,7 @@
 		<string key="IBDocument.HIToolboxVersion">353.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="541"/>
-			<integer value="580"/>
+			<integer value="21"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -40,7 +39,7 @@
 			<object class="NSWindowTemplate" id="483958638">
 				<int key="NSWindowStyleMask">271</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{722, 361}, {464, 337}}</string>
+				<string key="NSWindowRect">{{722, 379}, {378, 319}}</string>
 				<int key="NSWTFlags">1886912512</int>
 				<string key="NSWindowTitle">Clyppan</string>
 				<string key="NSWindowClass">OMHMainWindow</string>
@@ -490,7 +489,7 @@ ARcABAAAAAEAAAACARwAAwAAAAEAAQAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 										<object class="NSTableView" id="203304861">
 											<reference key="NSNextResponder" ref="507919604"/>
 											<int key="NSvFlags">256</int>
-											<string key="NSFrameSize">{464, 317}</string>
+											<string key="NSFrameSize">{378, 299}</string>
 											<reference key="NSSuperview" ref="507919604"/>
 											<bool key="NSEnabled">YES</bool>
 											<object class="_NSCornerView" key="NSCornerView">
@@ -501,7 +500,7 @@ ARcABAAAAAEAAAACARwAAwAAAAEAAQAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 											<object class="NSMutableArray" key="NSTableColumns">
 												<bool key="EncodedWithXMLCoder">YES</bool>
 												<object class="NSTableColumn" id="448859602">
-													<double key="NSWidth">4.610000e+02</double>
+													<double key="NSWidth">3.750000e+02</double>
 													<double key="NSMinWidth">3.000000e+01</double>
 													<double key="NSMaxWidth">5.000000e+03</double>
 													<object class="NSTableHeaderCell" key="NSHeaderCell">
@@ -566,7 +565,7 @@ ARcABAAAAAEAAAACARwAAwAAAAEAAQAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 											<bool key="NSAllowsTypeSelect">YES</bool>
 										</object>
 									</object>
-									<string key="NSFrameSize">{464, 317}</string>
+									<string key="NSFrameSize">{378, 299}</string>
 									<reference key="NSSuperview" ref="646364350"/>
 									<reference key="NSNextKeyView" ref="203304861"/>
 									<reference key="NSDocView" ref="203304861"/>
@@ -593,7 +592,7 @@ ARcABAAAAAEAAAACARwAAwAAAAEAAQAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 									<double key="NSPercent">9.981618e-01</double>
 								</object>
 							</object>
-							<string key="NSFrame">{{0, 20}, {464, 317}}</string>
+							<string key="NSFrame">{{0, 20}, {378, 299}}</string>
 							<reference key="NSSuperview" ref="823886803"/>
 							<reference key="NSNextKeyView" ref="507919604"/>
 							<int key="NSsFlags">528</int>
@@ -605,7 +604,7 @@ ARcABAAAAAEAAAACARwAAwAAAAEAAQAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 						<object class="NSTextField" id="847959752">
 							<reference key="NSNextResponder" ref="823886803"/>
 							<int key="NSvFlags">290</int>
-							<string key="NSFrame">{{84, 4}, {296, 14}}</string>
+							<string key="NSFrame">{{84, 4}, {210, 14}}</string>
 							<reference key="NSSuperview" ref="823886803"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="370501744">
@@ -624,7 +623,7 @@ ARcABAAAAAEAAAACARwAAwAAAAEAAQAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 							</object>
 						</object>
 					</object>
-					<string key="NSFrameSize">{464, 337}</string>
+					<string key="NSFrameSize">{378, 319}</string>
 					<reference key="NSSuperview"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1440, 878}}</string>
@@ -3299,10 +3298,10 @@ ARcABAAAAAEAAAACARwAAwAAAAEAAQAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 					<reference ref="9"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<reference ref="9"/>
-					<string>{{83, 487}, {464, 337}}</string>
-					<string>{{83, 487}, {464, 337}}</string>
+					<string>{{83, 505}, {378, 319}}</string>
+					<string>{{83, 505}, {378, 319}}</string>
 					<reference ref="9"/>
-					<reference ref="9"/>
+					<boolean value="NO"/>
 					<reference ref="9"/>
 					<string>{213, 107}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3455,7 +3454,7 @@ ARcABAAAAAEAAAACARwAAwAAAAEAAQAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">676</int>
+			<int key="maxID">695</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -3467,11 +3466,13 @@ ARcABAAAAAEAAAACARwAAwAAAAEAAQAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSMutableArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>showMainWindow:</string>
 							<string>showPreferencesWindow:</string>
 							<string>toogleQuickPreviewWindow:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 						</object>

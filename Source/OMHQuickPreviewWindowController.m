@@ -18,7 +18,7 @@ static OMHQuickPreviewWindowController *_sharedOMHQuickPreviewWindowController =
 #pragma mark -
 #pragma mark Class Methods
 
-+ (OMHQuickPreviewWindowController *)sharedWindowController
++ (OMHQuickPreviewWindowController *) sharedWindowController
 {
 	if ( !_sharedOMHQuickPreviewWindowController ) 
     {

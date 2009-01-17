@@ -9,7 +9,7 @@
 #import "OMHClipboardController.h"
 
 
-const float PasteboardPullInterval = 0.5;
+const float PasteboardPullInterval = 0.45;
 static OMHClipboardController *_OMHClipboardController = nil;
 
 

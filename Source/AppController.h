@@ -14,6 +14,7 @@
 #import "OMHClipboardController.h"
 #import "OMHPreferenceController.h"
 #import "OMHQuickPreviewWindowController.h"
+#import "OMHStatusItemWindowController.h"
 
 
 #define autoSaveInterval 60*10 // How often should we save the clippings
@@ -26,15 +27,15 @@
     
     // Controllers
     IBOutlet OMHClippingController *clippingController;
-    
+
     // Core data
     NSPersistentStoreCoordinator *persistentStoreCoordinator;
     NSManagedObjectModel *managedObjectModel;
     NSManagedObjectContext *managedObjectContext;    
- 
+
     // Other
     NSStatusItem *statusItem;
-    NSTimer *autoSaveTimer;
+    NSTimer *autoSaveTimer;   
 }
 
 // Properties
@@ -42,6 +43,7 @@
 @property( nonatomic, retain ) NSWindow *mainWindow;
 
 // Actions
+- (IBAction) showMainWindow:(id)sender;
 - (IBAction) showPreferencesWindow:(id)sender;
 - (IBAction) toogleQuickPreviewWindow:(id)sender;
 
@@ -49,6 +51,7 @@
 - (void) createStatusMenu;
 - (void) flashStatusMenu;
 - (void) statusMenuItemClicked;
+- (NSString *) activateKeyComboString;
 
 // Delegation methods
 - (void) shortcutDidChange:(NSString *)shortcutId keyCombo:(NSValue *)wrappedKeyCombo;
@@ -57,6 +60,5 @@
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator;
 - (NSManagedObjectModel *)managedObjectModel;
 - (NSManagedObjectContext *)managedObjectContext;
-
 
 @end

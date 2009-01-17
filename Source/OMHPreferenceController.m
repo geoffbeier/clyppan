@@ -17,25 +17,6 @@ static OMHPreferenceController *_sharedPrefsWindowController = nil;
 
 @synthesize delegate;
 
-+ (void) initialize;
-{
-	// Set default values for preferences
-	NSMutableDictionary *defaultValues = [NSMutableDictionary dictionary];
-    
-    // Register Ctrl+Command+C as the default short cut
-    [defaultValues setObject:[NSNumber numberWithShort:8] forKey:@"activateKey"];
-    [defaultValues setObject:[NSNumber numberWithUnsignedInt:768] forKey:@"activateModifier"];
-
-    // Register Shift+Command+V as the default short cut
-    [defaultValues setObject:[NSNumber numberWithShort:9] forKey:@"rapidPasteKey"];
-    [defaultValues setObject:[NSNumber numberWithUnsignedInt:768] forKey:@"rapidPasteModifier"];
-
-    // Set default limit for when to purge old clippings
-    [defaultValues setObject:[NSNumber numberWithInt:500] forKey:@"clippingPurgeLimit"];
-        
-	[[NSUserDefaults standardUserDefaults] registerDefaults:defaultValues];
-}
-
 + (OMHPreferenceController *) sharedPrefsWindowController
 {
 	if (!_sharedPrefsWindowController) {

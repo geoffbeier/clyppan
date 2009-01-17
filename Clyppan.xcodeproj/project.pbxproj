@@ -24,6 +24,7 @@
 		EE1429150F1D25BB002F1FE7 /* Clyppan.icns in Resources */ = {isa = PBXBuildFile; fileRef = EE1429100F1D25BB002F1FE7 /* Clyppan.icns */; };
 		EE1429160F1D25BB002F1FE7 /* clyppan-small.png in Resources */ = {isa = PBXBuildFile; fileRef = EE1429110F1D25BB002F1FE7 /* clyppan-small.png */; };
 		EE3FE3CF0F211B0E00B09105 /* OMHClipping.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3FE3CD0F211B0E00B09105 /* OMHClipping.m */; };
+		EE3FE4010F211EB000B09105 /* MAAttachedWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3FE4000F211EB000B09105 /* MAAttachedWindow.m */; };
 		EE4A8F7A0F1E075B007DE4BF /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE4A8F780F1E075B007DE4BF /* Preferences.xib */; };
 		EE4A901A0F1E1A17007DE4BF /* Check.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EE4A90190F1E1A17007DE4BF /* Check.pdf */; };
 		EE4A92060F1E83E9007DE4BF /* QuickPreview.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE4A92040F1E83E9007DE4BF /* QuickPreview.xib */; };
@@ -32,6 +33,8 @@
 		EE4A93D40F1F8825007DE4BF /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE4A93D20F1F8825007DE4BF /* Sparkle.framework */; };
 		EE4A93E80F1F8845007DE4BF /* ShortcutRecorder.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EE4A93D10F1F8825007DE4BF /* ShortcutRecorder.framework */; };
 		EE4A93E90F1F8845007DE4BF /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EE4A93D20F1F8825007DE4BF /* Sparkle.framework */; };
+		EE5A52BD0F22285000919974 /* OMHStatusItemWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5A52BC0F22285000919974 /* OMHStatusItemWindowController.m */; };
+		EE5A52C70F222C6400919974 /* StatusItemHelperWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE5A52C50F222C6400919974 /* StatusItemHelperWindow.xib */; };
 		EE71BBFA0F1F888E00F130A9 /* ImageTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE71BBF80F1F888E00F130A9 /* ImageTextCell.m */; };
 		EE71BBFD0F1F88A200F130A9 /* OMHShortcutKey.m in Sources */ = {isa = PBXBuildFile; fileRef = EE71BBFC0F1F88A200F130A9 /* OMHShortcutKey.m */; };
 		EE71BC000F1F88B700F130A9 /* DBPrefsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE71BBFF0F1F88B700F130A9 /* DBPrefsWindowController.m */; };
@@ -87,12 +90,17 @@
 		EE1429110F1D25BB002F1FE7 /* clyppan-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "clyppan-small.png"; path = "Resources/clyppan-small.png"; sourceTree = SOURCE_ROOT; };
 		EE3FE3CD0F211B0E00B09105 /* OMHClipping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OMHClipping.m; path = Source/OMHClipping.m; sourceTree = SOURCE_ROOT; };
 		EE3FE3CE0F211B0E00B09105 /* OMHClipping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OMHClipping.h; path = Source/OMHClipping.h; sourceTree = SOURCE_ROOT; };
+		EE3FE3FF0F211EB000B09105 /* MAAttachedWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MAAttachedWindow.h; path = ../collections/Views/MAAttachedWindow.h; sourceTree = SOURCE_ROOT; };
+		EE3FE4000F211EB000B09105 /* MAAttachedWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MAAttachedWindow.m; path = ../collections/Views/MAAttachedWindow.m; sourceTree = SOURCE_ROOT; };
 		EE4A8F790F1E075B007DE4BF /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Preferences.xib; sourceTree = "<group>"; };
 		EE4A90190F1E1A17007DE4BF /* Check.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Check.pdf; path = Resources/Check.pdf; sourceTree = SOURCE_ROOT; };
 		EE4A92050F1E83E9007DE4BF /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/QuickPreview.xib; sourceTree = "<group>"; };
 		EE4A92870F1E8EF9007DE4BF /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Credits.rtf; path = Resources/Credits.rtf; sourceTree = SOURCE_ROOT; };
 		EE4A93D10F1F8825007DE4BF /* ShortcutRecorder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShortcutRecorder.framework; path = Frameworks/ShortcutRecorder.framework; sourceTree = SOURCE_ROOT; };
 		EE4A93D20F1F8825007DE4BF /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Frameworks/Sparkle.framework; sourceTree = SOURCE_ROOT; };
+		EE5A52BB0F22285000919974 /* OMHStatusItemWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMHStatusItemWindowController.h; sourceTree = "<group>"; };
+		EE5A52BC0F22285000919974 /* OMHStatusItemWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMHStatusItemWindowController.m; sourceTree = "<group>"; };
+		EE5A52C60F222C6400919974 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/StatusItemHelperWindow.xib; sourceTree = "<group>"; };
 		EE71BBF80F1F888E00F130A9 /* ImageTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageTextCell.m; path = ../collections/Cells/ImageTextCell.m; sourceTree = SOURCE_ROOT; };
 		EE71BBF90F1F888E00F130A9 /* ImageTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageTextCell.h; path = ../collections/Cells/ImageTextCell.h; sourceTree = SOURCE_ROOT; };
 		EE71BBFB0F1F88A200F130A9 /* OMHShortcutKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OMHShortcutKey.h; path = ../collections/Shortcut/OMHShortcutKey.h; sourceTree = SOURCE_ROOT; };
@@ -166,6 +174,7 @@
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				EE4A92040F1E83E9007DE4BF /* QuickPreview.xib */,
+				EE5A52C50F222C6400919974 /* StatusItemHelperWindow.xib */,
 			);
 			name = Clyppan;
 			sourceTree = "<group>";
@@ -213,12 +222,14 @@
 		EE0F27E80F1D2AD100E0C0FF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EE71BBF80F1F888E00F130A9 /* ImageTextCell.m */,
+				EE71BBF90F1F888E00F130A9 /* ImageTextCell.h */,
+				EE3FE3FF0F211EB000B09105 /* MAAttachedWindow.h */,
+				EE3FE4000F211EB000B09105 /* MAAttachedWindow.m */,
 				EE1428F70F1D259A002F1FE7 /* OMHClippingsTableView.h */,
 				EE1428F00F1D259A002F1FE7 /* OMHClippingsTableView.m */,
 				EE1428FA0F1D259A002F1FE7 /* OMHMainWindow.h */,
 				EE1428F60F1D259A002F1FE7 /* OMHMainWindow.m */,
-				EE71BBF80F1F888E00F130A9 /* ImageTextCell.m */,
-				EE71BBF90F1F888E00F130A9 /* ImageTextCell.h */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -233,10 +244,12 @@
 				EE1428EF0F1D259A002F1FE7 /* OMHClippingController.m */,
 				EE1428F20F1D259A002F1FE7 /* OMHClipboardController.h */,
 				EE1428F50F1D259A002F1FE7 /* OMHClipboardController.m */,
-				EE1428FE0F1D259A002F1FE7 /* OMHQuickPreviewWindowController.h */,
-				EE1428F90F1D259A002F1FE7 /* OMHQuickPreviewWindowController.m */,
 				EE71BBFB0F1F88A200F130A9 /* OMHShortcutKey.h */,
 				EE71BBFC0F1F88A200F130A9 /* OMHShortcutKey.m */,
+				EE5A52BB0F22285000919974 /* OMHStatusItemWindowController.h */,
+				EE5A52BC0F22285000919974 /* OMHStatusItemWindowController.m */,
+				EE1428FE0F1D259A002F1FE7 /* OMHQuickPreviewWindowController.h */,
+				EE1428F90F1D259A002F1FE7 /* OMHQuickPreviewWindowController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -340,6 +353,7 @@
 				EE4A92880F1E8EF9007DE4BF /* Credits.rtf in Resources */,
 				EE71BC0C0F1F88E100F130A9 /* Shortcuts.png in Resources */,
 				EE71BC0D0F1F88E100F130A9 /* Update.tiff in Resources */,
+				EE5A52C70F222C6400919974 /* StatusItemHelperWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +377,8 @@
 				EE71BBFD0F1F88A200F130A9 /* OMHShortcutKey.m in Sources */,
 				EE71BC000F1F88B700F130A9 /* DBPrefsWindowController.m in Sources */,
 				EE3FE3CF0F211B0E00B09105 /* OMHClipping.m in Sources */,
+				EE3FE4010F211EB000B09105 /* MAAttachedWindow.m in Sources */,
+				EE5A52BD0F22285000919974 /* OMHStatusItemWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +415,14 @@
 				EE4A92050F1E83E9007DE4BF /* English */,
 			);
 			name = QuickPreview.xib;
+			sourceTree = "<group>";
+		};
+		EE5A52C50F222C6400919974 /* StatusItemHelperWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE5A52C60F222C6400919974 /* English */,
+			);
+			name = StatusItemHelperWindow.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

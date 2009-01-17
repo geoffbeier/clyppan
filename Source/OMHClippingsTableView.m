@@ -108,7 +108,7 @@
 - (void) highlightSelectionInClipRect:(NSRect)rect;
 {
     NSResponder *firstResponder = [[self window] firstResponder];
-    if (![firstResponder isKindOfClass:[NSView class]] ||![(NSView *)firstResponder isDescendantOf:self] || ![[self window] isKeyWindow] ) 
+    if ( ![firstResponder isKindOfClass:[NSView class]] || ![(NSView *)firstResponder isDescendantOf:self] || ![[self window] isKeyWindow] ) 
     {
         [cell setTextColor:[NSColor blackColor]];
     }
