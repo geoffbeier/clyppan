@@ -310,7 +310,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>20</integer>
+									<integer>22</integer>
 									<integer>13</integer>
 									<integer>3</integer>
 									<integer>0</integer>
@@ -352,7 +352,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>EED928070EE3BE2400448843</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>AppController.m</string>
+								<string>OMHClippingController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -360,11 +360,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>EED928080EE3BE2400448843</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>AppController.m</string>
+										<string>OMHClippingController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>EE5A54360F236B7A00919974</string>
+										<string>EE5A54560F2387CF00919974</string>
 										<key>history</key>
 										<array>
 											<string>EE14291F0F1D25FA002F1FE7</string>
@@ -381,7 +381,6 @@
 											<string>EE3FE4200F21241A00B09105</string>
 											<string>EE3FE4B80F212DB500B09105</string>
 											<string>EE3FE5AC0F214ACF00B09105</string>
-											<string>EE3FE5AD0F214ACF00B09105</string>
 											<string>EE3FE5AE0F214ACF00B09105</string>
 											<string>EE3FE5BB0F214B8A00B09105</string>
 											<string>EE5A52790F21538D00919974</string>
@@ -401,9 +400,10 @@
 											<string>EE5A541C0F236A7D00919974</string>
 											<string>EE5A541D0F236A7D00919974</string>
 											<string>EE5A541E0F236A7D00919974</string>
-											<string>EE5A541F0F236A7D00919974</string>
-											<string>EE5A54300F236B7500919974</string>
-											<string>EE5A54310F236B7500919974</string>
+											<string>EE5A54410F23866900919974</string>
+											<string>EE5A54420F23866900919974</string>
+											<string>EE5A54430F23866900919974</string>
+											<string>EE5A544D0F23875500919974</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -468,6 +468,9 @@
 											<string>EE5A54260F236A7D00919974</string>
 											<string>EE5A54270F236A7D00919974</string>
 											<string>EE5A54320F236B7500919974</string>
+											<string>EE5A54450F23866900919974</string>
+											<string>EE5A54460F23866900919974</string>
+											<string>EE5A54470F23866900919974</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -629,8 +632,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXProjectModuleGUID</key>
@@ -767,7 +768,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>253979514.29818299</real>
+	<real>253986767.89973399</real>
 	<key>ToolbarDisplayMode</key>
 	<integer>2</integer>
 	<key>ToolbarIsVisible</key>

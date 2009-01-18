@@ -252,8 +252,10 @@
     [pb declareTypes:[NSArray arrayWithObject:NSStringPboardType] owner:nil];
     [pb setString:[self.currentActiveItem.content string] forType:NSStringPboardType];    
     
-    //    [pb declareTypes:[NSArray arrayWithObject:NSRTFPboardType] owner:nil];
-    //    [pb setString:self.currentActiveItem.content forType:NSRTFPboardType];    
+    NSRange range = NSMakeRange( 0, [self.currentActiveItem.content length] );
+    NSData *data = [self.currentActiveItem.content RTFFromRange:range documentAttributes:nil];
+    [pb declareTypes:[NSArray arrayWithObject:NSRTFPboardType] owner:nil];
+    [pb setData:data forType:NSRTFPboardType];
 }
 
 - (void) markObjectAsCurrentWithoutClipboard:(OMHClipping *)object;

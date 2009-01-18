@@ -2,3 +2,4 @@
 .gitignore
 build
 .*oh\..*
+.DS_Store
