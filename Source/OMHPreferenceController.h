@@ -28,6 +28,7 @@ extern NSString *ShortcutRapidPasteId;
 // Properties
 @property( nonatomic, assign ) id delegate;
 
+// Class methods
 + (OMHPreferenceController *)sharedPrefsWindowController;
 
 // Methods

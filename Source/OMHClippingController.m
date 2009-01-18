@@ -195,7 +195,7 @@
     [alert addButtonWithTitle:@"Remove"];
     [alert addButtonWithTitle:@"Don't Remove"];
     [alert setMessageText:@"Are you sure you want to remove the selected clipping?"];
-    [alert setInformativeText:@"Deleted clippings cannot be restored."];
+    [alert setInformativeText:@"This action cannot be undone."];
     [alert setAlertStyle:NSCriticalAlertStyle];
     
     [alert beginSheetModalForWindow:[[NSApp delegate] mainWindow]
@@ -214,7 +214,7 @@
     [alert addButtonWithTitle:@"Remove"];
     [alert addButtonWithTitle:@"Don't Remove"];
     [alert setMessageText:@"Are you sure you want to remove all clippings?"];
-    [alert setInformativeText:@"Deleted clippings cannot be restored."];
+    [alert setInformativeText:@"This action cannot be undone."];
     [alert setAlertStyle:NSCriticalAlertStyle];
     
     [alert beginSheetModalForWindow:[[NSApp delegate] mainWindow]

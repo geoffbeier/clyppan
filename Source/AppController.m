@@ -33,7 +33,7 @@
     [defaultValues setObject:[NSNumber numberWithUnsignedInt:768] forKey:@"rapidPasteModifier"];
     
     // Set default limit for when to purge old clippings
-    [defaultValues setObject:[NSNumber numberWithInt:500] forKey:@"clippingPurgeLimit"];
+    [defaultValues setObject:[NSNumber numberWithInt:1000] forKey:@"clippingPurgeLimit"];
     
     // Set a flag to know if we've ever started before
     [defaultValues setObject:[NSNumber numberWithBool:NO] forKey:@"hasLaunchedBefore"];

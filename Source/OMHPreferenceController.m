@@ -13,9 +13,12 @@ NSString *ShortcutRapidPasteId = @"OHMRapidPaste";
 
 static OMHPreferenceController *_sharedPrefsWindowController = nil;
 
+
 @implementation OMHPreferenceController
 
+
 @synthesize delegate;
+
 
 + (OMHPreferenceController *) sharedPrefsWindowController
 {
@@ -73,7 +76,7 @@ static OMHPreferenceController *_sharedPrefsWindowController = nil;
     unsigned int activateModifier = [[defaults objectForKey:@"activateModifier"] unsignedIntValue];
     KeyCombo keyCombo = SRMakeKeyCombo( activateKey, SRCarbonToCocoaFlags( activateModifier ) );
     [activateControl setKeyCombo:keyCombo];
-    
+
     signed short rapidPasteKey = [[defaults objectForKey:@"rapidPasteKey"] shortValue];
     unsigned int rapidPasteModifier = [[defaults objectForKey:@"rapidPasteModifier"] unsignedIntValue];    
     keyCombo = SRMakeKeyCombo( rapidPasteKey, SRCarbonToCocoaFlags( rapidPasteModifier ) );
