@@ -6,6 +6,21 @@
 	objectVersion = 45;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		EE5A55050F24DD1900919974 /* Distribution */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = EE5A550D0F24DD3000919974 /* Build configuration list for PBXAggregateTarget "Distribution" */;
+			buildPhases = (
+				EE5A55040F24DD1900919974 /* ShellScript */,
+			);
+			dependencies = (
+				EE5A55090F24DD2D00919974 /* PBXTargetDependency */,
+			);
+			name = Distribution;
+			productName = Distribution;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7446970DB6B7EA00F9684A /* MainMenu.xib */; };
 		770B37ED0679A11B001EADE2 /* Clyppan_DataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 770B37EC0679A11B001EADE2 /* Clyppan_DataModel.xcdatamodel */; };
@@ -35,6 +50,7 @@
 		EE4A93E90F1F8845007DE4BF /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EE4A93D20F1F8825007DE4BF /* Sparkle.framework */; };
 		EE5A52BD0F22285000919974 /* OMHStatusItemWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5A52BC0F22285000919974 /* OMHStatusItemWindowController.m */; };
 		EE5A52C70F222C6400919974 /* StatusItemHelperWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE5A52C50F222C6400919974 /* StatusItemHelperWindow.xib */; };
+		EE5A54690F23DF3C00919974 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = EE5A54680F23DF3C00919974 /* dsa_pub.pem */; };
 		EE71BBFA0F1F888E00F130A9 /* ImageTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE71BBF80F1F888E00F130A9 /* ImageTextCell.m */; };
 		EE71BBFD0F1F88A200F130A9 /* OMHShortcutKey.m in Sources */ = {isa = PBXBuildFile; fileRef = EE71BBFC0F1F88A200F130A9 /* OMHShortcutKey.m */; };
 		EE71BC000F1F88B700F130A9 /* DBPrefsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE71BBFF0F1F88B700F130A9 /* DBPrefsWindowController.m */; };
@@ -42,6 +58,16 @@
 		EE71BC0D0F1F88E100F130A9 /* Update.tiff in Resources */ = {isa = PBXBuildFile; fileRef = EE71BC0B0F1F88E100F130A9 /* Update.tiff */; };
 		EEF4181A0F1D27A80037980E /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF418190F1D27A80037980E /* Carbon.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE5A55080F24DD2D00919974 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1107260486CEB800E47090 /* Clyppan */;
+			remoteInfo = Clyppan;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		EEF418CE0F1D2A0B0037980E /* Copy Frameworks */ = {
@@ -101,6 +127,7 @@
 		EE5A52BB0F22285000919974 /* OMHStatusItemWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMHStatusItemWindowController.h; sourceTree = "<group>"; };
 		EE5A52BC0F22285000919974 /* OMHStatusItemWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMHStatusItemWindowController.m; sourceTree = "<group>"; };
 		EE5A52C60F222C6400919974 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/StatusItemHelperWindow.xib; sourceTree = "<group>"; };
+		EE5A54680F23DF3C00919974 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dsa_pub.pem; path = Resources/dsa_pub.pem; sourceTree = "<group>"; };
 		EE71BBF80F1F888E00F130A9 /* ImageTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageTextCell.m; path = ../collections/Cells/ImageTextCell.m; sourceTree = SOURCE_ROOT; };
 		EE71BBF90F1F888E00F130A9 /* ImageTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageTextCell.h; path = ../collections/Cells/ImageTextCell.h; sourceTree = SOURCE_ROOT; };
 		EE71BBFB0F1F88A200F130A9 /* OMHShortcutKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OMHShortcutKey.h; path = ../collections/Shortcut/OMHShortcutKey.h; sourceTree = SOURCE_ROOT; };
@@ -191,6 +218,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EE5A54680F23DF3C00919974 /* dsa_pub.pem */,
 				EE4A92870F1E8EF9007DE4BF /* Credits.rtf */,
 				EE1429080F1D25A7002F1FE7 /* Images */,
 				8D1107310486CEB800E47090 /* Info.plist */,
@@ -332,6 +360,7 @@
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* Clyppan */,
+				EE5A55050F24DD1900919974 /* Distribution */,
 			);
 		};
 /* End PBXProject section */
@@ -354,10 +383,27 @@
 				EE71BC0C0F1F88E100F130A9 /* Shortcuts.png in Resources */,
 				EE71BC0D0F1F88E100F130A9 /* Update.tiff in Resources */,
 				EE5A52C70F222C6400919974 /* StatusItemHelperWindow.xib in Resources */,
+				EE5A54690F23DF3C00919974 /* dsa_pub.pem in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EE5A55040F24DD1900919974 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "set -o errexit\n\n[ $BUILD_STYLE = Release ] || { echo Distribution target requires \"'Release'\" build style; false; }\n\nVERSION=$(defaults read \"$BUILT_PRODUCTS_DIR/$PROJECT_NAME.app/Contents/Info\" CFBundleVersion)\nDOWNLOAD_BASE_URL=\"http://www.example.com/download/\"\nRELEASENOTES_URL=\"http://www.example.com/software/my-cool-app/release-notes.html#version-$VERSION\"\n\nARCHIVE_FILENAME=\"$PROJECT_NAME $VERSION.zip\"\nDOWNLOAD_URL=\"$DOWNLOAD_BASE_URL/$ARCHIVE_FILENAME\"\nKEYCHAIN_PRIVKEY_NAME=\"$PROJECT_NAME private Sparkle key\"\n\nWD=$PWD\ncd \"$BUILT_PRODUCTS_DIR\"\nrm -f \"$PROJECT_NAME\"*.zip\nzip -qr \"$ARCHIVE_FILENAME\" \"$PROJECT_NAME.app\"\ncp \"$ARCHIVE_FILENAME\" \"/Users/$USER/Desktop/\"\n\nSIZE=$(stat -f %z \"$ARCHIVE_FILENAME\")\nPUBDATE=$(date +\"%a, %d %b %G %T %z\")\nSIGNATURE=$(\n\topenssl dgst -sha1 -binary < \"$ARCHIVE_FILENAME\" \\\n\t| openssl dgst -dss1 -sign <(security find-generic-password -g -s \"$KEYCHAIN_PRIVKEY_NAME\" 2>&1 1>/dev/null | perl -pe '($_) = /\"(.+)\"/; s/\\\\012/\\n/g') \\\n\t| openssl enc -base64\n)\n\n[ $SIGNATURE ] || { echo Unable to load signing private key with name \"'$KEYCHAIN_PRIVKEY_NAME'\" from keychain; false; }\n\necho \"Signature: $SIGNATURE\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D11072C0486CEB800E47090 /* Sources */ = {
@@ -383,6 +429,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE5A55090F24DD2D00919974 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D1107260486CEB800E47090 /* Clyppan */;
+			targetProxy = EE5A55080F24DD2D00919974 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
@@ -503,6 +557,27 @@
 			};
 			name = Release;
 		};
+		EE5A55060F24DD1A00919974 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = Distribution;
+			};
+			name = Debug;
+		};
+		EE5A55070F24DD1A00919974 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = Distribution;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -520,6 +595,15 @@
 			buildConfigurations = (
 				26FC0A890875C7B200E6366F /* Debug */,
 				26FC0A8A0875C7B200E6366F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE5A550D0F24DD3000919974 /* Build configuration list for PBXAggregateTarget "Distribution" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE5A55060F24DD1A00919974 /* Debug */,
+				EE5A55070F24DD1A00919974 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

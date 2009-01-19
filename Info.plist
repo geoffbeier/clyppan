@@ -11,7 +11,7 @@
 	<key>CFBundleIconFile</key>
 	<string>Clyppan</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.omh.Clyppan</string>
+	<string>cc.omh.Clyppan</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundlePackageType</key>
@@ -19,7 +19,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>22</string>
+	<string>1.0</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>NSMainNibFile</key>
@@ -28,6 +28,10 @@
 	<string>NSApplication</string>
 	<key>NSUIElement</key>
 	<string>1</string>
+	<key>SUFeedURL</key>
+	<string>http://www.omh.cc/feeds/appcast/clyppan/</string>
+	<key>SUPublicDSAKeyFile</key>
+	<string>dsa_pub.pem</string>
 	<key>SUEnableAutomaticChecks</key>
 	<string>1</string>
 </dict>
