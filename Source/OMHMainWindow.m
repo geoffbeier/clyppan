@@ -24,6 +24,15 @@
         }
 	}
 
+    unichar key = [[event charactersIgnoringModifiers] characterAtIndex:0];
+    
+    // Esc?
+    if ( key == 27 )
+    {
+        [NSApp hide:self];
+        return YES;
+    }
+    
     return [super performKeyEquivalent:event];
 }
 
