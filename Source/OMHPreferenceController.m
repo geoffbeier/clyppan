@@ -20,11 +20,13 @@ static OMHPreferenceController *_sharedPrefsWindowController = nil;
 @synthesize delegate;
 
 
-+ (OMHPreferenceController *) sharedPrefsWindowController
++ (OMHPreferenceController *) sharedWindowController
 {
-	if (!_sharedPrefsWindowController) {
+	if ( !_sharedPrefsWindowController ) 
+    {
 		_sharedPrefsWindowController = [[self alloc] initWithWindowNibName:[self nibName]];
 	}
+
 	return _sharedPrefsWindowController;
 }
 
@@ -103,7 +105,7 @@ static OMHPreferenceController *_sharedPrefsWindowController = nil;
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         [defaults setObject:[NSNumber numberWithShort:keyCombo.code] forKey:@"rapidPasteKey"];
         [defaults setObject:[NSNumber numberWithUnsignedInt:keyCombo.flags] forKey:@"rapidPasteModifier"];                
-        
+
         [self tellDelegateShortcutDidChange:ShortcutRapidPasteId keyCombo:keyCombo];
     }
 }

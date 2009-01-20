@@ -58,8 +58,8 @@
     [[OMHShortcutKey sharedShortcutKey] setDelegate:self];
 
     // Set up the custom preference controller
-    [[OMHPreferenceController sharedPrefsWindowController] setDelegate:self];
-    [[OMHPreferenceController sharedPrefsWindowController] loadHotKeyFromUserDefaults];
+    [[OMHPreferenceController sharedWindowController] setDelegate:self];
+    [[OMHPreferenceController sharedWindowController] loadHotKeyFromUserDefaults];
 
     // Observe certain user default keypaths
     [defaults addObserver:self forKeyPath:@"clippingPurgeLimit" options:0 context:NULL];
@@ -226,6 +226,7 @@
 
 - (void) shortcutDidChange:(NSString *)shortcutId keyCombo:(NSValue *)wrappedKeyCombo;
 {
+    NSLog( @"change3" );
     KeyCombo keyCombo;
     [wrappedKeyCombo getValue:&keyCombo];
     

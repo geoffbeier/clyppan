@@ -29,7 +29,7 @@ extern NSString *ShortcutRapidPasteId;
 @property( nonatomic, assign ) id delegate;
 
 // Class methods
-+ (OMHPreferenceController *)sharedPrefsWindowController;
++ (OMHPreferenceController *) sharedWindowController;
 
 // Methods
 - (void) loadHotKeyFromUserDefaults;
