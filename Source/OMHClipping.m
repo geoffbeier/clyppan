@@ -111,7 +111,7 @@
                        operation:NSCompositeSourceOver 
                        fraction:1];
 
-        [stamp drawInRect:NSMakeRect( 13, 13, newImage.size.width / 1.70, newImage.size.height / 1.70 ) 
+        [stamp drawInRect:NSMakeRect( 15, 15, newImage.size.width / 1.90, newImage.size.height / 1.90 ) 
                  fromRect:NSMakeRect( 0, 0, stamp.size.width, stamp.size.height ) 
                 operation:NSCompositeSourceOver 
                  fraction:1];

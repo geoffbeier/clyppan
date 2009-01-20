@@ -8,7 +8,7 @@
 		<string key="IBDocument.HIToolboxVersion">353.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="2"/>
+			<integer value="21"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -459,9 +459,7 @@ ARcABAAAAAEAAAACARwAAwAAAAEAAQAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<reference ref="691873957"/>
 						<reference ref="712024405"/>
-						<reference ref="886542703"/>
 						<reference ref="359462539"/>
-						<reference ref="420906708"/>
 						<reference ref="70810048"/>
 						<reference ref="926179134"/>
 					</object>
@@ -1535,7 +1533,7 @@ ARcABAAAAAEAAAACARwAAwAAAAEAAQAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 				<bool key="NSFilterRestrictsInsertion">YES</bool>
 				<bool key="NSClearsFilterPredicateOnInsertion">YES</bool>
 			</object>
-			<object class="NSCustomObject" id="822017278">
+			<object class="NSCustomObject" id="391719546">
 				<string key="NSClassName">SUUpdater</string>
 			</object>
 		</object>
@@ -2974,7 +2972,7 @@ ARcABAAAAAEAAAACARwAAwAAAAEAAQAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">696</int>
-						<reference key="object" ref="822017278"/>
+						<reference key="object" ref="391719546"/>
 						<reference key="parent" ref="0"/>
 						<string key="objectName">Sparkle</string>
 					</object>
@@ -3313,8 +3311,8 @@ ARcABAAAAAEAAAACARwAAwAAAAEAAQAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 					<reference ref="9"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<reference ref="9"/>
-					<string>{{83, 505}, {378, 319}}</string>
-					<string>{{83, 505}, {378, 319}}</string>
+					<string>{{185, 371}, {378, 319}}</string>
+					<string>{{185, 371}, {378, 319}}</string>
 					<reference ref="9"/>
 					<boolean value="NO"/>
 					<reference ref="9"/>
@@ -3379,7 +3377,7 @@ ARcABAAAAAEAAAACARwAAwAAAAEAAQAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<reference ref="9"/>
-					<string>{{7, 799}, {616, 0}}</string>
+					<string>{{66, 690}, {616, 0}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{85, 653}, {194, 183}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
