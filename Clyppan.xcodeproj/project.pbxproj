@@ -64,7 +64,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8D1107260486CEB800E47090 /* Clyppan */;
+			remoteGlobalIDString = 8D1107260486CEB800E47090;
 			remoteInfo = Clyppan;
 		};
 /* End PBXContainerItemProxy section */
@@ -200,8 +200,6 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				EE4A92040F1E83E9007DE4BF /* QuickPreview.xib */,
-				EE5A52C50F222C6400919974 /* StatusItemHelperWindow.xib */,
 			);
 			name = Clyppan;
 			sourceTree = "<group>";
@@ -218,13 +216,15 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EE1429080F1D25A7002F1FE7 /* Images */,
+				2F7446970DB6B7EA00F9684A /* MainMenu.xib */,
+				EE4A92040F1E83E9007DE4BF /* QuickPreview.xib */,
+				EE4A8F780F1E075B007DE4BF /* Preferences.xib */,
+				EE5A52C50F222C6400919974 /* StatusItemHelperWindow.xib */,
 				EE5A54680F23DF3C00919974 /* dsa_pub.pem */,
 				EE4A92870F1E8EF9007DE4BF /* Credits.rtf */,
-				EE1429080F1D25A7002F1FE7 /* Images */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
-				2F7446970DB6B7EA00F9684A /* MainMenu.xib */,
-				EE4A8F780F1E075B007DE4BF /* Preferences.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -531,6 +531,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_OBJC_GC = required;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
@@ -539,6 +541,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				SDKROOT = macosx10.5;
+				STRIP_INSTALLED_PRODUCT = NO;
 			};
 			name = Debug;
 		};
@@ -546,7 +549,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEPLOYMENT_POSTPROCESSING = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_OBJC_GC = required;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
@@ -554,6 +559,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
 				SDKROOT = macosx10.5;
+				SEPARATE_STRIP = YES;
+				STRIP_INSTALLED_PRODUCT = YES;
 			};
 			name = Release;
 		};

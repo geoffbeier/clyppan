@@ -33,10 +33,7 @@
  */
 - (void) pasteboardUpdated:(id)newContent
 {
-    if ( [newContent isKindOfClass:[NSAttributedString class]] )
-        [self addObjectWithContent:newContent];
-    else
-        NSLog( @"The new clipboard content wasn't a NSAttributedString" );
+    [self addObjectWithContent:newContent];
 }
 
 - (void) addObject:(id)object
@@ -66,8 +63,26 @@
  * A check for duplicates is performed before adding anything. If
  * a duplicate is found it will be marked as the current clipping.
  */
-- (void) addObjectWithContent:(NSAttributedString *)content;
+- (void) addObjectWithContent:(id)newContent;
 {  
+    NSAttributedString *content;
+    NSString *type = NSStringPboardType;
+    
+    if ( [newContent isKindOfClass:[NSAttributedString class]] )
+    {
+        content = newContent;
+        type = NSRTFPboardType;
+    }
+    else if ( [newContent isKindOfClass:[NSString class]] )
+    {
+        content = [[NSAttributedString alloc] initWithString:newContent];
+    }
+    else
+    {
+        NSLog( @"The new clipboard content wasn't a NSAttributedString" ); 
+        return;
+    }
+        
     // Check if existing object exists...
     OMHClipping *existingObject = [self objectWithContent:content];
     if ( existingObject != nil )
@@ -78,6 +93,7 @@
     
     // Create new object and add it
     id object = [self createObject:content];
+    [object setContentType:type];
     [self addObject:object];
     [self markObjectAsCurrentWithoutClipboard:object];
 }

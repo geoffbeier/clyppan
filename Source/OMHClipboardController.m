@@ -81,7 +81,7 @@ static OMHClipboardController *_OMHClipboardController = nil;
     previousChangeCount = changeCount;
     
     NSData *data = nil;
-    NSAttributedString *string = nil;
+    id string = nil;
     
     if ( [[pboard types] containsObject:NSRTFPboardType] ) 
     {
@@ -90,8 +90,7 @@ static OMHClipboardController *_OMHClipboardController = nil;
     }    
     else if ( [[pboard types] containsObject:NSStringPboardType] ) 
     {
-        NSString *stringFromPboard = [pboard stringForType:NSStringPboardType];
-        string = [[NSAttributedString alloc] initWithString:stringFromPboard];
+        string = [pboard stringForType:NSStringPboardType];
     }
     
     if ( string != nil && [delegate respondsToSelector:@selector( pasteboardUpdated: )] )

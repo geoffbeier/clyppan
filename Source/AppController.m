@@ -226,7 +226,6 @@
 
 - (void) shortcutDidChange:(NSString *)shortcutId keyCombo:(NSValue *)wrappedKeyCombo;
 {
-    NSLog( @"change3" );
     KeyCombo keyCombo;
     [wrappedKeyCombo getValue:&keyCombo];
     

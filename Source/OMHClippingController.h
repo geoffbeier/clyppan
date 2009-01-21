@@ -28,7 +28,7 @@
 // Instance methods
 - (id) createObject:(NSAttributedString *)content;
 - (id) objectWithContent:(NSAttributedString *)content;
-- (void) addObjectWithContent:(NSAttributedString *)content;
+- (void) addObjectWithContent:(id)newContent;
 - (void) purgeUntilCountIs:(int)limit;
 - (void) removeAllObjects;
 

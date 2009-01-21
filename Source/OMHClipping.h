@@ -16,6 +16,7 @@
 @property( nonatomic, retain ) NSString *title;
 @property( nonatomic, retain ) NSAttributedString *content;
 @property( nonatomic, retain ) NSString *plainContent;
+@property( nonatomic, retain ) NSString *contentType;
 @property( nonatomic, readonly ) NSString *meta;
 @property( nonatomic, retain ) NSString *createdFromApp;
 @property( nonatomic, assign ) NSDate *lastUsed;

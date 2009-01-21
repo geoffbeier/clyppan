@@ -15,6 +15,7 @@
 @dynamic title;
 @dynamic content;
 @dynamic plainContent;
+@dynamic contentType;
 @dynamic meta;
 @dynamic createdFromApp;
 @dynamic lastUsed;
@@ -98,29 +99,10 @@
 
 - (NSImage *) image
 {
-    if ( [self.isCurrent boolValue] )
-    {
-        NSImage *newImage = [[NSImage alloc] initWithSize:NSMakeSize( 64, 64 )];
-        NSImage *cachedImage = [[NSWorkspace sharedWorkspace] iconForFileType:@".textClipping"];
-        NSImage *stamp = [NSImage imageNamed:@"Stamp"];
-        
-        [newImage lockFocus];
-        
-        [cachedImage drawInRect:NSMakeRect( 0, 0, newImage.size.width, newImage.size.height ) 
-                       fromRect:NSMakeRect( 0, 0, cachedImage.size.width, cachedImage.size.height ) 
-                       operation:NSCompositeSourceOver 
-                       fraction:1];
-
-        [stamp drawInRect:NSMakeRect( 15, 15, newImage.size.width / 1.90, newImage.size.height / 1.90 ) 
-                 fromRect:NSMakeRect( 0, 0, stamp.size.width, stamp.size.height ) 
-                operation:NSCompositeSourceOver 
-                 fraction:1];
-        
-        [newImage unlockFocus];
-        return newImage;
-    }
-
-    return [[NSWorkspace sharedWorkspace] iconForFileType:@".textClipping"];
+    if ( [self.contentType isEqualToString:NSStringPboardType] )
+        return [[NSWorkspace sharedWorkspace] iconForFileType:@".txt"];
+    else
+        return [[NSWorkspace sharedWorkspace] iconForFileType:@".rtf"];
 }
 
 - (NSString *) meta
