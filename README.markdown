@@ -1,21 +1,16 @@
-ABOUT
------
+# About
 
 Clyppan is a Free and Open Source clipboard history application for Mac OS X that's always at your fingertips.
 
 
+# Installation
 
-INSTALLATION
-------------
-
-Requirements
-============
+## Requirements
 
 To build Clyppan you need Xcode 3.1 and Leopard 10.5.6.
 
 
-Building
-========
+## Building
 
 Create a new directory and clone Clyppan and the Collections repository:
 
