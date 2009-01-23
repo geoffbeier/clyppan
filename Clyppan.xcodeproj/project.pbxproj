@@ -265,9 +265,9 @@
 		EE0F27E90F1D2AE200E0C0FF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EE0F27EB0F1D2B5400E0C0FF /* Preferences */,
 				EE6AD1290F296CF4000C38AC /* OMHStatusItemWindowController.h */,
 				EE6AD12A0F296CF4000C38AC /* OMHStatusItemWindowController.m */,
-				EE0F27EB0F1D2B5400E0C0FF /* Preferences */,
 				EE1428FB0F1D259A002F1FE7 /* AppController.h */,
 				EE1428F30F1D259A002F1FE7 /* AppController.m */,
 				EE1428FC0F1D259A002F1FE7 /* OMHClippingController.h */,
