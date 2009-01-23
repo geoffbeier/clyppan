@@ -99,10 +99,7 @@
 
 - (NSImage *) image
 {
-    if ( [self.contentType isEqualToString:NSStringPboardType] )
-        return [[NSWorkspace sharedWorkspace] iconForFileType:@".txt"];
-    else
-        return [[NSWorkspace sharedWorkspace] iconForFileType:@".rtf"];
+    return [[NSWorkspace sharedWorkspace] iconForFileType:NSFileTypeForHFSTypeCode( kClippingTextTypeIcon )];
 }
 
 - (NSString *) meta
