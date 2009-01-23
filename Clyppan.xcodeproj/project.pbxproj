@@ -48,9 +48,9 @@
 		EE4A93D40F1F8825007DE4BF /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE4A93D20F1F8825007DE4BF /* Sparkle.framework */; };
 		EE4A93E80F1F8845007DE4BF /* ShortcutRecorder.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EE4A93D10F1F8825007DE4BF /* ShortcutRecorder.framework */; };
 		EE4A93E90F1F8845007DE4BF /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EE4A93D20F1F8825007DE4BF /* Sparkle.framework */; };
-		EE5A52BD0F22285000919974 /* OMHStatusItemWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5A52BC0F22285000919974 /* OMHStatusItemWindowController.m */; };
 		EE5A52C70F222C6400919974 /* StatusItemHelperWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE5A52C50F222C6400919974 /* StatusItemHelperWindow.xib */; };
 		EE5A54690F23DF3C00919974 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = EE5A54680F23DF3C00919974 /* dsa_pub.pem */; };
+		EE6AD12B0F296CF4000C38AC /* OMHStatusItemWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6AD12A0F296CF4000C38AC /* OMHStatusItemWindowController.m */; };
 		EE71BBFA0F1F888E00F130A9 /* ImageTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE71BBF80F1F888E00F130A9 /* ImageTextCell.m */; };
 		EE71BBFD0F1F88A200F130A9 /* OMHShortcutKey.m in Sources */ = {isa = PBXBuildFile; fileRef = EE71BBFC0F1F88A200F130A9 /* OMHShortcutKey.m */; };
 		EE71BC000F1F88B700F130A9 /* DBPrefsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE71BBFF0F1F88B700F130A9 /* DBPrefsWindowController.m */; };
@@ -124,10 +124,10 @@
 		EE4A92870F1E8EF9007DE4BF /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Credits.rtf; path = Resources/Credits.rtf; sourceTree = SOURCE_ROOT; };
 		EE4A93D10F1F8825007DE4BF /* ShortcutRecorder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShortcutRecorder.framework; path = Frameworks/ShortcutRecorder.framework; sourceTree = SOURCE_ROOT; };
 		EE4A93D20F1F8825007DE4BF /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Frameworks/Sparkle.framework; sourceTree = SOURCE_ROOT; };
-		EE5A52BB0F22285000919974 /* OMHStatusItemWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMHStatusItemWindowController.h; sourceTree = "<group>"; };
-		EE5A52BC0F22285000919974 /* OMHStatusItemWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMHStatusItemWindowController.m; sourceTree = "<group>"; };
 		EE5A52C60F222C6400919974 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/StatusItemHelperWindow.xib; sourceTree = "<group>"; };
 		EE5A54680F23DF3C00919974 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dsa_pub.pem; path = Resources/dsa_pub.pem; sourceTree = "<group>"; };
+		EE6AD1290F296CF4000C38AC /* OMHStatusItemWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OMHStatusItemWindowController.h; path = Source/OMHStatusItemWindowController.h; sourceTree = SOURCE_ROOT; };
+		EE6AD12A0F296CF4000C38AC /* OMHStatusItemWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OMHStatusItemWindowController.m; path = Source/OMHStatusItemWindowController.m; sourceTree = SOURCE_ROOT; };
 		EE71BBF80F1F888E00F130A9 /* ImageTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageTextCell.m; path = ../collections/Cells/ImageTextCell.m; sourceTree = SOURCE_ROOT; };
 		EE71BBF90F1F888E00F130A9 /* ImageTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageTextCell.h; path = ../collections/Cells/ImageTextCell.h; sourceTree = SOURCE_ROOT; };
 		EE71BBFB0F1F88A200F130A9 /* OMHShortcutKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OMHShortcutKey.h; path = ../collections/Shortcut/OMHShortcutKey.h; sourceTree = SOURCE_ROOT; };
@@ -265,6 +265,8 @@
 		EE0F27E90F1D2AE200E0C0FF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EE6AD1290F296CF4000C38AC /* OMHStatusItemWindowController.h */,
+				EE6AD12A0F296CF4000C38AC /* OMHStatusItemWindowController.m */,
 				EE0F27EB0F1D2B5400E0C0FF /* Preferences */,
 				EE1428FB0F1D259A002F1FE7 /* AppController.h */,
 				EE1428F30F1D259A002F1FE7 /* AppController.m */,
@@ -274,8 +276,6 @@
 				EE1428F50F1D259A002F1FE7 /* OMHClipboardController.m */,
 				EE71BBFB0F1F88A200F130A9 /* OMHShortcutKey.h */,
 				EE71BBFC0F1F88A200F130A9 /* OMHShortcutKey.m */,
-				EE5A52BB0F22285000919974 /* OMHStatusItemWindowController.h */,
-				EE5A52BC0F22285000919974 /* OMHStatusItemWindowController.m */,
 				EE1428FE0F1D259A002F1FE7 /* OMHQuickPreviewWindowController.h */,
 				EE1428F90F1D259A002F1FE7 /* OMHQuickPreviewWindowController.m */,
 			);
@@ -424,7 +424,7 @@
 				EE71BC000F1F88B700F130A9 /* DBPrefsWindowController.m in Sources */,
 				EE3FE3CF0F211B0E00B09105 /* OMHClipping.m in Sources */,
 				EE3FE4010F211EB000B09105 /* MAAttachedWindow.m in Sources */,
-				EE5A52BD0F22285000919974 /* OMHStatusItemWindowController.m in Sources */,
+				EE6AD12B0F296CF4000C38AC /* OMHStatusItemWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
