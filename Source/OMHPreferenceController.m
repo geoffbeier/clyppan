@@ -8,8 +8,18 @@
 
 #import "OMHPreferenceController.h"
 
-NSString *ShortcutActivateAppId = @"OMHActivateApp";
-NSString *ShortcutRapidPasteId = @"OHMRapidPaste";
+
+// Preference constants
+NSString *OMHActivateAppKey = @"activateKey";
+NSString *OMHActivateAppModifierKey = @"activateModifier";
+NSString *OMHRapidPasteKey = @"rapidPasteKey";
+NSString *OMHRapidPasteModifierKey = @"rapidPasteModifier";
+NSString *OMHClippingPurgeLimitKey = @"clippingPurgeLimit";
+NSString *OMHAppHasLaunchedBeforeKey = @"hasLaunchedBefore";
+
+// Shortcut identifier constants.
+NSString *OMHShortcutActivateAppId = @"OMHActivateApp";
+NSString *OMHShortcutRapidPasteId = @"OHMRapidPaste";
 
 static OMHPreferenceController *_sharedPrefsWindowController = nil;
 
@@ -74,18 +84,18 @@ static OMHPreferenceController *_sharedPrefsWindowController = nil;
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
-    signed short activateKey = [[defaults objectForKey:@"activateKey"] shortValue];
-    unsigned int activateModifier = [[defaults objectForKey:@"activateModifier"] unsignedIntValue];
+    signed short activateKey = [[defaults objectForKey:OMHActivateAppKey] shortValue];
+    unsigned int activateModifier = [[defaults objectForKey:OMHActivateAppModifierKey] unsignedIntValue];
     KeyCombo keyCombo = SRMakeKeyCombo( activateKey, SRCarbonToCocoaFlags( activateModifier ) );
     [activateControl setKeyCombo:keyCombo];
 
-    signed short rapidPasteKey = [[defaults objectForKey:@"rapidPasteKey"] shortValue];
-    unsigned int rapidPasteModifier = [[defaults objectForKey:@"rapidPasteModifier"] unsignedIntValue];    
+    signed short rapidPasteKey = [[defaults objectForKey:OMHRapidPasteKey] shortValue];
+    unsigned int rapidPasteModifier = [[defaults objectForKey:OMHRapidPasteModifierKey] unsignedIntValue];    
     keyCombo = SRMakeKeyCombo( rapidPasteKey, SRCarbonToCocoaFlags( rapidPasteModifier ) );
     [rapidPasteControl setKeyCombo:keyCombo]; 
     
-    [self tellDelegateShortcutDidChange:ShortcutActivateAppId keyCombo:SRMakeKeyCombo( activateKey, activateModifier )];
-    [self tellDelegateShortcutDidChange:ShortcutRapidPasteId keyCombo:SRMakeKeyCombo( rapidPasteKey, rapidPasteModifier )];
+    [self tellDelegateShortcutDidChange:OMHShortcutActivateAppId keyCombo:SRMakeKeyCombo( activateKey, activateModifier )];
+    [self tellDelegateShortcutDidChange:OMHShortcutRapidPasteId keyCombo:SRMakeKeyCombo( rapidPasteKey, rapidPasteModifier )];
 }
 
 - (void) shortcutRecorder:(SRRecorderControl *)recorder keyComboDidChange:(KeyCombo)keyCombo
@@ -95,18 +105,18 @@ static OMHPreferenceController *_sharedPrefsWindowController = nil;
     if ( recorder == activateControl )
     {        
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        [defaults setObject:[NSNumber numberWithShort:keyCombo.code] forKey:@"activateKey"];
-        [defaults setObject:[NSNumber numberWithUnsignedInt:keyCombo.flags] forKey:@"activateModifier"];        
+        [defaults setObject:[NSNumber numberWithShort:keyCombo.code] forKey:OMHActivateAppKey];
+        [defaults setObject:[NSNumber numberWithUnsignedInt:keyCombo.flags] forKey:OMHActivateAppModifierKey];        
 
-        [self tellDelegateShortcutDidChange:ShortcutActivateAppId keyCombo:keyCombo];
+        [self tellDelegateShortcutDidChange:OMHShortcutRapidPasteId keyCombo:keyCombo];
     }
     else if ( recorder == rapidPasteControl )
     {
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        [defaults setObject:[NSNumber numberWithShort:keyCombo.code] forKey:@"rapidPasteKey"];
-        [defaults setObject:[NSNumber numberWithUnsignedInt:keyCombo.flags] forKey:@"rapidPasteModifier"];                
+        [defaults setObject:[NSNumber numberWithShort:keyCombo.code] forKey:OMHRapidPasteKey];
+        [defaults setObject:[NSNumber numberWithUnsignedInt:keyCombo.flags] forKey:OMHRapidPasteModifierKey];                
 
-        [self tellDelegateShortcutDidChange:ShortcutRapidPasteId keyCombo:keyCombo];
+        [self tellDelegateShortcutDidChange:OMHShortcutRapidPasteId keyCombo:keyCombo];
     }
 }
 

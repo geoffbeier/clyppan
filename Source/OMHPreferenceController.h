@@ -10,8 +10,19 @@
 #import "DBPrefsWindowController.h"
 #import <ShortcutRecorder/ShortcutRecorder.h>
 
-extern NSString *ShortcutActivateAppId;
-extern NSString *ShortcutRapidPasteId;
+
+// Preference constants
+extern NSString *OMHActivateAppKey;
+extern NSString *OMHActivateAppModifierKey;
+extern NSString *OMHRapidPasteKey;
+extern NSString *OMHRapidPasteModifierKey;
+extern NSString *OMHClippingPurgeLimitKey;
+extern NSString *OMHAppHasLaunchedBeforeKey;
+
+// Shortcut identifier constants.
+extern NSString *OMHShortcutActivateAppId;
+extern NSString *OMHShortcutRapidPasteId;
+
 
 @interface OMHPreferenceController : DBPrefsWindowController
 {

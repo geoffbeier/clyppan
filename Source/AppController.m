@@ -25,18 +25,18 @@
 	NSMutableDictionary *defaultValues = [NSMutableDictionary dictionary];
     
     // Register Ctrl+Command+C as the default short cut
-    [defaultValues setObject:[NSNumber numberWithShort:8] forKey:@"activateKey"];
-    [defaultValues setObject:[NSNumber numberWithUnsignedInt:768] forKey:@"activateModifier"];
+    [defaultValues setObject:[NSNumber numberWithShort:8] forKey:OMHActivateAppKey];
+    [defaultValues setObject:[NSNumber numberWithUnsignedInt:768] forKey:OMHActivateAppModifierKey];
     
     // Register Shift+Command+V as the default short cut
-    [defaultValues setObject:[NSNumber numberWithShort:9] forKey:@"rapidPasteKey"];
-    [defaultValues setObject:[NSNumber numberWithUnsignedInt:768] forKey:@"rapidPasteModifier"];
+    [defaultValues setObject:[NSNumber numberWithShort:9] forKey:OMHRapidPasteKey];
+    [defaultValues setObject:[NSNumber numberWithUnsignedInt:768] forKey:OMHRapidPasteModifierKey];
     
     // Set default limit for when to purge old clippings
-    [defaultValues setObject:[NSNumber numberWithInt:1000] forKey:@"clippingPurgeLimit"];
+    [defaultValues setObject:[NSNumber numberWithInt:1000] forKey:OMHClippingPurgeLimitKey];
     
     // Set a flag to know if we've ever started before
-    [defaultValues setObject:[NSNumber numberWithBool:NO] forKey:@"hasLaunchedBefore"];
+    [defaultValues setObject:[NSNumber numberWithBool:NO] forKey:OMHAppHasLaunchedBeforeKey];
     
 	[[NSUserDefaults standardUserDefaults] registerDefaults:defaultValues];
 }
@@ -46,7 +46,7 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];    
 
     // Show floating helper window
-    if ( ![defaults boolForKey:@"hasLaunchedBefore"] )
+    if ( ![defaults boolForKey:OMHAppHasLaunchedBeforeKey] )
     {
         [[OMHStatusItemWindowController sharedWindowController] showWindow:self];
     }
@@ -62,10 +62,10 @@
     [[OMHPreferenceController sharedWindowController] loadHotKeyFromUserDefaults];
 
     // Observe certain user default keypaths
-    [defaults addObserver:self forKeyPath:@"clippingPurgeLimit" options:0 context:NULL];
+    [defaults addObserver:self forKeyPath:OMHClippingPurgeLimitKey options:0 context:NULL];
 
     // Set purge limit
-    clippingController.clippingPurgeLimit = [[defaults objectForKey:@"clippingPurgeLimit"] intValue];    
+    clippingController.clippingPurgeLimit = [[defaults objectForKey:OMHClippingPurgeLimitKey] intValue];    
 
     // Set window collection behaviour
     [mainWindow setCollectionBehavior:NSWindowCollectionBehaviorCanJoinAllSpaces];  
@@ -149,8 +149,8 @@
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
-    signed short activateKey = [[defaults objectForKey:@"activateKey"] shortValue];
-    unsigned int activateModifier = [[defaults objectForKey:@"activateModifier"] unsignedIntValue];
+    signed short activateKey = [[defaults objectForKey:OMHActivateAppKey] shortValue];
+    unsigned int activateModifier = [[defaults objectForKey:OMHActivateAppModifierKey] unsignedIntValue];
     
 	return [NSString stringWithFormat: @"%@%@",
             SRStringForCocoaModifierFlags( SRCarbonToCocoaFlags( activateModifier ) ),
@@ -164,10 +164,10 @@
 - (void) windowDidBecomeKey:(NSNotification *)notification
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if ( [defaults boolForKey:@"hasLaunchedBefore"] )
+    if ( [defaults boolForKey:OMHAppHasLaunchedBeforeKey] )
     {
         [[OMHStatusItemWindowController sharedWindowController] close];
-        [defaults setBool:YES forKey:@"hasLaunchedBefore"];        
+        [defaults setBool:YES forKey:OMHAppHasLaunchedBeforeKey];        
     }
 }
 
@@ -188,12 +188,12 @@
 {
     // Don't show the main window if we're starting up for the first time.
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];    
-    if ( [defaults boolForKey:@"hasLaunchedBefore"] )
+    if ( [defaults boolForKey:OMHAppHasLaunchedBeforeKey] )
     {
         [self showMainWindow:self];        
     }
     
-    [defaults setBool:YES forKey:@"hasLaunchedBefore"];
+    [defaults setBool:YES forKey:OMHAppHasLaunchedBeforeKey];
 }
 
 - (void) applicationWillResignActive:(NSNotification *)aNotification
@@ -205,7 +205,7 @@
 - (void) handleHotKey:(NSString *)identifier;
 {
     [self flashStatusMenu];
-    if ( [identifier isEqualTo:ShortcutActivateAppId] )
+    if ( [identifier isEqualTo:OMHShortcutActivateAppId] )
     {
         if ( [mainWindow isKeyWindow] && [mainWindow isVisible] )
         {
@@ -217,7 +217,7 @@
             [self showMainWindow:self];
         }            
     }
-    else if ( [identifier isEqualTo:ShortcutRapidPasteId] )
+    else if ( [identifier isEqualTo:OMHShortcutRapidPasteId] )
     {
         [clippingController rapidPaste];
     }
@@ -237,10 +237,10 @@
 
 -(void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context 
 {
-    if ( [keyPath isEqualToString:@"clippingPurgeLimit"] )
+    if ( [keyPath isEqualToString:OMHClippingPurgeLimitKey  ] )
     {
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        clippingController.clippingPurgeLimit = [[defaults objectForKey:@"clippingPurgeLimit"] intValue];
+        clippingController.clippingPurgeLimit = [[defaults objectForKey:OMHClippingPurgeLimitKey] intValue];
     }
 }
 
