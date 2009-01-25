@@ -7,14 +7,16 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "AppController.h"
 #import "ImageTextCell.h"
+
+//@class ImageTextCell;
 
 
 @interface OMHClippingsTableView: NSTableView
 {
     ImageTextCell *cell;
 }
-
 
 // Interface actions
 - (IBAction) scrollToCurrentItem:(id)sender;

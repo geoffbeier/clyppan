@@ -8,14 +8,13 @@
 
 #import "OMHClippingController.h"
 #import "OMHClipboardController.h"
+#import "OMHClipping.h"
 
 
 @implementation OMHClippingController
 
-
 @synthesize currentActiveItem;
 @synthesize clippingPurgeLimit;
-
 
 - (void) awakeFromNib
 {
@@ -150,19 +149,6 @@
 }
 
 /*!
- * Marks the clipping at 'row' as current.
- *￼
- * @param ￼row The index of the object that should be marked.
- */
-- (void) markObjectAsSelectedOnRow:(NSInteger)row
-{
-    OMHClipping *object = [[self arrangedObjects] objectAtIndex:row];
-    [self markObjectAsCurrent:object];
-    
-    [self setSelectionIndex:row];
-}
-
-/*!
  * Peforms a Rapid Paste
  *
  * Rapid Paste takes the current item and changes the last used date to make it 
@@ -172,7 +158,7 @@
 - (void) rapidPaste;
 {
     OMHClipping *object = self.currentActiveItem;
-    [self markObjectAsSelectedOnRow:1];
+    [self markObjectAsSelectedOnRow:[NSNumber numberWithInt:1]];
 
     // Make timeIntervalSince1970 negative so the clipping will end up at the bottom
     NSTimeInterval interval = -fabs( [[NSDate date] timeIntervalSince1970] );
@@ -185,7 +171,7 @@
 {
     if ( [[self selectedObjects] objectAtIndex:0] == self.currentActiveItem )
         if ( [[self arrangedObjects] count] >= 2 )
-            [self markObjectAsSelectedOnRow:1];
+            [self markObjectAsSelectedOnRow:[NSNumber numberWithInt:1]];
     
     [super remove:sender];
 }
@@ -258,6 +244,19 @@
 - (IBAction) markAsCurrent:(id)sender;
 {
     [self markObjectAsCurrent:[[self selectedObjects] objectAtIndex:0]];
+}
+
+/*!
+ * Marks the clipping at 'row' as current.
+ *￼
+ * @param ￼row The index of the object that should be marked.
+ */
+- (void) markObjectAsSelectedOnRow:(NSNumber *)row
+{
+    OMHClipping *object = [[self arrangedObjects] objectAtIndex:[row intValue]];
+    [self markObjectAsCurrent:object];
+    
+    [self setSelectionIndex:[row intValue]];
 }
 
 - (void) markObjectAsCurrent:(OMHClipping *)object;

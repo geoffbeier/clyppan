@@ -7,9 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "DBPrefsWindowController.h"
 #import <ShortcutRecorder/ShortcutRecorder.h>
-
+#import "DBPrefsWindowController.h"
 
 // Preference constants
 extern NSString *OMHActivateAppKey;

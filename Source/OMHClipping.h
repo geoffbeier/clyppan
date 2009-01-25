@@ -14,16 +14,14 @@
 }
 
 @property( nonatomic, retain ) NSString *title;
-@property( nonatomic, retain ) NSAttributedString *content;
 @property( nonatomic, retain ) NSString *plainContent;
 @property( nonatomic, retain ) NSString *contentType;
-@property( nonatomic, readonly ) NSString *meta;
 @property( nonatomic, retain ) NSString *createdFromApp;
+@property( nonatomic, retain ) NSAttributedString *content;
 @property( nonatomic, assign ) NSDate *lastUsed;
 @property( nonatomic, assign ) NSDate *created;
-@property( nonatomic, readonly ) NSImage *image;
 @property( nonatomic, assign ) NSNumber *isCurrent;
-
-- (NSString *) titleFromContent:(NSAttributedString *)newContent;
+@property( nonatomic, readonly ) NSImage *image;
+@property( nonatomic, readonly ) NSString *meta;
 
 @end

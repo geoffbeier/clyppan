@@ -6,15 +6,21 @@
 //  Copyright 2008 omh.cc. All rights reserved.
 //
 
+#import <ShortcutRecorder/ShortcutRecorder.h>
+
 #import "AppController.h"
+#import "OMHShortcutKey.h"
+#import "OMHClippingController.h"
+#import "OMHClipboardController.h"
+#import "OMHPreferenceController.h"
+#import "OMHQuickPreviewWindowController.h"
+#import "OMHStatusItemWindowController.h"
 
 
 @implementation AppController
 
-
 @synthesize statusItem;
 @synthesize mainWindow;
-
 
 #pragma mark -
 #pragma mark Initialization and Setup

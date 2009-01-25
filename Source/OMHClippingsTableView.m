@@ -7,9 +7,10 @@
 //
 
 #import "OMHClippingsTableView.h"
-#import "AppController.h"
+
 
 @implementation OMHClippingsTableView
+
 
 #pragma mark -
 #pragma mark Initialization and Setup
@@ -68,14 +69,16 @@
     // If key == Shift+Enter
     if ( key == NSCarriageReturnCharacter && [event modifierFlags] & NSShiftKeyMask )
     {
-        [[self delegate] markObjectAsSelectedOnRow:[self selectedRow]];
+        [self.delegate performSelector:@selector( markObjectAsSelectedOnRow: ) 
+                            withObject:[NSNumber numberWithInt:[self selectedRow]]];
         return;
     }    
     
     // If key == Enter or Return.
     if (  key == NSEnterCharacter || key == NSCarriageReturnCharacter )
     {
-        [[self delegate] markObjectAsSelectedOnRow:[self selectedRow]];
+        [self.delegate performSelector:@selector( markObjectAsSelectedOnRow: ) 
+                            withObject:[NSNumber numberWithInt:[self selectedRow]]];
         [[NSApplication sharedApplication] hide:self];
         return;
     }
@@ -94,7 +97,8 @@
 {  
     if ( [event clickCount] == 2 )
     {
-        [[self delegate] markObjectAsSelectedOnRow:[self selectedRow]];
+        [self.delegate performSelector:@selector( markObjectAsSelectedOnRow: ) 
+                            withObject:[NSNumber numberWithInt:[self selectedRow]]];
         return;
     }
     

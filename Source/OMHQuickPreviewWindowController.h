@@ -13,13 +13,11 @@
 {
 }
 
-
 // Class methods
-+ (OMHQuickPreviewWindowController *)sharedWindowController;
++ (OMHQuickPreviewWindowController *) sharedWindowController;
 + (NSString *) nibName;
 
 // Actions
 - (IBAction) toogleQuickPreviewWindow:(id)sender;
-
 
 @end

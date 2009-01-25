@@ -7,14 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <ShortcutRecorder/ShortcutRecorder.h>
-
-#import "OMHShortcutKey.h"
-#import "OMHClippingController.h"
-#import "OMHClipboardController.h"
-#import "OMHPreferenceController.h"
-#import "OMHQuickPreviewWindowController.h"
-#import "OMHStatusItemWindowController.h"
+@class OMHClippingController;
 
 
 #define autoSaveInterval 60*10 // How often should we save the clippings

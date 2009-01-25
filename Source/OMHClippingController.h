@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "OMHClipping.h"
+@class OMHClipping;
 
 
 @interface OMHClippingController: NSArrayController 
@@ -33,7 +33,7 @@
 - (void) removeAllObjects;
 
 - (void) setSorting;
-- (void) markObjectAsSelectedOnRow:(NSInteger)row;
+- (void) markObjectAsSelectedOnRow:(NSNumber *)row;
 - (void) markObjectAsCurrent:(OMHClipping *)object;
 - (void) markObjectAsCurrentWithoutClipboard:(OMHClipping *)object;
 - (void) rapidPaste;

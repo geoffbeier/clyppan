@@ -7,8 +7,9 @@
 //
 
 #import "OMHStatusItemWindowController.h"
+#import "MAAttachedWindow.h"
 
-
+// Holds shared singleton instance
 static OMHStatusItemWindowController *_OMHStatusItemWindowController = nil;
 
 

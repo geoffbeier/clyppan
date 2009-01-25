@@ -8,7 +8,6 @@
 
 #import "OMHPreferenceController.h"
 
-
 // Preference constants
 NSString *OMHActivateAppKey = @"activateKey";
 NSString *OMHActivateAppModifierKey = @"activateModifier";
@@ -21,14 +20,13 @@ NSString *OMHAppHasLaunchedBeforeKey = @"hasLaunchedBefore";
 NSString *OMHShortcutActivateAppId = @"OMHActivateApp";
 NSString *OMHShortcutRapidPasteId = @"OHMRapidPaste";
 
+// Holds shared singleton instance
 static OMHPreferenceController *_sharedPrefsWindowController = nil;
 
 
 @implementation OMHPreferenceController
 
-
 @synthesize delegate;
-
 
 + (OMHPreferenceController *) sharedWindowController
 {

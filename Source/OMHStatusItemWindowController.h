@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "MAAttachedWindow.h"
+@class MAAttachedWindow;
 
 @interface OMHStatusItemWindowController: NSWindowController 
 {
