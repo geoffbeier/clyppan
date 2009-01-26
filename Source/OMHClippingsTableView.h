@@ -10,9 +10,6 @@
 #import "AppController.h"
 #import "ImageTextCell.h"
 
-//@class ImageTextCell;
-
-
 @interface OMHClippingsTableView: NSTableView
 {
     ImageTextCell *cell;
