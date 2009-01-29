@@ -107,12 +107,25 @@
  */
 - (void) statusMenuItemClicked
 {
-    [self showMainWindow:self];
+    [self toogleMainWindow:self];
 }
 
 - (IBAction) showPreferencesWindow:(id)sender
 {
     [[OMHPreferenceController sharedWindowController] showWindow:nil];
+}
+
+- (IBAction) toogleMainWindow:(id)sender
+{
+    if ( [mainWindow isKeyWindow] && [mainWindow isVisible] )
+    {
+        [mainWindow orderOut:self];
+        [NSApp hide:self];
+    }
+    else
+    {
+        [self showMainWindow:self];
+    }    
 }
 
 - (IBAction) toogleQuickPreviewWindow:(id)sender
@@ -213,21 +226,15 @@
     [self flashStatusMenu];
     if ( [identifier isEqualTo:OMHShortcutActivateAppId] )
     {
-        if ( [mainWindow isKeyWindow] && [mainWindow isVisible] )
-        {
-            [mainWindow orderOut:self];
-            [NSApp hide:self];
-        }
-        else
-        {
-            [self showMainWindow:self];
-        }            
+        [self toogleMainWindow:self];
+        return;
     }
-    else if ( [identifier isEqualTo:OMHShortcutRapidPasteId] )
+    
+    if ( [identifier isEqualTo:OMHShortcutRapidPasteId] )
     {
         [clippingController rapidPaste];
+        return;
     }
-
 }
 
 - (void) shortcutDidChange:(NSString *)shortcutId keyCombo:(NSValue *)wrappedKeyCombo;

@@ -38,7 +38,9 @@
 // Actions
 - (IBAction) showMainWindow:(id)sender;
 - (IBAction) showPreferencesWindow:(id)sender;
+- (IBAction) toogleMainWindow:(id)sender;
 - (IBAction) toogleQuickPreviewWindow:(id)sender;
+
 
 // Methods
 - (void) createStatusMenu;
