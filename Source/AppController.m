@@ -39,7 +39,7 @@
     [defaultValues setObject:[NSNumber numberWithUnsignedInt:768] forKey:OMHRapidPasteModifierKey];
     
     // Set default limit for when to purge old clippings
-    [defaultValues setObject:[NSNumber numberWithInt:1000] forKey:OMHClippingPurgeLimitKey];
+    [defaultValues setObject:[NSNumber numberWithInt:50] forKey:OMHClippingPurgeLimitKey];
     
     // Set a flag to know if we've ever started before
     [defaultValues setObject:[NSNumber numberWithBool:NO] forKey:OMHAppHasLaunchedBeforeKey];
@@ -158,7 +158,6 @@
     {
         [[NSApplication sharedApplication] presentError:error];
     }
-    NSLog( @"MOC is saved" );
 }
 
 /* 
