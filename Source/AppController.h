@@ -28,7 +28,8 @@
 
     // Other
     NSStatusItem *statusItem;
-    NSTimer *autoSaveTimer;   
+    NSTimer *autoSaveTimer;
+    IBOutlet NSTextField *statusTextField;
 }
 
 // Properties

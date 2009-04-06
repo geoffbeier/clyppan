@@ -78,6 +78,9 @@
     
     // Set up the clipboard controller
     [[OMHClipboardController sharedController] createTimer];
+    
+    // Apply an embossed look to the status text
+    [statusTextField.cell setBackgroundStyle:NSBackgroundStyleRaised];
 }
 
 /*!
