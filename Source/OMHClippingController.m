@@ -275,8 +275,8 @@
 
 - (void) markObjectAsCurrentWithoutClipboard:(OMHClipping *)object;
 {
-    if ( [object.isCurrent boolValue] == YES )
-        return;
+//    if ( [object.isCurrent boolValue] == YES )
+//        return;
     
     if ( self.currentActiveItem == nil )
         if ( [[self arrangedObjects] count] >= 1 )
@@ -289,7 +289,7 @@
     self.currentActiveItem = object;
     
     [self setSorting];
-    [self setSelectedObjects:[NSArray arrayWithObject:object]];    
+//    [self setSelectedObjects:[NSArray arrayWithObject:object]];    
 }
 
 @end
