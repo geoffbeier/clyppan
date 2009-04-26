@@ -39,11 +39,18 @@
 #import "OMHQuickPreviewWindowController.h"
 #import "OMHStatusItemWindowController.h"
 
-
 @implementation AppController
 
 @synthesize statusItem;
 @synthesize mainWindow;
+
+#pragma mark -
+#pragma mark Class methods
+
++ (AppController *) sharedAppController
+{
+    return [NSApp delegate];
+}
 
 #pragma mark -
 #pragma mark Initialization and Setup

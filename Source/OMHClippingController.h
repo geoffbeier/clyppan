@@ -30,8 +30,9 @@
  */
 
 #import <Cocoa/Cocoa.h>
-@class OMHClipping;
+#import "AppController.h"
 
+@class OMHClipping;
 
 @interface OMHClippingController: NSArrayController 
 {
@@ -60,6 +61,5 @@
 - (void) markObjectAsCurrent:(OMHClipping *)object;
 - (void) markObjectAsCurrentWithoutClipboard:(OMHClipping *)object;
 - (void) rapidPaste;
-
 
 @end

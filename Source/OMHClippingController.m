@@ -117,7 +117,9 @@
         NSLog( @"The new clipboard content wasn't a NSAttributedString" ); 
         return;
     }
-        
+    
+    [[AppController sharedAppController] flashStatusMenu];
+
     // Check if existing object exists...
     OMHClipping *existingObject = [self objectWithContent:content];
     if ( existingObject != nil )

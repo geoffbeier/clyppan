@@ -61,12 +61,14 @@
 @property( nonatomic, retain ) NSStatusItem *statusItem;
 @property( nonatomic, retain ) NSWindow *mainWindow;
 
+// Class methods
++ (AppController *) sharedAppController;
+
 // Actions
 - (IBAction) showMainWindow:(id)sender;
 - (IBAction) showPreferencesWindow:(id)sender;
 - (IBAction) toogleMainWindow:(id)sender;
 - (IBAction) toogleQuickPreviewWindow:(id)sender;
-
 
 // Methods
 - (void) createStatusMenu;
