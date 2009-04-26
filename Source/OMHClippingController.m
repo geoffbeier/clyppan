@@ -1,10 +1,34 @@
-//
-//  OMHClippingController.m
-//  Clyppan
-//
-//  Created by Ole Morten Halvorsen on 4/3/08.
-//  Copyright 2008 omh.cc. All rights reserved.
-//
+/**
+ * @file OMHClippingController.m
+ * @author Ole Morten Halvorsen
+ *
+ * @section LICENSE
+ * Copyright (c) 2009, Ole Morten Halvorsen
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without modification, 
+ * are permitted provided that the following conditions are met:
+ *
+ * - Redistributions of source code must retain the above copyright notice, this list 
+ *   of conditions and the following disclaimer.
+ * - Redistributions in binary form must reproduce the above copyright notice, this list
+ *   of conditions and the following disclaimer in the documentation and/or other materials 
+ *   provided with the distribution.
+ * - Neither the name of Clyppan nor the names of its contributors may be used to endorse or 
+ *   promote products derived from this software without specific prior written permission.
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE 
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; 
+ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+ * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF 
+ * THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
 
 #import "OMHClippingController.h"
 #import "OMHClipboardController.h"
@@ -25,16 +49,23 @@
     [[OMHClipboardController sharedController] setDelegate:self];
 }
 
-/*!
+/**
  * Puts new content inserted on the pastboard into the clipping list
  *
  * OMHClippingController delegate method.
+ *
+ * @param newContent id Object containing the new clipboard content
  */
 - (void) pasteboardUpdated:(id)newContent
 {
     [self addObjectWithContent:newContent];
 }
 
+/**
+ * Adds a new object to the arrangedObject array.
+ *
+ * @param object id The object to add
+ */
 - (void) addObject:(id)object
 {
     [super addObject:object];
@@ -44,8 +75,12 @@
     }
 }
 
-/*!
- * Creates and returns a new clipping object
+/**
+ * Creates and returns a new clipping object.
+ *
+ * The create clipping object is not added to the arrangedObjects.
+ * 
+ * @param content NSAttributedString 
  */
 - (id) createObject:(NSAttributedString *)content;
 {
@@ -56,21 +91,22 @@
     return object;
 }
 
-/*!
+/**
  * Adds a new clipping
  *
  * A check for duplicates is performed before adding anything. If
  * a duplicate is found it will be marked as the current clipping.
+ *
+ * @param newContent id Either a NSAttributedString or NSString object that
+                        contains the clipboard contents.
  */
 - (void) addObjectWithContent:(id)newContent;
 {  
     NSAttributedString *content;
-    NSString *type = NSStringPboardType;
     
     if ( [newContent isKindOfClass:[NSAttributedString class]] )
     {
         content = newContent;
-        type = NSRTFPboardType;
     }
     else if ( [newContent isKindOfClass:[NSString class]] )
     {
@@ -92,14 +128,15 @@
     
     // Create new object and add it
     id object = [self createObject:content];
-    [object setContentType:type];
     [self addObject:object];
     [self markObjectAsCurrentWithoutClipboard:object];
 }
 
-/*!
+/**
  * Makes sure [self arrangedObjects] only contains as many objects as specified by the
  * limit parameter
+ *
+ * @param limit int Maximum number of items to allow in the clipping array.
  */
 - (void) purgeUntilCountIs:(int)limit
 {
@@ -117,8 +154,10 @@
     }
 }
 
-/*!
+/**
  * Returns an object with content matching the content parameter.
+ *
+ * @param content Instance of NSAttributedString that contains the clipbarod content.
  */
 - (id) objectWithContent:(NSAttributedString *)content;
 {
@@ -134,7 +173,7 @@
     return nil;
 }
 
-/*!
+/**
  * ￼Sets the default sorting which is sort by 'current' then 'lastUsed'
  */
 - (void) setSorting;
@@ -148,7 +187,7 @@
     [self setSortDescriptors:[NSArray arrayWithObjects:current, lastUsed, nil]];
 }
 
-/*!
+/**
  * Peforms a Rapid Paste
  *
  * Rapid Paste takes the current item and changes the last used date to make it 
@@ -167,6 +206,15 @@
     [self setSorting];
 }
 
+
+/**
+ * Removes the first selected clipping
+ *
+ * If the selected clipping is also the clipping on the clipboard the clipping
+ * next in the list will be marked as the current and put on the clipboard.
+ *
+ * @param sender id The caller of this method
+ */
 - (void) remove:(id)sender
 {
     if ( [[self selectedObjects] objectAtIndex:0] == self.currentActiveItem )
@@ -176,8 +224,8 @@
     [super remove:sender];
 }
 
-/*!
- * Removes all clippings from the array
+/**
+ * Removes all clippings from the arrangedObject array
  */
 - (void) removeAllObjects;
 {
@@ -188,11 +236,17 @@
     [self removeObjectsAtArrangedObjectIndexes:set];    
 }
 
-/*!
- * Ask the user if it's ok to remove a object
+/**
+ * Asks the user if it's ok to remove a object
  */
 - (IBAction) removeObject:(id)sender;
 {
+    if ( [[self arrangedObjects] count] <= 1 )
+    {
+        NSBeep();
+        return;
+    }
+
     NSAlert *alert = [[NSAlert alloc] init];
     [alert addButtonWithTitle:@"Remove"];
     [alert addButtonWithTitle:@"Don't Remove"];
@@ -207,11 +261,19 @@
 }
 
 
-/*!
- * Ask the user if it's ok to remove all objects
+/**
+ * Asks the user if it's ok to remove all objects
+ *
+ * @param sender id Caller of the method
  */
 - (IBAction) removeAllObjects:(id)sender;
 {
+    if ( [[self selectedObjects] count] <= 0 )
+    {
+        NSBeep();
+        return;
+    }
+    
     NSAlert *alert = [[NSAlert alloc] init];
     [alert addButtonWithTitle:@"Remove"];
     [alert addButtonWithTitle:@"Don't Remove"];
@@ -225,6 +287,13 @@
                         contextInfo:nil];
 }
 
+/**
+ * Removes the first selected clipping object if the user agreed to it in the alert.
+ *
+ * @param alert Instance of NSAlert
+ * @param returnCode int The return code
+ * @param contextInfo void* Context Info
+ */
 - (void) alertRemoveObjectDidEnd:(NSAlert *)alert returnCode:(int)returnCode contextInfo:(void *)contextInfo 
 {
     if ( returnCode == NSAlertFirstButtonReturn ) 
@@ -233,6 +302,13 @@
     }
 }
 
+/**
+ * Removes all clipping objects if the user agreed to it in the alert.
+ *
+ * @param alert Instance of NSAlert
+ * @param returnCode int The return code
+ * @param contextInfo void* Context Info
+ */
 - (void) alertRemoveAllDidEnd:(NSAlert *)alert returnCode:(int)returnCode contextInfo:(void *)contextInfo 
 {
     if ( returnCode == NSAlertFirstButtonReturn ) 
@@ -241,24 +317,36 @@
     }
 }
 
+/**
+ * Puts and marks the first selected object as the current clipboard object.
+ *
+ * @param sender id the caller of this method
+ */
 - (IBAction) markAsCurrent:(id)sender;
 {
     [self markObjectAsCurrent:[[self selectedObjects] objectAtIndex:0]];
 }
 
-/*!
+/**
  * Marks the clipping at 'row' as current.
  *￼
- * @param ￼row The index of the object that should be marked.
+ * @param row The index of the object that should be marked.
  */
 - (void) markObjectAsSelectedOnRow:(NSNumber *)row
 {
-    OMHClipping *object = [[self arrangedObjects] objectAtIndex:[row intValue]];
-    [self markObjectAsCurrent:object];
+    if ( [row intValue] < 0 || [row intValue] > [[self arrangedObjects] count] )
+        return;
     
+    OMHClipping *object = [[self arrangedObjects] objectAtIndex:[row intValue]];    
+    [self markObjectAsCurrent:object];
     [self setSelectionIndex:[row intValue]];
 }
 
+/**
+ * Marks a clipping object as current and put its content on the clipboard
+ *
+ * @param object OMHClipping The object to mark and put on the clipboard
+ */
 - (void) markObjectAsCurrent:(OMHClipping *)object;
 {
     [self markObjectAsCurrentWithoutClipboard:object];
@@ -273,11 +361,13 @@
     [pb setData:data forType:NSRTFPboardType];
 }
 
+/**
+ * Marks a clipping object as current but does not put it on the clipboard.
+ *
+ * @param object OMHClipping The object to mark as current
+ */
 - (void) markObjectAsCurrentWithoutClipboard:(OMHClipping *)object;
 {
-//    if ( [object.isCurrent boolValue] == YES )
-//        return;
-    
     if ( self.currentActiveItem == nil )
         if ( [[self arrangedObjects] count] >= 1 )
             self.currentActiveItem = [[self arrangedObjects] objectAtIndex:0];
@@ -289,7 +379,6 @@
     self.currentActiveItem = object;
     
     [self setSorting];
-//    [self setSelectedObjects:[NSArray arrayWithObject:object]];    
 }
 
 @end

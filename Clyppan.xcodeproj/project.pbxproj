@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
+		EE19C3430FA38DBF000537FE /* Build Documentation */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = EE19C3560FA38DD1000537FE /* Build configuration list for PBXAggregateTarget "Build Documentation" */;
+			buildPhases = (
+				EE19C3470FA38DCE000537FE /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "Build Documentation";
+			productName = "Build Documentation";
+		};
 		EE5A55050F24DD1900919974 /* Distribution */ = {
 			isa = PBXAggregateTarget;
 			buildConfigurationList = EE5A550D0F24DD3000919974 /* Build configuration list for PBXAggregateTarget "Distribution" */;
@@ -34,7 +45,6 @@
 
 /* Begin PBXBuildFile section */
 		2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7446970DB6B7EA00F9684A /* MainMenu.xib */; };
-		770B37ED0679A11B001EADE2 /* Clyppan_DataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 770B37EC0679A11B001EADE2 /* Clyppan_DataModel.xcdatamodel */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -46,7 +56,6 @@
 		EE1429050F1D259A002F1FE7 /* OMHQuickPreviewWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1428F90F1D259A002F1FE7 /* OMHQuickPreviewWindowController.m */; };
 		EE1429060F1D259A002F1FE7 /* OMHPreferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1428FD0F1D259A002F1FE7 /* OMHPreferenceController.m */; };
 		EE1429120F1D25BB002F1FE7 /* clyppan-small-inverted.png in Resources */ = {isa = PBXBuildFile; fileRef = EE14290D0F1D25BB002F1FE7 /* clyppan-small-inverted.png */; };
-		EE1429130F1D25BB002F1FE7 /* Stamp.png in Resources */ = {isa = PBXBuildFile; fileRef = EE14290E0F1D25BB002F1FE7 /* Stamp.png */; };
 		EE1429150F1D25BB002F1FE7 /* Clyppan.icns in Resources */ = {isa = PBXBuildFile; fileRef = EE1429100F1D25BB002F1FE7 /* Clyppan.icns */; };
 		EE1429160F1D25BB002F1FE7 /* clyppan-small.png in Resources */ = {isa = PBXBuildFile; fileRef = EE1429110F1D25BB002F1FE7 /* clyppan-small.png */; };
 		EE3FE3CF0F211B0E00B09105 /* OMHClipping.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3FE3CD0F211B0E00B09105 /* OMHClipping.m */; };
@@ -59,6 +68,7 @@
 		EE4A93D40F1F8825007DE4BF /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE4A93D20F1F8825007DE4BF /* Sparkle.framework */; };
 		EE4A93E80F1F8845007DE4BF /* ShortcutRecorder.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EE4A93D10F1F8825007DE4BF /* ShortcutRecorder.framework */; };
 		EE4A93E90F1F8845007DE4BF /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EE4A93D20F1F8825007DE4BF /* Sparkle.framework */; };
+		EE54B4AA0F8FF01D00B19E9C /* OMHGradientBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE54B4A90F8FF01D00B19E9C /* OMHGradientBackgroundView.m */; };
 		EE5A52C70F222C6400919974 /* StatusItemHelperWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE5A52C50F222C6400919974 /* StatusItemHelperWindow.xib */; };
 		EE5A54690F23DF3C00919974 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = EE5A54680F23DF3C00919974 /* dsa_pub.pem */; };
 		EE6AD12B0F296CF4000C38AC /* OMHStatusItemWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6AD12A0F296CF4000C38AC /* OMHStatusItemWindowController.m */; };
@@ -67,6 +77,7 @@
 		EE71BC000F1F88B700F130A9 /* DBPrefsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE71BBFF0F1F88B700F130A9 /* DBPrefsWindowController.m */; };
 		EE71BC0C0F1F88E100F130A9 /* Shortcuts.png in Resources */ = {isa = PBXBuildFile; fileRef = EE71BC0A0F1F88E100F130A9 /* Shortcuts.png */; };
 		EE71BC0D0F1F88E100F130A9 /* Update.tiff in Resources */ = {isa = PBXBuildFile; fileRef = EE71BC0B0F1F88E100F130A9 /* Update.tiff */; };
+		EE79F8410F9FB03F00010D7E /* Clyppan_DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE79F8400F9FB03F00010D7E /* Clyppan_DataModel.xcdatamodeld */; };
 		EEF4181A0F1D27A80037980E /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF418190F1D27A80037980E /* Carbon.framework */; };
 /* End PBXBuildFile section */
 
@@ -103,7 +114,7 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		2F7446980DB6B7EA00F9684A /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Clyppan_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Clyppan_Prefix.pch; sourceTree = "<group>"; };
-		770B37EC0679A11B001EADE2 /* Clyppan_DataModel.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = Clyppan_DataModel.xcdatamodel; sourceTree = "<group>"; };
+		770B37EC0679A11B001EADE2 /* 1.0.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = 1.0.xcdatamodel; sourceTree = "<group>"; };
 		77C82804067257F0000B614F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Clyppan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clyppan.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,7 +133,6 @@
 		EE1428FD0F1D259A002F1FE7 /* OMHPreferenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OMHPreferenceController.m; path = Source/OMHPreferenceController.m; sourceTree = "<group>"; };
 		EE1428FE0F1D259A002F1FE7 /* OMHQuickPreviewWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OMHQuickPreviewWindowController.h; path = Source/OMHQuickPreviewWindowController.h; sourceTree = "<group>"; };
 		EE14290D0F1D25BB002F1FE7 /* clyppan-small-inverted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "clyppan-small-inverted.png"; path = "Resources/clyppan-small-inverted.png"; sourceTree = SOURCE_ROOT; };
-		EE14290E0F1D25BB002F1FE7 /* Stamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stamp.png; path = Resources/Stamp.png; sourceTree = SOURCE_ROOT; };
 		EE1429100F1D25BB002F1FE7 /* Clyppan.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Clyppan.icns; path = Resources/Clyppan.icns; sourceTree = SOURCE_ROOT; };
 		EE1429110F1D25BB002F1FE7 /* clyppan-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "clyppan-small.png"; path = "Resources/clyppan-small.png"; sourceTree = SOURCE_ROOT; };
 		EE3FE3CD0F211B0E00B09105 /* OMHClipping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OMHClipping.m; path = Source/OMHClipping.m; sourceTree = SOURCE_ROOT; };
@@ -135,6 +145,8 @@
 		EE4A92870F1E8EF9007DE4BF /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Credits.rtf; path = Resources/Credits.rtf; sourceTree = SOURCE_ROOT; };
 		EE4A93D10F1F8825007DE4BF /* ShortcutRecorder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShortcutRecorder.framework; path = Frameworks/ShortcutRecorder.framework; sourceTree = SOURCE_ROOT; };
 		EE4A93D20F1F8825007DE4BF /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Frameworks/Sparkle.framework; sourceTree = SOURCE_ROOT; };
+		EE54B4A80F8FF01D00B19E9C /* OMHGradientBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMHGradientBackgroundView.h; sourceTree = "<group>"; };
+		EE54B4A90F8FF01D00B19E9C /* OMHGradientBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMHGradientBackgroundView.m; sourceTree = "<group>"; };
 		EE5A52C60F222C6400919974 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/StatusItemHelperWindow.xib; sourceTree = "<group>"; };
 		EE5A54680F23DF3C00919974 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dsa_pub.pem; path = Resources/dsa_pub.pem; sourceTree = "<group>"; };
 		EE6AD1290F296CF4000C38AC /* OMHStatusItemWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OMHStatusItemWindowController.h; path = Source/OMHStatusItemWindowController.h; sourceTree = SOURCE_ROOT; };
@@ -253,7 +265,7 @@
 		7756732906782D8800D1FEB8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				770B37EC0679A11B001EADE2 /* Clyppan_DataModel.xcdatamodel */,
+				EE79F8400F9FB03F00010D7E /* Clyppan_DataModel.xcdatamodeld */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -269,6 +281,8 @@
 				EE1428F00F1D259A002F1FE7 /* OMHClippingsTableView.m */,
 				EE1428FA0F1D259A002F1FE7 /* OMHMainWindow.h */,
 				EE1428F60F1D259A002F1FE7 /* OMHMainWindow.m */,
+				EE54B4A80F8FF01D00B19E9C /* OMHGradientBackgroundView.h */,
+				EE54B4A90F8FF01D00B19E9C /* OMHGradientBackgroundView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -320,7 +334,6 @@
 				EE71BC0B0F1F88E100F130A9 /* Update.tiff */,
 				EE4A90190F1E1A17007DE4BF /* Check.pdf */,
 				EE14290D0F1D25BB002F1FE7 /* clyppan-small-inverted.png */,
-				EE14290E0F1D25BB002F1FE7 /* Stamp.png */,
 				EE1429100F1D25BB002F1FE7 /* Clyppan.icns */,
 				EE1429110F1D25BB002F1FE7 /* clyppan-small.png */,
 			);
@@ -373,6 +386,7 @@
 				8D1107260486CEB800E47090 /* Clyppan */,
 				EE5A55050F24DD1900919974 /* Distribution */,
 				EEACE4C40F745A2700D11643 /* Clang Static Analyser */,
+				EE19C3430FA38DBF000537FE /* Build Documentation */,
 			);
 		};
 /* End PBXProject section */
@@ -385,7 +399,6 @@
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */,
 				EE1429120F1D25BB002F1FE7 /* clyppan-small-inverted.png in Resources */,
-				EE1429130F1D25BB002F1FE7 /* Stamp.png in Resources */,
 				EE1429150F1D25BB002F1FE7 /* Clyppan.icns in Resources */,
 				EE1429160F1D25BB002F1FE7 /* clyppan-small.png in Resources */,
 				EE4A8F7A0F1E075B007DE4BF /* Preferences.xib in Resources */,
@@ -402,6 +415,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		EE19C3470FA38DCE000537FE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "DOXYGEN_PATH=\"/Applications/Doxygen.app/Contents/Resources/doxygen\"\n\n$DOXYGEN_PATH $SOURCE_ROOT/Doxyfile\n\nopen \"Documentation/html/index.html\"";
+		};
 		EE5A55040F24DD1900919974 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -436,7 +462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
-				770B37ED0679A11B001EADE2 /* Clyppan_DataModel.xcdatamodel in Sources */,
+				EE79F8410F9FB03F00010D7E /* Clyppan_DataModel.xcdatamodeld in Sources */,
 				EE1428FF0F1D259A002F1FE7 /* OMHClippingController.m in Sources */,
 				EE1429000F1D259A002F1FE7 /* OMHClippingsTableView.m in Sources */,
 				EE1429010F1D259A002F1FE7 /* AppController.m in Sources */,
@@ -450,6 +476,7 @@
 				EE3FE3CF0F211B0E00B09105 /* OMHClipping.m in Sources */,
 				EE3FE4010F211EB000B09105 /* MAAttachedWindow.m in Sources */,
 				EE6AD12B0F296CF4000C38AC /* OMHStatusItemWindowController.m in Sources */,
+				EE54B4AA0F8FF01D00B19E9C /* OMHGradientBackgroundView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,6 +618,27 @@
 			};
 			name = Release;
 		};
+		EE19C3440FA38DBF000537FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = "Build Documentation";
+			};
+			name = Debug;
+		};
+		EE19C3450FA38DBF000537FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = "Build Documentation";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		EE5A55060F24DD1A00919974 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -654,6 +702,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		EE19C3560FA38DD1000537FE /* Build configuration list for PBXAggregateTarget "Build Documentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE19C3440FA38DBF000537FE /* Debug */,
+				EE19C3450FA38DBF000537FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EE5A550D0F24DD3000919974 /* Build configuration list for PBXAggregateTarget "Distribution" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -673,6 +730,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EE79F8400F9FB03F00010D7E /* Clyppan_DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				770B37EC0679A11B001EADE2 /* 1.0.xcdatamodel */,
+			);
+			currentVersion = 770B37EC0679A11B001EADE2 /* 1.0.xcdatamodel */;
+			path = Clyppan_DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
 }

@@ -1,10 +1,33 @@
-//
-//  AppController.m
-//  Clyppan
-//
-//  Created by Ole Morten Halvorsen on 4/3/08.
-//  Copyright 2008 omh.cc. All rights reserved.
-//
+/**
+ * @file AppController.m
+ * @author Ole Morten Halvorsen
+ *
+ * @section LICENSE
+ * Copyright (c) 2009, Ole Morten Halvorsen
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without modification, 
+ * are permitted provided that the following conditions are met:
+ *
+ * - Redistributions of source code must retain the above copyright notice, this list 
+ *   of conditions and the following disclaimer.
+ * - Redistributions in binary form must reproduce the above copyright notice, this list
+ *   of conditions and the following disclaimer in the documentation and/or other materials 
+ *   provided with the distribution.
+ * - Neither the name of Clyppan nor the names of its contributors may be used to endorse or 
+ *   promote products derived from this software without specific prior written permission.
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE 
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; 
+ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+ * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF 
+ * THE POSSIBILITY OF SUCH DAMAGE.
+ */
 
 #import <ShortcutRecorder/ShortcutRecorder.h>
 
@@ -44,6 +67,9 @@
     // Set a flag to know if we've ever started before
     [defaultValues setObject:[NSNumber numberWithBool:NO] forKey:OMHAppHasLaunchedBeforeKey];
     
+    // Do not hide on deactivate by default
+    [defaultValues setObject:[NSNumber numberWithBool:NO] forKey:OMHHideAppOnDeactiveKey];
+    
 	[[NSUserDefaults standardUserDefaults] registerDefaults:defaultValues];
 }
 
@@ -81,9 +107,11 @@
     
     // Apply an embossed look to the status text
     [statusTextField.cell setBackgroundStyle:NSBackgroundStyleRaised];
+    [currentClippingText.cell setBackgroundStyle:NSBackgroundStyleLowered];
+    [currentClippingMetaText.cell setBackgroundStyle:NSBackgroundStyleLowered];
 }
 
-/*!
+/**
  * Creates a status menu item visible in the top right of the screen.
  */
 - (void) createStatusMenu
@@ -105,7 +133,7 @@
     [mainWindow makeKeyAndOrderFront:self];
 }
 
-/*!
+/**
  * Handles the event of the status menu item getting clicked.
  */
 - (void) statusMenuItemClicked
@@ -140,7 +168,7 @@
 #pragma mark -
 #pragma mark Methods
 
-/*
+/**
  * Flashes the status icon for a short while
  */
 - (void) flashStatusMenu
@@ -151,7 +179,7 @@
      afterDelay:0.40];
 }
 
-/*
+/**
  * Stores everything in the managed object context to disk
  */
 - (void) autoSave
@@ -163,7 +191,7 @@
     }
 }
 
-/* 
+/**
  * Returns the string representation the activate keyboard shortcut 
  */
 - (NSString *) activateKeyComboString
@@ -199,10 +227,10 @@
        	  									 target:self
                                            selector:@selector( autoSave )
                                            userInfo:nil 
-                                            repeats:YES];    
+                                            repeats:YES]; 
 }
 
-/*!
+/**
  * Displays the main window if it's was previously closed. 
  */
 - (void) applicationWillBecomeActive:(NSNotification *)aNotification
@@ -211,7 +239,7 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];    
     if ( [defaults boolForKey:OMHAppHasLaunchedBeforeKey] )
     {
-        [self showMainWindow:self];        
+        [self showMainWindow:self];
     }
     
     [defaults setBool:YES forKey:OMHAppHasLaunchedBeforeKey];
@@ -220,7 +248,10 @@
 - (void) applicationWillResignActive:(NSNotification *)aNotification
 {
     [[OMHStatusItemWindowController sharedWindowController] close];
-    [NSApp hide:self];
+    if ( [[NSUserDefaults standardUserDefaults] boolForKey:OMHHideAppOnDeactiveKey] )
+    {
+        [NSApp hide:self];   
+    }    
 }
 
 - (void) handleHotKey:(NSString *)identifier;
@@ -319,8 +350,18 @@
     }
     
     url = [NSURL fileURLWithPath: [applicationSupportFolder stringByAppendingPathComponent: @"Clyppan.sql"]];
+    NSLog( @"URL: %@", url );
+
+    NSDictionary *optionsDictionary = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:YES]
+                                                                  forKey:NSMigratePersistentStoresAutomaticallyOption];
+
     persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel: [self managedObjectModel]];
-    if (![persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:url options:nil error:&error]){
+        
+    if (![persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType 
+                                                  configuration:nil 
+                                                            URL:url 
+                                                        options:optionsDictionary 
+                                                          error:&error]){
         [[NSApplication sharedApplication] presentError:error];
     }    
     
