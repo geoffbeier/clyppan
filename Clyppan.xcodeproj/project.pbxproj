@@ -58,6 +58,8 @@
 		EE1429120F1D25BB002F1FE7 /* clyppan-small-inverted.png in Resources */ = {isa = PBXBuildFile; fileRef = EE14290D0F1D25BB002F1FE7 /* clyppan-small-inverted.png */; };
 		EE1429150F1D25BB002F1FE7 /* Clyppan.icns in Resources */ = {isa = PBXBuildFile; fileRef = EE1429100F1D25BB002F1FE7 /* Clyppan.icns */; };
 		EE1429160F1D25BB002F1FE7 /* clyppan-small.png in Resources */ = {isa = PBXBuildFile; fileRef = EE1429110F1D25BB002F1FE7 /* clyppan-small.png */; };
+		EE19C4BC0FA4E07E000537FE /* OMHImageTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE19C4BB0FA4E07E000537FE /* OMHImageTextCell.m */; };
+		EE19C4E50FA4E5DA000537FE /* OMHGradientBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE19C4E40FA4E5DA000537FE /* OMHGradientBackgroundView.m */; };
 		EE3FE3CF0F211B0E00B09105 /* OMHClipping.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3FE3CD0F211B0E00B09105 /* OMHClipping.m */; };
 		EE3FE4010F211EB000B09105 /* MAAttachedWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3FE4000F211EB000B09105 /* MAAttachedWindow.m */; };
 		EE4A8F7A0F1E075B007DE4BF /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE4A8F780F1E075B007DE4BF /* Preferences.xib */; };
@@ -68,11 +70,9 @@
 		EE4A93D40F1F8825007DE4BF /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE4A93D20F1F8825007DE4BF /* Sparkle.framework */; };
 		EE4A93E80F1F8845007DE4BF /* ShortcutRecorder.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EE4A93D10F1F8825007DE4BF /* ShortcutRecorder.framework */; };
 		EE4A93E90F1F8845007DE4BF /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EE4A93D20F1F8825007DE4BF /* Sparkle.framework */; };
-		EE54B4AA0F8FF01D00B19E9C /* OMHGradientBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE54B4A90F8FF01D00B19E9C /* OMHGradientBackgroundView.m */; };
 		EE5A52C70F222C6400919974 /* StatusItemHelperWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE5A52C50F222C6400919974 /* StatusItemHelperWindow.xib */; };
 		EE5A54690F23DF3C00919974 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = EE5A54680F23DF3C00919974 /* dsa_pub.pem */; };
 		EE6AD12B0F296CF4000C38AC /* OMHStatusItemWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6AD12A0F296CF4000C38AC /* OMHStatusItemWindowController.m */; };
-		EE71BBFA0F1F888E00F130A9 /* ImageTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE71BBF80F1F888E00F130A9 /* ImageTextCell.m */; };
 		EE71BBFD0F1F88A200F130A9 /* OMHShortcutKey.m in Sources */ = {isa = PBXBuildFile; fileRef = EE71BBFC0F1F88A200F130A9 /* OMHShortcutKey.m */; };
 		EE71BC000F1F88B700F130A9 /* DBPrefsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE71BBFF0F1F88B700F130A9 /* DBPrefsWindowController.m */; };
 		EE71BC0C0F1F88E100F130A9 /* Shortcuts.png in Resources */ = {isa = PBXBuildFile; fileRef = EE71BC0A0F1F88E100F130A9 /* Shortcuts.png */; };
@@ -135,6 +135,10 @@
 		EE14290D0F1D25BB002F1FE7 /* clyppan-small-inverted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "clyppan-small-inverted.png"; path = "Resources/clyppan-small-inverted.png"; sourceTree = SOURCE_ROOT; };
 		EE1429100F1D25BB002F1FE7 /* Clyppan.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Clyppan.icns; path = Resources/Clyppan.icns; sourceTree = SOURCE_ROOT; };
 		EE1429110F1D25BB002F1FE7 /* clyppan-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "clyppan-small.png"; path = "Resources/clyppan-small.png"; sourceTree = SOURCE_ROOT; };
+		EE19C4BA0FA4E07E000537FE /* OMHImageTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OMHImageTextCell.h; path = ../collections/Cells/OMHImageTextCell.h; sourceTree = SOURCE_ROOT; };
+		EE19C4BB0FA4E07E000537FE /* OMHImageTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OMHImageTextCell.m; path = ../collections/Cells/OMHImageTextCell.m; sourceTree = SOURCE_ROOT; };
+		EE19C4E30FA4E5DA000537FE /* OMHGradientBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OMHGradientBackgroundView.h; path = Source/OMHGradientBackgroundView.h; sourceTree = SOURCE_ROOT; };
+		EE19C4E40FA4E5DA000537FE /* OMHGradientBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OMHGradientBackgroundView.m; path = Source/OMHGradientBackgroundView.m; sourceTree = SOURCE_ROOT; };
 		EE3FE3CD0F211B0E00B09105 /* OMHClipping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OMHClipping.m; path = Source/OMHClipping.m; sourceTree = SOURCE_ROOT; };
 		EE3FE3CE0F211B0E00B09105 /* OMHClipping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OMHClipping.h; path = Source/OMHClipping.h; sourceTree = SOURCE_ROOT; };
 		EE3FE3FF0F211EB000B09105 /* MAAttachedWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MAAttachedWindow.h; path = ../collections/Views/MAAttachedWindow.h; sourceTree = SOURCE_ROOT; };
@@ -145,14 +149,10 @@
 		EE4A92870F1E8EF9007DE4BF /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Credits.rtf; path = Resources/Credits.rtf; sourceTree = SOURCE_ROOT; };
 		EE4A93D10F1F8825007DE4BF /* ShortcutRecorder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShortcutRecorder.framework; path = Frameworks/ShortcutRecorder.framework; sourceTree = SOURCE_ROOT; };
 		EE4A93D20F1F8825007DE4BF /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Frameworks/Sparkle.framework; sourceTree = SOURCE_ROOT; };
-		EE54B4A80F8FF01D00B19E9C /* OMHGradientBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMHGradientBackgroundView.h; sourceTree = "<group>"; };
-		EE54B4A90F8FF01D00B19E9C /* OMHGradientBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMHGradientBackgroundView.m; sourceTree = "<group>"; };
 		EE5A52C60F222C6400919974 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/StatusItemHelperWindow.xib; sourceTree = "<group>"; };
 		EE5A54680F23DF3C00919974 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dsa_pub.pem; path = Resources/dsa_pub.pem; sourceTree = "<group>"; };
 		EE6AD1290F296CF4000C38AC /* OMHStatusItemWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OMHStatusItemWindowController.h; path = Source/OMHStatusItemWindowController.h; sourceTree = SOURCE_ROOT; };
 		EE6AD12A0F296CF4000C38AC /* OMHStatusItemWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OMHStatusItemWindowController.m; path = Source/OMHStatusItemWindowController.m; sourceTree = SOURCE_ROOT; };
-		EE71BBF80F1F888E00F130A9 /* ImageTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageTextCell.m; path = ../collections/Cells/ImageTextCell.m; sourceTree = SOURCE_ROOT; };
-		EE71BBF90F1F888E00F130A9 /* ImageTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageTextCell.h; path = ../collections/Cells/ImageTextCell.h; sourceTree = SOURCE_ROOT; };
 		EE71BBFB0F1F88A200F130A9 /* OMHShortcutKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OMHShortcutKey.h; path = ../collections/Shortcut/OMHShortcutKey.h; sourceTree = SOURCE_ROOT; };
 		EE71BBFC0F1F88A200F130A9 /* OMHShortcutKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OMHShortcutKey.m; path = ../collections/Shortcut/OMHShortcutKey.m; sourceTree = SOURCE_ROOT; };
 		EE71BBFE0F1F88B700F130A9 /* DBPrefsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBPrefsWindowController.h; path = ../collections/Controllers/DBPrefsWindowController.h; sourceTree = SOURCE_ROOT; };
@@ -273,16 +273,16 @@
 		EE0F27E80F1D2AD100E0C0FF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EE71BBF90F1F888E00F130A9 /* ImageTextCell.h */,
-				EE71BBF80F1F888E00F130A9 /* ImageTextCell.m */,
+				EE19C4BA0FA4E07E000537FE /* OMHImageTextCell.h */,
+				EE19C4BB0FA4E07E000537FE /* OMHImageTextCell.m */,
 				EE3FE3FF0F211EB000B09105 /* MAAttachedWindow.h */,
 				EE3FE4000F211EB000B09105 /* MAAttachedWindow.m */,
 				EE1428F70F1D259A002F1FE7 /* OMHClippingsTableView.h */,
 				EE1428F00F1D259A002F1FE7 /* OMHClippingsTableView.m */,
 				EE1428FA0F1D259A002F1FE7 /* OMHMainWindow.h */,
 				EE1428F60F1D259A002F1FE7 /* OMHMainWindow.m */,
-				EE54B4A80F8FF01D00B19E9C /* OMHGradientBackgroundView.h */,
-				EE54B4A90F8FF01D00B19E9C /* OMHGradientBackgroundView.m */,
+				EE19C4E30FA4E5DA000537FE /* OMHGradientBackgroundView.h */,
+				EE19C4E40FA4E5DA000537FE /* OMHGradientBackgroundView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -470,13 +470,13 @@
 				EE1429040F1D259A002F1FE7 /* OMHMainWindow.m in Sources */,
 				EE1429050F1D259A002F1FE7 /* OMHQuickPreviewWindowController.m in Sources */,
 				EE1429060F1D259A002F1FE7 /* OMHPreferenceController.m in Sources */,
-				EE71BBFA0F1F888E00F130A9 /* ImageTextCell.m in Sources */,
 				EE71BBFD0F1F88A200F130A9 /* OMHShortcutKey.m in Sources */,
 				EE71BC000F1F88B700F130A9 /* DBPrefsWindowController.m in Sources */,
 				EE3FE3CF0F211B0E00B09105 /* OMHClipping.m in Sources */,
 				EE3FE4010F211EB000B09105 /* MAAttachedWindow.m in Sources */,
 				EE6AD12B0F296CF4000C38AC /* OMHStatusItemWindowController.m in Sources */,
-				EE54B4AA0F8FF01D00B19E9C /* OMHGradientBackgroundView.m in Sources */,
+				EE19C4BC0FA4E07E000537FE /* OMHImageTextCell.m in Sources */,
+				EE19C4E50FA4E5DA000537FE /* OMHGradientBackgroundView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
