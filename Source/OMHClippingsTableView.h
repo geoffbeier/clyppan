@@ -32,11 +32,11 @@
 
 #import <Cocoa/Cocoa.h>
 #import "AppController.h"
-#import "ImageTextCell.h"
+#import "OMHImageTextCell.h"
 
 @interface OMHClippingsTableView: NSTableView
 {
-    ImageTextCell *cell;
+    OMHImageTextCell *cell;
 }
 
 // Interface actions

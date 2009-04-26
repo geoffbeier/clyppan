@@ -43,7 +43,7 @@
     [self setIntercellSpacing:NSMakeSize(0, 0)];
 
     // Create custom image and text cell
-    cell = [[ImageTextCell alloc] init];
+    cell = [[OMHImageTextCell alloc] init];
     [cell setPrimaryTextKeyPath: @"title"];
     [cell setSecondaryTextKeyPath: @"meta"];
     [cell setIconKeyPath: @"image"];
