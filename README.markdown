@@ -31,7 +31,7 @@ Open Interface Builder, go to Preferences -> Plug-ins, click the + button, brows
 To build open clyppan-git/clyppan/Clyppan.xcodeproj in Xcode and hit the build button.
 
 
-## License
+# License
 
 All code, except where otherwise noted, is licensed under the New BSD license. 
 
