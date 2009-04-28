@@ -357,7 +357,6 @@
     }
     
     url = [NSURL fileURLWithPath: [applicationSupportFolder stringByAppendingPathComponent: @"Clyppan.sql"]];
-    NSLog( @"URL: %@", url );
 
     NSDictionary *optionsDictionary = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:YES]
                                                                   forKey:NSMigratePersistentStoresAutomaticallyOption];
