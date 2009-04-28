@@ -31,10 +31,8 @@
 
 #import "OMHClipboardController.h"
 
-
 const float PasteboardPullInterval = 0.45;
 static OMHClipboardController *_OMHClipboardController = nil;
-
 
 @implementation OMHClipboardController
 
@@ -60,8 +58,11 @@ static OMHClipboardController *_OMHClipboardController = nil;
 
 - (id) init
 {
-    [super init];
-    previousChangeCount = 0;
+    if ( ![super init] )
+        return nil;
+    
+    previousChangeCount = 0;        
+
     return self;
 }
 
@@ -88,6 +89,7 @@ static OMHClipboardController *_OMHClipboardController = nil;
 @interface OMHClipboardController (private)
 
 - (void) timerFired:(NSTimer *)timer;
+- (BOOL) pasteboardHasChanged:(NSPasteboard *)pboard;
 
 @end
 
@@ -97,21 +99,20 @@ static OMHClipboardController *_OMHClipboardController = nil;
 - (void) timerFired:(NSTimer *)timer;
 {
     NSPasteboard *pboard = [NSPasteboard generalPasteboard];
-    int changeCount = [pboard changeCount];
-    if ( changeCount <= previousChangeCount )
+    if ( ![self pasteboardHasChanged:pboard] )
         return;
     
-    previousChangeCount = changeCount;
-    
-    NSData *data = nil;
     id string = nil;
+
+    NSArray *supportedTypes = [NSArray arrayWithObjects: NSRTFPboardType, NSStringPboardType, nil];
+    NSString *bestType = [[NSPasteboard generalPasteboard] availableTypeFromArray:supportedTypes];    
     
-    if ( [[pboard types] containsObject:NSRTFPboardType] ) 
+    if ( [bestType isEqualToString:NSRTFPboardType] )
     {
-        data = [pboard dataForType:NSRTFPboardType];
+        NSData *data = [pboard dataForType:NSRTFPboardType];
         string = [[NSAttributedString alloc] initWithRTF:data documentAttributes:NULL];
     }    
-    else if ( [[pboard types] containsObject:NSStringPboardType] ) 
+    else if ( [bestType isEqualToString:NSStringPboardType] )
     {
         string = [pboard stringForType:NSStringPboardType];
     }
@@ -122,5 +123,14 @@ static OMHClipboardController *_OMHClipboardController = nil;
     }
 }
 
-@end
+- (BOOL) pasteboardHasChanged:(NSPasteboard *)pboard
+{
+    int changeCount = [pboard changeCount];
+    if ( changeCount <= previousChangeCount )
+        return NO;
+    
+    previousChangeCount = changeCount;    
+    return YES;
+}
 
+@end
