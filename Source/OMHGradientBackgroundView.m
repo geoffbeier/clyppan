@@ -38,20 +38,34 @@
 {
     rect = [self bounds];
     
-    // Draw the gradient
-    NSColor *color = [NSColor colorWithCalibratedRed:68 / 255.00 
-                                               green:70 / 255.00 
-                                                blue:70 / 255.00 
-                                               alpha:1];
+    NSColor *color;
+    NSGradient *gradient;
+    if ( [self.window isKeyWindow] )
+    {
+        color = [NSColor colorWithCalibratedRed:68 / 255.00
+                                          green:70 / 255.00
+                                           blue:70 / 255.00
+                                          alpha:1];
+        gradient = [[NSGradient alloc] initWithStartingColor:[color shadowWithLevel:0.2]
+                                                 endingColor:[color highlightWithLevel:0.1]];
 
-    NSGradient *gradient = [[NSGradient alloc] initWithStartingColor:[color shadowWithLevel:0.2]
-                                                         endingColor:[color highlightWithLevel:0.1]];    
+    }
+    else
+    {
+        color = [NSColor colorWithCalibratedRed:140 / 255.00
+                                          green:140 / 255.00
+                                           blue:140 / 255.00
+                                          alpha:1];
+        gradient = [[NSGradient alloc] initWithStartingColor:[color shadowWithLevel:0.215]
+                                                 endingColor:[color highlightWithLevel:0.1]];
+    }
+
     [gradient drawInRect:rect angle:90];
 
     // Draw the bottom border
     [[color shadowWithLevel:0.6] set];
     rect.size.height = 1;
-    [[NSBezierPath bezierPathWithRect:rect] fill];    
+    [[NSBezierPath bezierPathWithRect:rect] fill];
 }
 
 @end
