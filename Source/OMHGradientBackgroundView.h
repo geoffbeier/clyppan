@@ -32,7 +32,11 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface OMHGradientBackgroundView : NSView {
+/**
+ * Draws a nice dark gradient as the NSView background
+ */
+@interface OMHGradientBackgroundView : NSView 
+{
 
 }
 

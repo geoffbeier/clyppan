@@ -34,18 +34,21 @@
 
 @implementation OMHGradientBackgroundView
 
-- (void)drawRect:(NSRect)rect {
+- (void)drawRect:(NSRect)rect 
+{
     rect = [self bounds];
-    NSColor *color = [NSColor colorWithCalibratedRed:144 / 255.00 
-                                               green:148 / 255.00 
-                                                blue:154 / 255.00 
+    
+    // Draw the gradient
+    NSColor *color = [NSColor colorWithCalibratedRed:68 / 255.00 
+                                               green:70 / 255.00 
+                                                blue:70 / 255.00 
                                                alpha:1];
 
-    NSGradient *gradient = [[NSGradient alloc] initWithStartingColor:[color shadowWithLevel:0.4]
-                                                         endingColor:[color shadowWithLevel:0.2]];
-    
+    NSGradient *gradient = [[NSGradient alloc] initWithStartingColor:[color shadowWithLevel:0.2]
+                                                         endingColor:[color highlightWithLevel:0.1]];    
     [gradient drawInRect:rect angle:90];
-    
+
+    // Draw the bottom border
     [[color shadowWithLevel:0.6] set];
     rect.size.height = 1;
     [[NSBezierPath bezierPathWithRect:rect] fill];    
