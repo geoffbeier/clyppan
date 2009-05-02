@@ -380,9 +380,7 @@
     object.isCurrent = [NSNumber numberWithBool:YES];
     object.lastUsed = [NSDate date];
     self.currentActiveItem = object;
-    
-    NSLog( @"Current object is now %@ - %@", self.currentActiveItem.title, self.currentActiveItem.isCurrent );
-    
+
     [self setSorting];        
 }
 
