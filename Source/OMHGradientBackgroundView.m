@@ -42,9 +42,9 @@
     NSGradient *gradient;
     if ( [self.window isKeyWindow] )
     {
-        color = [NSColor colorWithCalibratedRed:68 / 255.00
-                                          green:70 / 255.00
-                                           blue:70 / 255.00
+        color = [NSColor colorWithCalibratedRed:88 / 255.00
+                                          green:90 / 255.00
+                                           blue:90 / 255.00
                                           alpha:1];
         gradient = [[NSGradient alloc] initWithStartingColor:[color shadowWithLevel:0.2]
                                                  endingColor:[color highlightWithLevel:0.1]];
@@ -52,9 +52,9 @@
     }
     else
     {
-        color = [NSColor colorWithCalibratedRed:140 / 255.00
-                                          green:140 / 255.00
-                                           blue:140 / 255.00
+        color = [NSColor colorWithCalibratedRed:160 / 255.00
+                                          green:160 / 255.00
+                                           blue:160 / 255.00
                                           alpha:1];
         gradient = [[NSGradient alloc] initWithStartingColor:[color shadowWithLevel:0.215]
                                                  endingColor:[color highlightWithLevel:0.1]];
