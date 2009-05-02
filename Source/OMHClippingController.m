@@ -118,8 +118,6 @@
         return;
     }
     
-    [[AppController sharedAppController] flashStatusMenu];
-
     // Check if existing object exists...
     OMHClipping *existingObject = [self objectWithContent:content];
     if ( existingObject != nil )
@@ -132,6 +130,7 @@
     id object = [self createObject:content];
     [self addObject:object];
     [self markObjectAsCurrentWithoutClipboard:object];
+    [[AppController sharedAppController] flashStatusMenu];
 }
 
 /**
@@ -376,19 +375,15 @@
             self.currentActiveItem = [[self arrangedObjects] objectAtIndex:0];
     
     // Since putting an item on the clippboard will cause this method
-    // to be called twice do nothing if currentActiveItem is the same.
-    if ( self.currentActiveItem != object )
-    {
-        object.isCurrent = [NSNumber numberWithBool:YES];
-        object.lastUsed = [NSDate date];
-        
-        self.currentActiveItem.isCurrent = [NSNumber numberWithBool:NO];
-        self.currentActiveItem = object;
-        
-        NSLog( @"Current object is now %@ - %@", self.currentActiveItem.title, self.currentActiveItem.isCurrent );
-        
-        [self setSorting];        
-    }
+    // to be called twice do nothing if currentActiveItem is the same.    
+    self.currentActiveItem.isCurrent = [NSNumber numberWithBool:NO];
+    object.isCurrent = [NSNumber numberWithBool:YES];
+    object.lastUsed = [NSDate date];
+    self.currentActiveItem = object;
+    
+    NSLog( @"Current object is now %@ - %@", self.currentActiveItem.title, self.currentActiveItem.isCurrent );
+    
+    [self setSorting];        
 }
 
 @end
