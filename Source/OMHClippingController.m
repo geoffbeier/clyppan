@@ -374,8 +374,6 @@
         if ( [[self arrangedObjects] count] >= 1 )
             self.currentActiveItem = [[self arrangedObjects] objectAtIndex:0];
     
-    // Since putting an item on the clippboard will cause this method
-    // to be called twice do nothing if currentActiveItem is the same.    
     self.currentActiveItem.isCurrent = [NSNumber numberWithBool:NO];
     object.isCurrent = [NSNumber numberWithBool:YES];
     object.lastUsed = [NSDate date];
