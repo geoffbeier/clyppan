@@ -45,7 +45,7 @@
 - (NSString *) titleFromContent:(NSAttributedString *)newContent;
 {
     NSString *newTitle = [[newContent string] copy];
-    NSString *newlineReplacementString = @"⏎ ";
+    NSString *newlineReplacementString = @"↩ ";
     
     // Replace newlines/tabs
     newTitle = [newTitle stringByReplacingOccurrencesOfString:@"\n" withString:newlineReplacementString];
@@ -123,7 +123,7 @@
 {
     if ( self.content )
         self.title = [self titleFromContent:self.content];
-
+    
     [self addObserver:self forKeyPath:@"content" options:0 context:NULL];    
 }
 
@@ -137,8 +137,9 @@
 - (NSString *) meta
 {
     NSString *dateString = [self.created descriptionWithCalendarFormat:@"%Y-%m-%d %H:%M:%S" 
-                                                   timeZone:nil locale:[[NSUserDefaults standardUserDefaults] dictionaryRepresentation]];
-
+                                                              timeZone:nil
+                                                                locale:[[NSUserDefaults standardUserDefaults] dictionaryRepresentation]];
+    
     return [NSString stringWithFormat:@"Added on %@ from %@", dateString, self.createdFromApp];   
 }
 
@@ -153,7 +154,7 @@
         // the attributes will be nil.
         if ( self.content == nil )
             return;
-            
+        
         self.title = [self titleFromContent:self.content];
         self.plainContent = [self.content string];
     }
