@@ -352,6 +352,7 @@
 - (void) markObjectAsCurrent:(OMHClipping *)object;
 {
     [self markObjectAsCurrentWithoutClipboard:object];
+
     NSPasteboard *pb = [NSPasteboard generalPasteboard];
     
     [pb declareTypes:[NSArray arrayWithObject:NSStringPboardType] owner:nil];
@@ -374,13 +375,20 @@
         if ( [[self arrangedObjects] count] >= 1 )
             self.currentActiveItem = [[self arrangedObjects] objectAtIndex:0];
     
-    object.isCurrent = [NSNumber numberWithBool:YES];
-    object.lastUsed = [NSDate date];
-    
-    self.currentActiveItem.isCurrent = [NSNumber numberWithBool:NO];
-    self.currentActiveItem = object;
-    
-    [self setSorting];
+    // Since putting an item on the clippboard will cause this method
+    // to be called twice do nothing if currentActiveItem is the same.
+    if ( self.currentActiveItem != object )
+    {
+        object.isCurrent = [NSNumber numberWithBool:YES];
+        object.lastUsed = [NSDate date];
+        
+        self.currentActiveItem.isCurrent = [NSNumber numberWithBool:NO];
+        self.currentActiveItem = object;
+        
+        NSLog( @"Current object is now %@ - %@", self.currentActiveItem.title, self.currentActiveItem.isCurrent );
+        
+        [self setSorting];        
+    }
 }
 
 @end
