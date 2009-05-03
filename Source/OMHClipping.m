@@ -107,6 +107,7 @@
 @dynamic created;
 @dynamic isCurrent;
 
+#pragma mark -
 #pragma mark Initialization and Setup
 
 - (void) awakeFromInsert
@@ -127,6 +128,7 @@
     [self addObserver:self forKeyPath:@"content" options:0 context:NULL];    
 }
 
+#pragma mark -
 #pragma mark Properties override methods
 
 - (NSImage *) image
@@ -143,7 +145,7 @@
     return [NSString stringWithFormat:@"Added on %@ from %@", dateString, self.createdFromApp];   
 }
 
-
+#pragma mark -
 #pragma mark KVO methods
 
 - (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context 

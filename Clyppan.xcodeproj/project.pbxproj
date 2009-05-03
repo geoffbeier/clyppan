@@ -78,6 +78,7 @@
 		EE71BC0C0F1F88E100F130A9 /* Shortcuts.png in Resources */ = {isa = PBXBuildFile; fileRef = EE71BC0A0F1F88E100F130A9 /* Shortcuts.png */; };
 		EE71BC0D0F1F88E100F130A9 /* Update.tiff in Resources */ = {isa = PBXBuildFile; fileRef = EE71BC0B0F1F88E100F130A9 /* Update.tiff */; };
 		EE79F8410F9FB03F00010D7E /* Clyppan_DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE79F8400F9FB03F00010D7E /* Clyppan_DataModel.xcdatamodeld */; };
+		EEECB6760FAE1454004A596B /* AppController+CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = EEECB6750FAE1454004A596B /* AppController+CoreData.m */; };
 		EEF4181A0F1D27A80037980E /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF418190F1D27A80037980E /* Carbon.framework */; };
 /* End PBXBuildFile section */
 
@@ -151,14 +152,16 @@
 		EE4A93D20F1F8825007DE4BF /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Frameworks/Sparkle.framework; sourceTree = SOURCE_ROOT; };
 		EE5A52C60F222C6400919974 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/StatusItemHelperWindow.xib; sourceTree = "<group>"; };
 		EE5A54680F23DF3C00919974 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dsa_pub.pem; path = Resources/dsa_pub.pem; sourceTree = "<group>"; };
-		EE6AD1290F296CF4000C38AC /* OMHStatusItemWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OMHStatusItemWindowController.h; path = Source/OMHStatusItemWindowController.h; sourceTree = SOURCE_ROOT; };
-		EE6AD12A0F296CF4000C38AC /* OMHStatusItemWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OMHStatusItemWindowController.m; path = Source/OMHStatusItemWindowController.m; sourceTree = SOURCE_ROOT; };
+		EE6AD1290F296CF4000C38AC /* OMHStatusItemWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OMHStatusItemWindowController.h; path = Source/OMHStatusItemWindowController.h; sourceTree = "<group>"; };
+		EE6AD12A0F296CF4000C38AC /* OMHStatusItemWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OMHStatusItemWindowController.m; path = Source/OMHStatusItemWindowController.m; sourceTree = "<group>"; };
 		EE71BBFB0F1F88A200F130A9 /* OMHShortcutKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OMHShortcutKey.h; path = ../collections/Shortcut/OMHShortcutKey.h; sourceTree = SOURCE_ROOT; };
 		EE71BBFC0F1F88A200F130A9 /* OMHShortcutKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OMHShortcutKey.m; path = ../collections/Shortcut/OMHShortcutKey.m; sourceTree = SOURCE_ROOT; };
 		EE71BBFE0F1F88B700F130A9 /* DBPrefsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBPrefsWindowController.h; path = ../collections/Controllers/DBPrefsWindowController.h; sourceTree = SOURCE_ROOT; };
 		EE71BBFF0F1F88B700F130A9 /* DBPrefsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBPrefsWindowController.m; path = ../collections/Controllers/DBPrefsWindowController.m; sourceTree = SOURCE_ROOT; };
 		EE71BC0A0F1F88E100F130A9 /* Shortcuts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Shortcuts.png; path = "../collections/Resources/Preference Icons/Shortcuts.png"; sourceTree = SOURCE_ROOT; };
 		EE71BC0B0F1F88E100F130A9 /* Update.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Update.tiff; path = "../collections/Resources/Preference Icons/Update.tiff"; sourceTree = SOURCE_ROOT; };
+		EEECB6740FAE1454004A596B /* AppController+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AppController+CoreData.h"; path = "Source/AppController+CoreData.h"; sourceTree = SOURCE_ROOT; };
+		EEECB6750FAE1454004A596B /* AppController+CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AppController+CoreData.m"; path = "Source/AppController+CoreData.m"; sourceTree = SOURCE_ROOT; };
 		EEF418190F1D27A80037980E /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -273,10 +276,10 @@
 		EE0F27E80F1D2AD100E0C0FF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EE19C4BA0FA4E07E000537FE /* OMHImageTextCell.h */,
-				EE19C4BB0FA4E07E000537FE /* OMHImageTextCell.m */,
 				EE3FE3FF0F211EB000B09105 /* MAAttachedWindow.h */,
 				EE3FE4000F211EB000B09105 /* MAAttachedWindow.m */,
+				EE19C4BA0FA4E07E000537FE /* OMHImageTextCell.h */,
+				EE19C4BB0FA4E07E000537FE /* OMHImageTextCell.m */,
 				EE1428F70F1D259A002F1FE7 /* OMHClippingsTableView.h */,
 				EE1428F00F1D259A002F1FE7 /* OMHClippingsTableView.m */,
 				EE1428FA0F1D259A002F1FE7 /* OMHMainWindow.h */,
@@ -291,18 +294,17 @@
 			isa = PBXGroup;
 			children = (
 				EE0F27EB0F1D2B5400E0C0FF /* Preferences */,
+				EEECB6570FAE1050004A596B /* Window Controllers */,
 				EE1428FB0F1D259A002F1FE7 /* AppController.h */,
 				EE1428F30F1D259A002F1FE7 /* AppController.m */,
+				EEECB6740FAE1454004A596B /* AppController+CoreData.h */,
+				EEECB6750FAE1454004A596B /* AppController+CoreData.m */,
 				EE1428FC0F1D259A002F1FE7 /* OMHClippingController.h */,
 				EE1428EF0F1D259A002F1FE7 /* OMHClippingController.m */,
 				EE1428F20F1D259A002F1FE7 /* OMHClipboardController.h */,
 				EE1428F50F1D259A002F1FE7 /* OMHClipboardController.m */,
 				EE71BBFB0F1F88A200F130A9 /* OMHShortcutKey.h */,
 				EE71BBFC0F1F88A200F130A9 /* OMHShortcutKey.m */,
-				EE6AD1290F296CF4000C38AC /* OMHStatusItemWindowController.h */,
-				EE6AD12A0F296CF4000C38AC /* OMHStatusItemWindowController.m */,
-				EE1428FE0F1D259A002F1FE7 /* OMHQuickPreviewWindowController.h */,
-				EE1428F90F1D259A002F1FE7 /* OMHQuickPreviewWindowController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -338,6 +340,17 @@
 				EE1429110F1D25BB002F1FE7 /* clyppan-small.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		EEECB6570FAE1050004A596B /* Window Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EE6AD1290F296CF4000C38AC /* OMHStatusItemWindowController.h */,
+				EE6AD12A0F296CF4000C38AC /* OMHStatusItemWindowController.m */,
+				EE1428FE0F1D259A002F1FE7 /* OMHQuickPreviewWindowController.h */,
+				EE1428F90F1D259A002F1FE7 /* OMHQuickPreviewWindowController.m */,
+			);
+			name = "Window Controllers";
 			sourceTree = "<group>";
 		};
 		EEF417FD0F1D26D80037980E /* 3rd Party Frameworks */ = {
@@ -477,6 +490,7 @@
 				EE6AD12B0F296CF4000C38AC /* OMHStatusItemWindowController.m in Sources */,
 				EE19C4BC0FA4E07E000537FE /* OMHImageTextCell.m in Sources */,
 				EE19C4E50FA4E5DA000537FE /* OMHGradientBackgroundView.m in Sources */,
+				EEECB6760FAE1454004A596B /* AppController+CoreData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -374,10 +374,17 @@
         if ( [[self arrangedObjects] count] >= 1 )
             self.currentActiveItem = [[self arrangedObjects] objectAtIndex:0];
     
-    self.currentActiveItem.isCurrent = [NSNumber numberWithBool:NO];
-    object.isCurrent = [NSNumber numberWithBool:YES];
-    object.lastUsed = [NSDate date];
-    self.currentActiveItem = object;
+    if ( self.currentActiveItem != object )
+    {
+        self.currentActiveItem.isCurrent = [NSNumber numberWithBool:NO];
+        object.isCurrent = [NSNumber numberWithBool:YES];
+        object.lastUsed = [NSDate date];
+        self.currentActiveItem = object;        
+    }
+    else
+    {
+        object.isCurrent = [NSNumber numberWithBool:YES];
+    }
 
     [self setSorting];        
 }

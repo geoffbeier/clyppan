@@ -30,10 +30,14 @@
  */
 
 #import <Cocoa/Cocoa.h>
+
+
 @class OMHClippingController;
 
-
-#define autoSaveInterval 60*10 // How often should we save the clippings
+/**
+ * How often we should auto save the data in seconds
+ */
+extern int const AUTOSAVE_INTERVAL;
 
 
 @interface AppController: NSObject 
@@ -57,31 +61,61 @@
     IBOutlet NSTextField *currentClippingMetaText;
 }
 
-// Properties
+/**
+ * Holds the status item
+ */
 @property( nonatomic, retain ) NSStatusItem *statusItem;
+
+/**
+ * Holds the main window
+ */
 @property( nonatomic, retain ) NSWindow *mainWindow;
 
-// Class methods
+/**
+ * Returns a shared instance (singleton) of this class
+ */
 + (AppController *) sharedAppController;
 
-// Actions
+
+/**
+ * Brings the main window to the front
+ */
 - (IBAction) showMainWindow:(id)sender;
+
+/**
+ * Brings the Preference window to the front
+ */
 - (IBAction) showPreferencesWindow:(id)sender;
+
+/**
+ * Toogles the main window
+ */
 - (IBAction) toogleMainWindow:(id)sender;
+
+/**
+ * Toogles the quick preview window
+ */
 - (IBAction) toogleQuickPreviewWindow:(id)sender;
 
-// Methods
+
+/**
+ * Creates and sets up the status item
+ */
 - (void) createStatusMenu;
+
+/** 
+ * Flashes the status menu icon (turns it blue temporary).
+ */
 - (void) flashStatusMenu;
+
+/**
+ * Handles the status menu item being clicked event
+ */
 - (void) statusMenuItemClicked;
+
+/**
+ * Returns the activate shortcut key as a string
+ */
 - (NSString *) activateKeyComboString;
-
-// Delegation methods
-- (void) shortcutDidChange:(NSString *)shortcutId keyCombo:(NSValue *)wrappedKeyCombo;
-
-// Core data
-- (NSPersistentStoreCoordinator *)persistentStoreCoordinator;
-- (NSManagedObjectModel *)managedObjectModel;
-- (NSManagedObjectContext *)managedObjectContext;
 
 @end
