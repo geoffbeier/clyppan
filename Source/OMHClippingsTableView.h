@@ -39,7 +39,9 @@
     OMHImageTextCell *cell;
 }
 
-// Interface actions
+/*
+ * IBAction: Scrolls to the clipping currently on the clipboard
+ */
 - (IBAction) scrollToCurrentItem:(id)sender;
 
 

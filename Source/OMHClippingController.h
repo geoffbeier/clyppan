@@ -34,32 +34,123 @@
 
 @class OMHClipping;
 
+
 @interface OMHClippingController: NSArrayController 
 {
     OMHClipping *currentActiveItem;    
     int clippingPurgeLimit;
 }
 
-// Properties
+
+#pragma mark -
+#pragma mark Properties
+
+/**
+ * Holds the clipping that's currentlty on the clipboard
+ */
 @property( nonatomic, assign ) OMHClipping *currentActiveItem;
+
+/**
+ * How many items to hold in the clipping list
+ */
 @property( nonatomic, assign ) int clippingPurgeLimit;
 
-// Interface Actions
+
+#pragma mark -
+#pragma mark Actions
+
+/**
+ * Removes an object from the clipping list
+ */
 - (IBAction) removeObject:(id)sender;
+
+/**
+ * Removes all objects from the clipping list
+ */
 - (IBAction) removeAllObjects:(id)sender;
+
+/**
+ * Marks the first selected object as current
+ */
 - (IBAction) markAsCurrent:(id)sender;
 
-// Instance methods
+
+#pragma mark -
+#pragma mark Instance methods
+
+/**
+ * Creates and returns a new clipping object.
+ *
+ * The create clipping object is not added to the arrangedObjects.
+ * 
+ * @param content NSAttributedString 
+ */
 - (id) createObject:(NSAttributedString *)content;
+
+/**
+ * Returns an object with content matching the content parameter.
+ *
+ * @param content Instance of NSAttributedString that contains the clipbarod content.
+ */
 - (id) objectWithContent:(NSAttributedString *)content;
+
+/**
+ * Adds a new clipping
+ *
+ * A check for duplicates is performed before adding anything. If
+ * a duplicate is found it will be marked as the current clipping.
+ *
+ * @param newContent id Either a NSAttributedString or NSString object that
+ contains the clipboard contents.
+ */
 - (void) addObjectWithContent:(id)newContent;
+
+/**
+ * Makes sure [self arrangedObjects] only contains as many objects as specified by the
+ * limit parameter
+ *
+ * @param limit int Maximum number of items to allow in the clipping array.
+ */
 - (void) purgeUntilCountIs:(int)limit;
+
+/**
+ * Removes all clippings from the arrangedObject array
+ */
 - (void) removeAllObjects;
 
-- (void) setSorting;
+/**
+ * Marks the clipping at 'row' as current.
+ *￼
+ * @param row The index of the object that should be marked.
+ */
 - (void) markObjectAsSelectedOnRow:(NSNumber *)row;
+
+/**
+ * Marks a clipping object as current and put its content on the clipboard
+ *
+ * @param object OMHClipping The object to mark and put on the clipboard
+ */
 - (void) markObjectAsCurrent:(OMHClipping *)object;
+
+/**
+ * Marks a clipping object as current but does not put it on the clipboard.
+ *
+ * @param object OMHClipping The object to mark as current
+ */
 - (void) markObjectAsCurrentWithoutClipboard:(OMHClipping *)object;
+
+/**
+ * Peforms a Rapid Paste
+ *
+ * Rapid Paste takes the current item and changes the last used date to make it 
+ * jump down the bottom of the list. The next item in the list will be promoted 
+ * to the current item.
+ */
 - (void) rapidPaste;
+
+/**
+ * ￼Sets the default sorting which is sort by 'current' then 'lastUsed'
+ */
+- (void) setSorting;
 
 @end

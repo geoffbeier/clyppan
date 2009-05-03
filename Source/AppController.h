@@ -61,6 +61,9 @@ extern int const AUTOSAVE_INTERVAL;
     IBOutlet NSTextField *currentClippingMetaText;
 }
 
+#pragma mark -
+#pragma mark Properties
+
 /**
  * Holds the status item
  */
@@ -71,11 +74,18 @@ extern int const AUTOSAVE_INTERVAL;
  */
 @property( nonatomic, retain ) NSWindow *mainWindow;
 
+
+#pragma mark -
+#pragma mark Class methods
+
 /**
  * Returns a shared instance (singleton) of this class
  */
 + (AppController *) sharedAppController;
 
+
+#pragma mark -
+#pragma mark Interface Actions
 
 /**
  * Brings the main window to the front
@@ -97,6 +107,9 @@ extern int const AUTOSAVE_INTERVAL;
  */
 - (IBAction) toogleQuickPreviewWindow:(id)sender;
 
+
+#pragma mark -
+#pragma mark Instance Methods
 
 /**
  * Creates and sets up the status item
