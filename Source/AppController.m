@@ -118,8 +118,6 @@ const int AUTOSAVE_INTERVAL = 10*60;
         
     // Apply an embossed look to the status text
     [statusTextField.cell setBackgroundStyle:NSBackgroundStyleRaised];
-    [currentClippingText.cell setBackgroundStyle:NSBackgroundStyleLowered];
-    [currentClippingMetaText.cell setBackgroundStyle:NSBackgroundStyleLowered];    
     
     // Set up the clipboard controller
     [[OMHClipboardController sharedController] createTimer];

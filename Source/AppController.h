@@ -57,8 +57,6 @@ extern int const AUTOSAVE_INTERVAL;
     NSStatusItem *statusItem;
     NSTimer *autoSaveTimer;
     IBOutlet NSTextField *statusTextField;
-    IBOutlet NSTextField *currentClippingText;
-    IBOutlet NSTextField *currentClippingMetaText;
 }
 
 #pragma mark -
