@@ -49,6 +49,7 @@
 		EE1429160F1D25BB002F1FE7 /* clyppan-small.png in Resources */ = {isa = PBXBuildFile; fileRef = EE1429110F1D25BB002F1FE7 /* clyppan-small.png */; };
 		EE19C4BC0FA4E07E000537FE /* OMHImageTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE19C4BB0FA4E07E000537FE /* OMHImageTextCell.m */; };
 		EE19C4E50FA4E5DA000537FE /* OMHGradientBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE19C4E40FA4E5DA000537FE /* OMHGradientBackgroundView.m */; };
+		EE3AA2250FAF8081002D747E /* 1.0.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 770B37EC0679A11B001EADE2 /* 1.0.xcdatamodel */; };
 		EE3FE3CF0F211B0E00B09105 /* OMHClipping.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3FE3CD0F211B0E00B09105 /* OMHClipping.m */; };
 		EE3FE4010F211EB000B09105 /* MAAttachedWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3FE4000F211EB000B09105 /* MAAttachedWindow.m */; };
 		EE4A8F7A0F1E075B007DE4BF /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE4A8F780F1E075B007DE4BF /* Preferences.xib */; };
@@ -466,6 +467,7 @@
 				EE19C4BC0FA4E07E000537FE /* OMHImageTextCell.m in Sources */,
 				EE19C4E50FA4E5DA000537FE /* OMHGradientBackgroundView.m in Sources */,
 				EEECB6760FAE1454004A596B /* AppController+CoreData.m in Sources */,
+				EE3AA2250FAF8081002D747E /* 1.0.xcdatamodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

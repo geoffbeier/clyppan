@@ -101,16 +101,13 @@
     }
     
     url = [NSURL fileURLWithPath: [applicationSupportFolder stringByAppendingPathComponent: @"Clyppan.sql"]];
-    
-    NSDictionary *optionsDictionary = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:YES]
-                                                                  forKey:NSMigratePersistentStoresAutomaticallyOption];
-    
+        
     persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel: [self managedObjectModel]];
     
     if (![persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType 
                                                   configuration:nil 
                                                             URL:url 
-                                                        options:optionsDictionary 
+                                                        options:nil 
                                                           error:&error]){
         [[NSApplication sharedApplication] presentError:error];
     }    
