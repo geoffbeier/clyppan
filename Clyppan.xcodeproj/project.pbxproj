@@ -30,17 +30,6 @@
 			name = Distribution;
 			productName = Distribution;
 		};
-		EEACE4C40F745A2700D11643 /* Clang Static Analyser */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = EEACE4C70F745A4500D11643 /* Build configuration list for PBXAggregateTarget "Clang Static Analyser" */;
-			buildPhases = (
-				EEACE4C30F745A2700D11643 /* ShellScript */,
-			);
-			dependencies = (
-			);
-			name = "Clang Static Analyser";
-			productName = "Clang Static Analyser";
-		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
@@ -398,7 +387,6 @@
 			targets = (
 				8D1107260486CEB800E47090 /* Clyppan */,
 				EE5A55050F24DD1900919974 /* Distribution */,
-				EEACE4C40F745A2700D11643 /* Clang Static Analyser */,
 				EE19C3430FA38DBF000537FE /* Build Documentation */,
 			);
 		};
@@ -453,19 +441,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
 			shellScript = "set -o errexit\n\n[ $BUILD_STYLE = Release ] || { echo Distribution target requires \"'Release'\" build style; false; }\n\nVERSION=$(defaults read \"$BUILT_PRODUCTS_DIR/$PROJECT_NAME.app/Contents/Info\" CFBundleVersion)\nDOWNLOAD_BASE_URL=\"http://www.example.com/download/\"\nRELEASENOTES_URL=\"http://www.example.com/software/my-cool-app/release-notes.html#version-$VERSION\"\n\nARCHIVE_FILENAME=\"$PROJECT_NAME $VERSION.zip\"\nDOWNLOAD_URL=\"$DOWNLOAD_BASE_URL/$ARCHIVE_FILENAME\"\nKEYCHAIN_PRIVKEY_NAME=\"$PROJECT_NAME private Sparkle key\"\n\nWD=$PWD\ncd \"$BUILT_PRODUCTS_DIR\"\nrm -f \"$PROJECT_NAME\"*.zip\nzip -qr \"$ARCHIVE_FILENAME\" \"$PROJECT_NAME.app\"\ncp \"$ARCHIVE_FILENAME\" \"/Users/$USER/Desktop/\"\n\nSIZE=$(stat -f %z \"$ARCHIVE_FILENAME\")\nPUBDATE=$(date +\"%a, %d %b %G %T %z\")\nSIGNATURE=$(\n\topenssl dgst -sha1 -binary < \"$ARCHIVE_FILENAME\" \\\n\t| openssl dgst -dss1 -sign <(security find-generic-password -g -s \"$KEYCHAIN_PRIVKEY_NAME\" 2>&1 1>/dev/null | perl -pe '($_) = /\"(.+)\"/; s/\\\\012/\\n/g') \\\n\t| openssl enc -base64\n)\n\n[ $SIGNATURE ] || { echo Unable to load signing private key with name \"'$KEYCHAIN_PRIVKEY_NAME'\" from keychain; false; }\n\necho \"Signature: $SIGNATURE\"";
-		};
-		EEACE4C30F745A2700D11643 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "scan-build xcodebuild -configuration \"$BUILD_STYLE\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -674,27 +649,6 @@
 			};
 			name = Release;
 		};
-		EEACE4C50F745A2700D11643 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				PRODUCT_NAME = "Clang Static Analyser";
-			};
-			name = Debug;
-		};
-		EEACE4C60F745A2700D11643 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				PRODUCT_NAME = "Clang Static Analyser";
-				ZERO_LINK = NO;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -730,15 +684,6 @@
 			buildConfigurations = (
 				EE5A55060F24DD1A00919974 /* Debug */,
 				EE5A55070F24DD1A00919974 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EEACE4C70F745A4500D11643 /* Build configuration list for PBXAggregateTarget "Clang Static Analyser" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EEACE4C50F745A2700D11643 /* Debug */,
-				EEACE4C60F745A2700D11643 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
