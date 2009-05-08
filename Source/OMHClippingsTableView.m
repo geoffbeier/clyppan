@@ -122,6 +122,12 @@
     {
         [self.delegate performSelector:@selector( markObjectAsSelectedOnRow: ) 
                             withObject:[NSNumber numberWithInt:[self selectedRow]]];
+
+        if ( !( [event modifierFlags] & NSShiftKeyMask ) )
+        {
+            [[NSApp delegate] performSelector:@selector( toogleMainWindow: ) withObject:self];
+        }
+
         return;
     }
     
@@ -135,7 +141,7 @@
 - (void) highlightSelectionInClipRect:(NSRect)rect;
 {
     NSResponder *firstResponder = [[self window] firstResponder];
-    if ( ![firstResponder isKindOfClass:[NSView class]] || ![(NSView *)firstResponder isDescendantOf:self] || ![[self window] isKeyWindow] ) 
+    if ( ![firstResponder isKindOfClass:[NSView class]] || ![(NSView *)firstResponder isDescendantOf:self] || ![[self window] isKeyWindow] )
     {
         [cell setTextColor:[NSColor blackColor]];
     }
