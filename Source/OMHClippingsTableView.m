@@ -109,7 +109,7 @@
     // If key == delete or backspace.
     if ( key == NSDeleteFunctionKey || key == NSDeleteCharacter )
     {
-        [[self delegate] removeObject:self];
+		[self.delegate performSelector:@selector( removeObject ) withObject:self];
         return;
     }
     
