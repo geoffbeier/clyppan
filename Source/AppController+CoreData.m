@@ -96,10 +96,14 @@
     
     fileManager = [NSFileManager defaultManager];
     applicationSupportFolder = [self applicationSupportFolder];
-    if ( ![fileManager fileExistsAtPath:applicationSupportFolder isDirectory:NULL] ) {
-        [fileManager createDirectoryAtPath:applicationSupportFolder attributes:nil];
+    if ( ![fileManager fileExistsAtPath:applicationSupportFolder isDirectory:NULL] ) 
+	{
+        [fileManager createDirectoryAtPath:applicationSupportFolder 
+			   withIntermediateDirectories:YES
+								attributes:nil
+									 error:&error];
     }
-    
+	
     url = [NSURL fileURLWithPath: [applicationSupportFolder stringByAppendingPathComponent: @"Clyppan.sql"]];
         
     persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel: [self managedObjectModel]];
