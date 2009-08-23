@@ -31,7 +31,7 @@
 
 
 #import "OMHClipping.h"
-
+#import "OMHHumanReadableDate.h"
 
 @interface OMHClipping( private )
 
@@ -138,11 +138,9 @@
 
 - (NSString *) meta
 {
-    NSString *dateString = [self.created descriptionWithCalendarFormat:@"%Y-%m-%d %H:%M:%S" 
-                                                              timeZone:nil
-                                                                locale:[[NSUserDefaults standardUserDefaults] dictionaryRepresentation]];
+    NSString *dateString = [OMHHumanReadableDate dateToHumanReadableString:self.created];
     
-    return [NSString stringWithFormat:@"Added on %@ from %@", dateString, self.createdFromApp];   
+    return [NSString stringWithFormat:@"Added %@ from %@", dateString, self.createdFromApp];   
 }
 
 #pragma mark -

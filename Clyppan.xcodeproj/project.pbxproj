@@ -49,6 +49,8 @@
 		EE1429160F1D25BB002F1FE7 /* clyppan-small.png in Resources */ = {isa = PBXBuildFile; fileRef = EE1429110F1D25BB002F1FE7 /* clyppan-small.png */; };
 		EE19C4BC0FA4E07E000537FE /* OMHImageTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE19C4BB0FA4E07E000537FE /* OMHImageTextCell.m */; };
 		EE19C4E50FA4E5DA000537FE /* OMHGradientBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE19C4E40FA4E5DA000537FE /* OMHGradientBackgroundView.m */; };
+		EE29E998104087A700651640 /* OMHHumanReadableDateTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE29E997104087A700651640 /* OMHHumanReadableDateTest.m */; };
+		EE29E9A310408F0500651640 /* OMHHumanReadableDate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE87B5060FE58ABC0058C68E /* OMHHumanReadableDate.m */; };
 		EE3AA2250FAF8081002D747E /* 1.0.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 770B37EC0679A11B001EADE2 /* 1.0.xcdatamodel */; };
 		EE3FE3CF0F211B0E00B09105 /* OMHClipping.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3FE3CD0F211B0E00B09105 /* OMHClipping.m */; };
 		EE3FE4010F211EB000B09105 /* MAAttachedWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3FE4000F211EB000B09105 /* MAAttachedWindow.m */; };
@@ -56,9 +58,7 @@
 		EE4A901A0F1E1A17007DE4BF /* Check.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EE4A90190F1E1A17007DE4BF /* Check.pdf */; };
 		EE4A92060F1E83E9007DE4BF /* QuickPreview.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE4A92040F1E83E9007DE4BF /* QuickPreview.xib */; };
 		EE4A92880F1E8EF9007DE4BF /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = EE4A92870F1E8EF9007DE4BF /* Credits.rtf */; };
-		EE4A93D30F1F8825007DE4BF /* ShortcutRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE4A93D10F1F8825007DE4BF /* ShortcutRecorder.framework */; };
 		EE4A93D40F1F8825007DE4BF /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE4A93D20F1F8825007DE4BF /* Sparkle.framework */; };
-		EE4A93E80F1F8845007DE4BF /* ShortcutRecorder.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EE4A93D10F1F8825007DE4BF /* ShortcutRecorder.framework */; };
 		EE4A93E90F1F8845007DE4BF /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EE4A93D20F1F8825007DE4BF /* Sparkle.framework */; };
 		EE5A52C70F222C6400919974 /* StatusItemHelperWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE5A52C50F222C6400919974 /* StatusItemHelperWindow.xib */; };
 		EE5A54690F23DF3C00919974 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = EE5A54680F23DF3C00919974 /* dsa_pub.pem */; };
@@ -68,6 +68,8 @@
 		EE71BC0C0F1F88E100F130A9 /* Shortcuts.png in Resources */ = {isa = PBXBuildFile; fileRef = EE71BC0A0F1F88E100F130A9 /* Shortcuts.png */; };
 		EE71BC0D0F1F88E100F130A9 /* Update.tiff in Resources */ = {isa = PBXBuildFile; fileRef = EE71BC0B0F1F88E100F130A9 /* Update.tiff */; };
 		EE79F8410F9FB03F00010D7E /* Clyppan_DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE79F8400F9FB03F00010D7E /* Clyppan_DataModel.xcdatamodeld */; };
+		EE87B5070FE58ABC0058C68E /* OMHHumanReadableDate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE87B5060FE58ABC0058C68E /* OMHHumanReadableDate.m */; };
+		EEE8DB1D103DF29600195ECA /* ShortcutRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE8DB1C103DF29600195ECA /* ShortcutRecorder.framework */; };
 		EEECB6760FAE1454004A596B /* AppController+CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = EEECB6750FAE1454004A596B /* AppController+CoreData.m */; };
 		EEF4181A0F1D27A80037980E /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF418190F1D27A80037980E /* Carbon.framework */; };
 /* End PBXBuildFile section */
@@ -89,7 +91,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EE4A93E80F1F8845007DE4BF /* ShortcutRecorder.framework in Copy Frameworks */,
 				EE4A93E90F1F8845007DE4BF /* Sparkle.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
@@ -130,6 +131,10 @@
 		EE19C4BB0FA4E07E000537FE /* OMHImageTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OMHImageTextCell.m; path = ../collections/Cells/OMHImageTextCell.m; sourceTree = SOURCE_ROOT; };
 		EE19C4E30FA4E5DA000537FE /* OMHGradientBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OMHGradientBackgroundView.h; path = Source/OMHGradientBackgroundView.h; sourceTree = SOURCE_ROOT; };
 		EE19C4E40FA4E5DA000537FE /* OMHGradientBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OMHGradientBackgroundView.m; path = Source/OMHGradientBackgroundView.m; sourceTree = SOURCE_ROOT; };
+		EE29E98F1040874500651640 /* Unit tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Unit tests.octest"; path = "build/Debug/Unit tests.octest"; sourceTree = "<group>"; };
+		EE29E9901040874500651640 /* Unit tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Unit tests-Info.plist"; sourceTree = "<group>"; };
+		EE29E996104087A700651640 /* OMHHumanReadableDateTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMHHumanReadableDateTest.h; sourceTree = "<group>"; };
+		EE29E997104087A700651640 /* OMHHumanReadableDateTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMHHumanReadableDateTest.m; sourceTree = "<group>"; };
 		EE3FE3CD0F211B0E00B09105 /* OMHClipping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OMHClipping.m; path = Source/OMHClipping.m; sourceTree = SOURCE_ROOT; };
 		EE3FE3CE0F211B0E00B09105 /* OMHClipping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OMHClipping.h; path = Source/OMHClipping.h; sourceTree = SOURCE_ROOT; };
 		EE3FE3FF0F211EB000B09105 /* MAAttachedWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MAAttachedWindow.h; path = ../collections/Views/MAAttachedWindow.h; sourceTree = SOURCE_ROOT; };
@@ -138,7 +143,6 @@
 		EE4A90190F1E1A17007DE4BF /* Check.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Check.pdf; path = Resources/Check.pdf; sourceTree = SOURCE_ROOT; };
 		EE4A92050F1E83E9007DE4BF /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/QuickPreview.xib; sourceTree = "<group>"; };
 		EE4A92870F1E8EF9007DE4BF /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Credits.rtf; path = Resources/Credits.rtf; sourceTree = SOURCE_ROOT; };
-		EE4A93D10F1F8825007DE4BF /* ShortcutRecorder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShortcutRecorder.framework; path = Frameworks/ShortcutRecorder.framework; sourceTree = SOURCE_ROOT; };
 		EE4A93D20F1F8825007DE4BF /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Frameworks/Sparkle.framework; sourceTree = SOURCE_ROOT; };
 		EE5A52C60F222C6400919974 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/StatusItemHelperWindow.xib; sourceTree = "<group>"; };
 		EE5A54680F23DF3C00919974 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dsa_pub.pem; path = Resources/dsa_pub.pem; sourceTree = "<group>"; };
@@ -150,6 +154,9 @@
 		EE71BBFF0F1F88B700F130A9 /* DBPrefsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBPrefsWindowController.m; path = ../collections/Controllers/DBPrefsWindowController.m; sourceTree = SOURCE_ROOT; };
 		EE71BC0A0F1F88E100F130A9 /* Shortcuts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Shortcuts.png; path = "../collections/Resources/Preference Icons/Shortcuts.png"; sourceTree = SOURCE_ROOT; };
 		EE71BC0B0F1F88E100F130A9 /* Update.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Update.tiff; path = "../collections/Resources/Preference Icons/Update.tiff"; sourceTree = SOURCE_ROOT; };
+		EE87B5050FE58ABC0058C68E /* OMHHumanReadableDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMHHumanReadableDate.h; sourceTree = "<group>"; };
+		EE87B5060FE58ABC0058C68E /* OMHHumanReadableDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMHHumanReadableDate.m; sourceTree = "<group>"; };
+		EEE8DB1C103DF29600195ECA /* ShortcutRecorder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShortcutRecorder.framework; path = Frameworks/ShortcutRecorder.framework; sourceTree = "<group>"; };
 		EEECB6740FAE1454004A596B /* AppController+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AppController+CoreData.h"; path = "Source/AppController+CoreData.h"; sourceTree = SOURCE_ROOT; };
 		EEECB6750FAE1454004A596B /* AppController+CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AppController+CoreData.m"; path = "Source/AppController+CoreData.m"; sourceTree = SOURCE_ROOT; };
 		EEF418190F1D27A80037980E /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
@@ -162,8 +169,15 @@
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				EEF4181A0F1D27A80037980E /* Carbon.framework in Frameworks */,
-				EE4A93D30F1F8825007DE4BF /* ShortcutRecorder.framework in Frameworks */,
 				EE4A93D40F1F8825007DE4BF /* Sparkle.framework in Frameworks */,
+				EEE8DB1D103DF29600195ECA /* ShortcutRecorder.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE29E98C1040874500651640 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +190,9 @@
 				EE0F27E80F1D2AD100E0C0FF /* Views */,
 				EE0F27E90F1D2AE200E0C0FF /* Controllers */,
 				EE0F27EA0F1D2B0C00E0C0FF /* Models */,
+				EE29E9ED1040944F00651640 /* Unit Tests */,
+				EE87B5050FE58ABC0058C68E /* OMHHumanReadableDate.h */,
+				EE87B5060FE58ABC0058C68E /* OMHHumanReadableDate.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -203,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				8D1107320486CEB800E47090 /* Clyppan.app */,
+				EE29E98F1040874500651640 /* Unit tests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -216,6 +234,7 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				EE29E9901040874500651640 /* Unit tests-Info.plist */,
 			);
 			name = Clyppan;
 			sourceTree = "<group>";
@@ -332,6 +351,15 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		EE29E9ED1040944F00651640 /* Unit Tests */ = {
+			isa = PBXGroup;
+			children = (
+				EE29E996104087A700651640 /* OMHHumanReadableDateTest.h */,
+				EE29E997104087A700651640 /* OMHHumanReadableDateTest.m */,
+			);
+			name = "Unit Tests";
+			sourceTree = "<group>";
+		};
 		EEECB6570FAE1050004A596B /* Window Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -346,8 +374,8 @@
 		EEF417FD0F1D26D80037980E /* 3rd Party Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EE4A93D10F1F8825007DE4BF /* ShortcutRecorder.framework */,
 				EE4A93D20F1F8825007DE4BF /* Sparkle.framework */,
+				EEE8DB1C103DF29600195ECA /* ShortcutRecorder.framework */,
 			);
 			name = "3rd Party Frameworks";
 			sourceTree = "<group>";
@@ -374,6 +402,24 @@
 			productReference = 8D1107320486CEB800E47090 /* Clyppan.app */;
 			productType = "com.apple.product-type.application";
 		};
+		EE29E98E1040874500651640 /* Unit tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE29E9931040874600651640 /* Build configuration list for PBXNativeTarget "Unit tests" */;
+			buildPhases = (
+				EE29E98A1040874500651640 /* Resources */,
+				EE29E98B1040874500651640 /* Sources */,
+				EE29E98C1040874500651640 /* Frameworks */,
+				EE29E98D1040874500651640 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Unit tests";
+			productName = "Unit tests";
+			productReference = EE29E98F1040874500651640 /* Unit tests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -389,6 +435,7 @@
 				8D1107260486CEB800E47090 /* Clyppan */,
 				EE5A55050F24DD1900919974 /* Distribution */,
 				EE19C3430FA38DBF000537FE /* Build Documentation */,
+				EE29E98E1040874500651640 /* Unit tests */,
 			);
 		};
 /* End PBXProject section */
@@ -414,6 +461,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EE29E98A1040874500651640 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -429,6 +483,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "DOXYGEN_PATH=\"/Applications/Doxygen.app/Contents/Resources/doxygen\"\n\n$DOXYGEN_PATH $SOURCE_ROOT/Doxyfile\n\nopen \"Documentation/html/index.html\"";
+		};
+		EE29E98D1040874500651640 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
 		EE5A55040F24DD1900919974 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -468,6 +535,16 @@
 				EE19C4E50FA4E5DA000537FE /* OMHGradientBackgroundView.m in Sources */,
 				EEECB6760FAE1454004A596B /* AppController+CoreData.m in Sources */,
 				EE3AA2250FAF8081002D747E /* 1.0.xcdatamodel in Sources */,
+				EE87B5070FE58ABC0058C68E /* OMHHumanReadableDate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE29E98B1040874500651640 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE29E998104087A700651640 /* OMHHumanReadableDateTest.m in Sources */,
+				EE29E9A310408F0500651640 /* OMHHumanReadableDate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,12 +650,12 @@
 		26FC0A890875C7B200E6366F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_OBJC_GC = required;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -591,18 +668,18 @@
 		26FC0A8A0875C7B200E6366F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_POSTPROCESSING = NO;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_OBJC_GC = required;
 				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_VERSION = 4.2;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = macosx10.5;
+				SDKROOT = macosx10.6;
 				SEPARATE_STRIP = NO;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_STYLE = all;
@@ -626,6 +703,60 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				PRODUCT_NAME = "Build Documentation";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		EE29E9911040874600651640 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				INFOPLIST_FILE = "Unit tests-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "Unit tests";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		EE29E9921040874600651640 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				INFOPLIST_FILE = "Unit tests-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "Unit tests";
+				WRAPPER_EXTENSION = octest;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -677,6 +808,15 @@
 			buildConfigurations = (
 				EE19C3440FA38DBF000537FE /* Debug */,
 				EE19C3450FA38DBF000537FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE29E9931040874600651640 /* Build configuration list for PBXNativeTarget "Unit tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE29E9911040874600651640 /* Debug */,
+				EE29E9921040874600651640 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

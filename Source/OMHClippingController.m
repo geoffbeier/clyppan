@@ -260,7 +260,7 @@
     [self markObjectAsCurrentWithoutClipboard:object];
 
     NSPasteboard *pb = [NSPasteboard generalPasteboard];
-    
+	
     [pb declareTypes:[NSArray arrayWithObject:NSStringPboardType] owner:nil];
     [pb setString:[self.currentActiveItem.content string] forType:NSStringPboardType];    
     
