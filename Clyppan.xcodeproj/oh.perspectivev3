@@ -202,24 +202,24 @@
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
-				<string>EE29E9DD104091D100651640</string>
+				<string>EE29EBB41041E05E00651640</string>
 				<key>PBXProjectModuleLabel</key>
-				<string>NSDate.h</string>
+				<string>NSArrayController.h</string>
 				<key>PBXSplitModuleInNavigatorKey</key>
 				<dict>
 					<key>Split0</key>
 					<dict>
 						<key>PBXProjectModuleGUID</key>
-						<string>EE29E9DE104091D100651640</string>
+						<string>EE29EBB51041E05E00651640</string>
 						<key>PBXProjectModuleLabel</key>
-						<string>NSDate.h</string>
+						<string>NSArrayController.h</string>
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>EE29EA851041797800651640</string>
+						<string>EE29EBF710431E3900651640</string>
 						<key>history</key>
 						<array>
-							<string>EE29E9DF104091D100651640</string>
+							<string>EE29EBB61041E05E00651640</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -310,6 +310,8 @@
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>7756732906782D8800D1FEB8</string>
 								<string>080E96DDFE201D6D7F000001</string>
+								<string>EE0F27E80F1D2AD100E0C0FF</string>
+								<string>EE0F27E90F1D2AE200E0C0FF</string>
 								<string>EE0F27EA0F1D2B0C00E0C0FF</string>
 								<string>EE29E9ED1040944F00651640</string>
 								<string>1C37FBAC04509CD000000102</string>
@@ -318,8 +320,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>8</integer>
-									<integer>6</integer>
+									<integer>23</integer>
+									<integer>15</integer>
 									<integer>3</integer>
 									<integer>0</integer>
 								</array>
@@ -360,7 +362,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>EED928070EE3BE2400448843</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>OMHClipping.m</string>
+								<string>OMHClippingController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -368,21 +370,31 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>EED928080EE3BE2400448843</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>OMHClipping.m</string>
+										<string>OMHClippingController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>EE29EA841041797800651640</string>
+										<string>EE29EBF610431E3900651640</string>
 										<key>history</key>
 										<array>
 											<string>EE29E9AC10408F6800651640</string>
-											<string>EE29E9AD10408F6800651640</string>
-											<string>EE29E9AE10408F6800651640</string>
 											<string>EE29EA191040AD5600651640</string>
 											<string>EE29EA58104175FC00651640</string>
 											<string>EE29EA6D1041790C00651640</string>
 											<string>EE29EA761041795500651640</string>
-											<string>EE29EA771041795500651640</string>
+											<string>EE29EA9110419D4600651640</string>
+											<string>EE29EAA51041ADB900651640</string>
+											<string>EE29EABF1041B30C00651640</string>
+											<string>EE29EAFB1041B6BD00651640</string>
+											<string>EE29EAFC1041B6BD00651640</string>
+											<string>EE29EB071041B85F00651640</string>
+											<string>EE29EB2F1041BAA700651640</string>
+											<string>EE29EB531041BCCA00651640</string>
+											<string>EE29EB581041BCEC00651640</string>
+											<string>EE29EB7E1041DE7D00651640</string>
+											<string>EE29EBB01041E05E00651640</string>
+											<string>EE29EBB11041E05E00651640</string>
+											<string>EE29EBB21041E05E00651640</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -396,18 +408,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1090, 555}}</string>
+								<string>{{0, 0}, {1090, 793}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 39 1440 839 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>555pt</string>
+							<string>793pt</string>
 						</dict>
 						<dict>
 							<key>Proportion</key>
-							<string>238pt</string>
+							<string>0pt</string>
 							<key>Tabs</key>
 							<array>
 								<dict>
@@ -475,7 +487,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1090, 211}}</string>
+										<string>{{10, 27}, {1090, -27}}</string>
 										<key>RubberWindowFrame</key>
 										<string>0 39 1440 839 0 0 1440 878 </string>
 									</dict>
@@ -697,10 +709,11 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>EE29EA861041797800651640</string>
+		<string>EE29EBF510431CDF00651640</string>
+		<string>EE29E9DD104091D100651640</string>
 		<string>EE29E9BE10408F6800651640</string>
 		<string>EE29E9BF10408F6800651640</string>
-		<string>EE29E9DD104091D100651640</string>
+		<string>EE29EBB41041E05E00651640</string>
 		<string>/Users/oh/Development/Cocoa/clyppan/Clyppan.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
