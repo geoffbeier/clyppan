@@ -166,8 +166,12 @@
     if ( [[self selectedObjects] objectAtIndex:0] == self.currentActiveItem )
         if ( [[self arrangedObjects] count] >= 2 )
             [self markObjectAsSelectedOnRow:[NSNumber numberWithInt:1]];
+    
+    NSUInteger index = [self selectionIndex];
 
-    [super remove:sender];
+    [super remove:self];
+
+    [super setSelectionIndex:index];
 }
 
 - (void) removeAllObjects;
