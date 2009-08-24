@@ -47,6 +47,9 @@
     
     // Register for updates from the clipboard controller
     [[OMHClipboardController sharedController] setDelegate:self];
+
+    // Start the timer that will update the meta clipping information
+    [self createMetaUpdateTimer];
 }
 
 - (void) pasteboardUpdated:(id)newContent
@@ -163,7 +166,7 @@
     if ( [[self selectedObjects] objectAtIndex:0] == self.currentActiveItem )
         if ( [[self arrangedObjects] count] >= 2 )
             [self markObjectAsSelectedOnRow:[NSNumber numberWithInt:1]];
-    
+
     [super remove:sender];
 }
 
@@ -290,6 +293,26 @@
     }
 
     [self setSorting];        
+}
+
+- (void) createMetaUpdateTimer;
+{
+	if ( updateMetaTimer )
+		[updateMetaTimer invalidate];
+
+	updateMetaTimer = [NSTimer scheduledTimerWithTimeInterval:60
+                                                       target:self
+                                                     selector:@selector( updateMetaDataTimer )
+                                                     userInfo:nil
+                                                      repeats:YES];
+}
+
+- (void) updateMetaDataTimer
+{
+    [self willChangeValueForKey:@"currentActiveItem"];
+    [self willChangeValueForKey:@"arrangedObjects"];
+    [self didChangeValueForKey:@"currentActiveItem"];
+    [self didChangeValueForKey:@"arrangedObjects"];
 }
 
 @end

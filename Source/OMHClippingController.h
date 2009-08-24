@@ -39,6 +39,9 @@
 {
     OMHClipping *currentActiveItem;    
     int clippingPurgeLimit;
+
+    @protected
+        NSTimer *updateMetaTimer;
 }
 
 
@@ -152,5 +155,8 @@
  * ￼Sets the default sorting which is sort by 'current' then 'lastUsed'
  */
 - (void) setSorting;
+
+- (void) createMetaUpdateTimer;
+- (void) updateMetaDataTimer;
 
 @end
